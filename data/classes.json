@@ -1,0 +1,234 @@
+[
+  {
+    "id": "fighter",
+    "name": {
+      "en": "Fighter",
+      "pl": "Wojownik"
+    },
+    "description": {
+      "pl": "Wojownicy to mistrzowie walki, biegli w różnych stylach bojowych i uzbrojeniu."
+    },
+    "hit_die": 10,
+    "primary_ability": ["strength", "dexterity"],
+    "saving_throws": ["strength", "constitution"],
+    "armor_proficiencies": ["all armor", "shields"],
+    "weapon_proficiencies": ["simple weapons", "martial weapons"],
+    "spellcasting": null,
+    "starting_equipment_options": [
+       ["kolczuga", "skórzana zbroja i długi łuk z 20 strzałami"],
+      ["broń bojowa i tarcza", "dwie bronie bojowe"],
+      ["lekka kusza i 20 bełtów", "dwa topory bojowe"],
+      ["pakiet poszukiwacza lochów", "pakiet eksploratora"]
+    ],
+    "level_1_features": [
+      {
+        "name": {
+          "en": "Fighting Style",
+          "pl": "Styl Walki"
+        },
+        "description": {
+          "pl": "Wybierz styl walki, który wpływa na twoje zdolności bojowe."
+        }
+      },
+      {
+        "name": {
+          "en": "Second Wind",
+          "pl": "Drugi Oddech"
+        },
+        "description": {
+          "pl": "Raz na turę możesz odzyskać punkty życia równe 1k10 + poziom klasy."
+        }
+      }
+    ]
+  },
+  {
+    "id": "rogue",
+    "name": {
+      "en": "Rogue",
+      "pl": "Łotrzyk"
+    },
+    "description": {
+      "pl": "Łotrzyki to mistrzowie podstępu, infiltracji i precyzyjnych ataków."
+    },
+    "hit_die": 8,
+    "primary_ability": ["dexterity"],
+    "saving_throws": ["dexterity", "intelligence"],
+    "armor_proficiencies": ["light armor"],
+    "weapon_proficiencies": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+    "spellcasting": null,
+    "starting_equipment_options": [
+      ["szpada", "krótki miecz"],
+      ["krótki łuk i 20 strzał", "krótki miecz"],
+      ["pakiet włamywacza", "pakiet poszukiwacza lochów", "pakiet eksploratora"],
+      ["skórzana zbroja", "dwa sztylety", "narzędzia złodziejskie"]
+    ],
+    "level_1_features": [
+      {
+        "name": {
+          "en": "Sneak Attack",
+          "pl": "Atak z Zaskoczenia"
+        },
+        "description": {
+          "pl": "Zadajesz dodatkowe obrażenia, gdy masz przewagę lub cel jest zajęty."
+        }
+      },
+      {
+        "name": {
+          "en": "Thieves’ Cant",
+          "pl": "Żargon Złodziei"
+        },
+        "description": {
+          "pl": "Znasz tajny język używany przez złodziei i przestępców."
+        }
+      }
+    ]
+  },
+  {
+    "id": "wizard",
+    "name": {
+      "en": "Wizard",
+      "pl": "Czarodziej"
+    },
+    "description": {
+      "pl": "Czarodzieje to mistrzowie magii opartej na nauce i wiedzy tajemnej."
+    },
+    "hit_die": 6,
+    "primary_ability": ["intelligence"],
+    "saving_throws": ["intelligence", "wisdom"],
+    "armor_proficiencies": [],
+    "weapon_proficiencies": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
+    "spellcasting": {
+      "spellcasting_ability": "intelligence",
+      "cantrips_known": 3,
+      "spells_known": "6 (in spellbook)",
+      "spell_slots": {
+        "1": 2
+      }
+    },
+    "starting_equipment_options": [
+      ["kostur", "sztylet"],
+      ["sakiewka komponentów", "fokus arkaniczny"],
+      ["pakiet uczonego", "pakiet eksploratora"],
+      ["księga czarów"]
+    ],
+    "level_1_features": [
+      {
+        "name": {
+          "en": "Spellcasting",
+          "pl": "Rzucanie Czarów"
+        },
+        "description": {
+          "pl": "Możesz rzucać czary i korzystać z księgi czarów."
+        }
+      },
+      {
+        "name": {
+          "en": "Arcane Recovery",
+          "pl": "Magiczne Odzyskanie"
+        },
+        "description": {
+          "pl": "Raz dziennie możesz odzyskać część zużytych slotów czarów."
+        }
+      }
+    ]
+  },
+  {
+    "id": "cleric",
+    "name": {
+      "en": "Cleric",
+      "pl": "Kleryk"
+    },
+    "description": {
+      "pl": "Klerycy są sługami bóstw, władają magią boską i walczą w ich imieniu."
+    },
+    "hit_die": 8,
+    "primary_ability": ["wisdom"],
+    "saving_throws": ["wisdom", "charisma"],
+    "armor_proficiencies": ["light armor", "medium armor", "shields"],
+    "weapon_proficiencies": ["all simple weapons"],
+    "spellcasting": {
+      "spellcasting_ability": "wisdom",
+      "cantrips_known": 3,
+      "spells_known": "Prepared daily (equal to Wis + level)",
+      "spell_slots": {
+        "1": 2
+      }
+    },
+    "starting_equipment_options": [
+      ["buława", "młot wojenny (jeśli masz tą umiejętność)"],
+      ["zbroja łuskowa", "skórzana zbroja", "kolczuga (jeśli masz tą umiejętność)"],
+      ["lekka kusza i 20 bełtów", "dowolna broń prosta"],
+      ["pakiet kapłana", "pakiet eksploratora"],
+      ["tarcza", "święty symbol"]
+    ],
+    "level_1_features": [
+      {
+        "name": {
+          "en": "Divine Domain",
+          "pl": "Boska Dziedzina"
+        },
+        "description": {
+          "pl": "Wybierasz dziedzinę boską, która nadaje dodatkowe czary i zdolności."
+        }
+      },
+      {
+        "name": {
+          "en": "Spellcasting",
+          "pl": "Rzucanie Czarów"
+        },
+        "description": {
+          "pl": "Zyskujesz dostęp do czarów boskich i możesz je rzucać według zasad klasy."
+        }
+      }
+    ]
+  },
+  {
+    "id": "bard",
+    "name": {
+      "en": "Bard",
+      "pl": "Bard"
+    },
+    "description": {
+      "pl": "Bardowie to artyści, muzycy i opowiadacze historii, którzy czerpią moc z inspiracji."
+    },
+    "hit_die": 8,
+    "primary_ability": ["charisma"],
+    "saving_throws": ["dexterity", "charisma"],
+    "armor_proficiencies": ["light armor"],
+    "weapon_proficiencies": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+    "spellcasting": {
+      "spellcasting_ability": "charisma",
+      "cantrips_known": 2,
+      "spells_known": 4,
+      "spell_slots": {
+        "1": 2
+      }
+    },
+    "starting_equipment_options": [
+      ["szabla", "długi miecz", "dowolna broń prosta"],
+      ["pakiet dyplomaty", "pakiet artysty"],
+      ["lutnia", "dowolny instrument muzyczny"],
+      ["skórzana zbroja", "sztylet"]
+    ],
+    "level_1_features": [
+      {
+        "name": {
+          "en": "Bardic Inspiration",
+          "pl": "Inspiracja Barda"
+        },
+        "description": {
+          "pl": "Raz na turę możesz dodać 1k6 do rzutu ataku, testu umiejętności lub rzutu obronnego sojusznika."
+        }
+      },
+      {
+        "name": {
+          "en": "Spellcasting",
+          "pl": "Rzucanie Czarów"
+        },
+        "description": {
+          "pl": "Zyskujesz dostęp do magii barda i możesz rzucać czary."
+        }
+      }
+    ]
+  }
+]

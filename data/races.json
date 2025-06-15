@@ -1,0 +1,235 @@
+[
+  {
+    "id": "human",
+    "name": {
+      "en": "Human",
+      "pl": "Człowiek"
+    },
+    "description": {
+      "pl": "Ludzie są wszechstronni i ambitni, często dominują w krainach fantasy."
+    },
+    "ability_bonuses": {
+      "strength": 1,
+      "dexterity": 1,
+      "constitution": 1,
+      "intelligence": 1,
+      "wisdom": 1,
+      "charisma": 1
+    },
+    "speed": 30,
+    "size": "Medium",
+    "traits": [
+      {
+        "name": {
+          "en": "Versatility",
+          "pl": "Wszechstronność"
+        },
+        "description": {
+          "pl": "Bonus +1 do każdej cechy."
+        }
+      }
+    ],
+    "languages": ["Common", "One extra language of choice"]
+  },
+
+  {
+    "id": "elf",
+    "name": {
+      "en": "Elf",
+      "pl": "Elf"
+    },
+    "description": {
+      "pl": "Elfy są gracją uosobioną, długowieczne i silnie związane z magią."
+    },
+    "ability_bonuses": {
+      "dexterity": 2
+    },
+    "speed": 30,
+    "size": "Medium",
+    "traits": [
+      {
+        "name": {
+          "en": "Darkvision",
+          "pl": "Widzenie w ciemności"
+        },
+        "description": {
+          "pl": "Widzisz w ciemności w promieniu 18 metrów."
+        }
+      },
+      {
+        "name": {
+          "en": "Keen Senses",
+          "pl": "Wyostrzone zmysły"
+        },
+        "description": {
+          "pl": "Zyskujesz biegłość w umiejętności Percepcja."
+        }
+      }
+    ],
+    "languages": ["Common", "Elvish"],
+    "subraces": [
+      {
+        "id": "high_elf",
+        "name": {
+          "en": "High Elf",
+          "pl": "Wysoki Elf"
+        },
+        "ability_bonuses": {
+          "intelligence": 1
+        },
+        "traits": [
+          {
+            "name": {
+              "en": "Cantrip",
+              "pl": "Trik"
+            },
+            "description": {
+              "pl": "Znasz jeden trik z listy czarów maga."
+            }
+          }
+        ]
+      },
+      {
+        "id": "wood_elf",
+        "name": {
+          "en": "Wood Elf",
+          "pl": "Leśny Elf"
+        },
+        "ability_bonuses": {
+          "wisdom": 1
+        },
+        "traits": [
+          {
+            "name": {
+              "en": "Fleet of Foot",
+              "pl": "Szybki Chód"
+            },
+            "description": {
+              "pl": "Twoja prędkość chodzenia wynosi 35 stóp."
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "dwarf",
+    "name": {
+      "en": "Dwarf",
+      "pl": "Krasnolud"
+    },
+    "description": {
+      "pl": "Krasnoludy są wytrzymałe, honorowe i świetnie radzą sobie w walce oraz rzemiośle."
+    },
+    "ability_bonuses": {
+      "constitution": 2
+    },
+    "speed": 25,
+    "size": "Medium",
+    "traits": [
+      {
+        "name": {
+          "en": "Dwarven Resilience",
+          "pl": "Krasnoludzka Odporność"
+        },
+        "description": {
+          "pl": "Masz odporność na trucizny i przewagę na rzuty obronne przeciwko truciznom."
+        }
+      }
+    ],
+    "languages": ["Common", "Dwarvish"],
+    "subraces": []
+  },
+
+
+{
+  "id": "halfling",
+  "name": {
+    "en": "Halfling",
+    "pl": "Niziołek"
+  },
+  "description": {
+    "pl": "Niziołki są małymi, zwinne istotami, które cenią sobie komfort i wspólnotę. Znane są ze swojego szczęścia i odwagi."
+  },
+  "ability_bonuses": {
+    "dexterity": 2
+  },
+  "speed": 25,
+  "size": "Small",
+  "traits": [
+    {
+      "name": {
+        "en": "Lucky",
+        "pl": "Szczęśliwy"
+      },
+      "description": {
+        "pl": "Gdy wyrzucisz 1 na kostce k20 podczas ataku, testu lub rzutu obronnego, możesz przerzucić tę kostkę."
+      }
+    },
+    {
+      "name": {
+        "en": "Brave",
+        "pl": "Odważny"
+      },
+      "description": {
+        "pl": "Masz przewagę na rzuty obronne przeciwko strachowi."
+      }
+    },
+    {
+      "name": {
+        "en": "Halfling Nimbleness",
+        "pl": "Zwinność Niziołka"
+      },
+      "description": {
+        "pl": "Możesz przechodzić przez pole istoty, która jest większa od ciebie."
+      }
+    }
+  ],
+  "languages": ["Common", "Halfling"],
+  "subraces": [
+    {
+      "id": "lightfoot_halfling",
+      "name": {
+        "en": "Lightfoot Halfling",
+        "pl": "Niziołek Śmiałek"
+      },
+      "ability_bonuses": {
+        "charisma": 1
+      },
+      "traits": [
+        {
+          "name": {
+            "en": "Naturally Stealthy",
+            "pl": "Wrodzona Skrytość"
+          },
+          "description": {
+            "pl": "Możesz próbować ukryć się, nawet gdy jesteś lekko zasłonięty przez inną osobę."
+          }
+        }
+      ]
+    },
+    {
+      "id": "stout_halfling",
+      "name": {
+        "en": "Stout Halfling",
+        "pl": "Niziołek Krzepki"
+      },
+      "ability_bonuses": {
+        "constitution": 1
+      },
+      "traits": [
+        {
+          "name": {
+            "en": "Stout Resilience",
+            "pl": "Krzepka Odporność"
+          },
+          "description": {
+            "pl": "Masz przewagę na rzuty obronne przeciwko truciznom oraz odporność na obrażenia od trucizn."
+          }
+        }
+      ]
+    }
+  ]
+}
+]

@@ -1,0 +1,148 @@
+[
+  {
+    "id": "acolyte",
+    "name": {
+      "en": "Acolyte",
+      "pl": "Akolita"
+    },
+    "description": {
+      "pl": "Spędziłeś życie w służbie świątyni konkretnego bóstwa. Studiowałeś święte teksty i uczestniczyłeś w rytuałach religijnych."
+    },
+    "skill_proficiencies": ["insight", "religion"],
+    "tool_proficiencies": [],
+    "languages": 2,
+    "equipment": [
+      "święty symbol",
+      "księga modlitw",
+      "5 świec",
+      "zapaska",
+      "ubrania codzienne",
+      "15 sztuk złota"
+    ],
+    "feature": {
+      "name": {
+        "en": "Shelter of the Faithful",
+        "pl": "Schronienie Wiernych"
+      },
+      "description": {
+        "pl": "Możesz otrzymać pomoc od członków swojej religii, w tym schronienie i leczenie."
+      }
+    }
+  },
+  {
+    "id": "criminal",
+    "name": {
+      "en": "Criminal",
+      "pl": "Przestępca"
+    },
+    "description": {
+      "pl": "Masz przeszłość kryminalną – może byłeś kieszonkowcem, oszustem albo członkiem organizacji przestępczej."
+    },
+    "skill_proficiencies": ["deception", "stealth"],
+    "tool_proficiencies": ["one type of gaming set", "thieves' tools"],
+    "languages": 0,
+    "equipment": [
+      "łom",
+      "ciemny kaptur",
+      "ubrania codzienne",
+      "15 sztuk złota"
+    ],
+    "feature": {
+      "name": {
+        "en": "Criminal Contact",
+        "pl": "Kontakt Kryminalny"
+      },
+      "description": {
+        "pl": "Masz niezawodny kontakt w sieci przestępczej, który może dostarczać informacji i pomocy."
+      }
+    }
+  },
+  {
+    "id": "entertainer",
+    "name": {
+      "en": "Entertainer",
+      "pl": "Artysta"
+    },
+    "description": {
+      "pl": "Jesteś utalentowanym wykonawcą – śpiewasz, grasz, tańczysz lub zabawiasz innych w inny sposób."
+    },
+    "skill_proficiencies": ["acrobatics", "performance"],
+    "tool_proficiencies": ["one musical instrument", "disguise kit"],
+    "languages": 0,
+    "equipment": [
+      "instrument muzyczny",
+      "kostium sceniczny",
+      "list miłosny (od fana)",
+      "ubrania codzienne",
+      "15 sztuk złota"
+    ],
+    "feature": {
+      "name": {
+        "en": "By Popular Demand",
+        "pl": "Na Życzenie Publiczności"
+      },
+      "description": {
+        "pl": "Możesz występować w lokalnych gospodach i teatrach, zdobywając jedzenie, schronienie i uznanie."
+      }
+    }
+  },
+  {
+    "id": "sage",
+    "name": {
+      "en": "Sage",
+      "pl": "Mędrzec"
+    },
+    "description": {
+      "pl": "Twoje życie upłynęło na studiowaniu wiedzy i ksiąg. Jesteś ekspertem w określonej dziedzinie akademickiej."
+    },
+    "skill_proficiencies": ["arcana", "history"],
+    "tool_proficiencies": [],
+    "languages": 2,
+    "equipment": [
+      "butelka czarnego atramentu",
+      "pióro",
+      "mały nóż",
+      "list od zmarłego mentora",
+      "ubrania codzienne",
+      "10 sztuk złota"
+    ],
+    "feature": {
+      "name": {
+        "en": "Researcher",
+        "pl": "Badacz"
+      },
+      "description": {
+        "pl": "Kiedy nie znasz odpowiedzi, wiesz gdzie i jak ją znaleźć – w księdze, w archiwum lub u uczonego."
+      }
+    }
+  },
+  {
+    "id": "soldier",
+    "name": {
+      "en": "Soldier",
+      "pl": "Żołnierz"
+    },
+    "description": {
+      "pl": "Spędziłeś lata na polach bitew jako członek armii lub najemnik. Znasz się na dyscyplinie i taktyce."
+    },
+    "skill_proficiencies": ["athletics", "intimidation"],
+    "tool_proficiencies": ["one type of gaming set", "vehicles (land)"],
+    "languages": 0,
+    "equipment": [
+      "pamiątka z wojny",
+      "talia kart",
+      "zestaw do czyszczenia broni",
+      "ubrania codzienne",
+      "10 sztuk złota"
+    ],
+    "feature": {
+      "name": {
+        "en": "Military Rank",
+        "pl": "Ranga Wojskowa"
+      },
+      "description": {
+        "pl": "Masz rangę wojskową, która budzi szacunek wśród żołnierzy oraz daje dostęp do baz wojskowych."
+      }
+    }
+  }
+]

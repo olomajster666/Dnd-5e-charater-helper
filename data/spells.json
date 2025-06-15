@@ -1,0 +1,290 @@
+[
+  {
+    "name": "Światło",
+    "english_name": "Light",
+    "level": 0,
+    "classes": ["cleric", "wizard"],
+    "description": {
+      "pl": "Dotykając przedmiotu, sprawiasz, że emituje jasne światło w promieniu 20 stóp przez 1 godzinę."
+    },
+    "range": "Dotyk",
+    "components": "V, M (kawałek krzemienia i stal)",
+    "duration": "1 godzina"
+  },
+  {
+    "name": "Wstrząs",
+    "english_name": "Shocking Grasp",
+    "level": 0,
+    "classes": ["wizard"],
+    "description": {
+      "pl": "Dotykasz stworzenia, zadając 1k8 obrażeń od błyskawic i uniemożliwiając mu reakcję, jeśli nie nosi metalowego pancerza."
+    },
+    "range": "Dotyk",
+    "components": "V, S",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Prowadzenie",
+    "english_name": "Guidance",
+    "level": 0,
+    "classes": ["cleric"],
+    "description": {
+      "pl": "Dotykasz stworzenia, dając mu +1d4 do jednego testu zdolności w ciągu 1 minuty."
+    },
+    "range": "Dotyk",
+    "components": "V, S",
+    "duration": "Konsumpcja, 1 minuta"
+  },
+  {
+    "name": "Gryźliwa Obraza",
+    "english_name": "Vicious Mockery",
+    "level": 0,
+    "classes": ["bard"],
+    "description": {
+      "pl": "Obraźliwymi słowami zadajesz 1k4 obrażeń psychicznych i dajesz przewagę na kolejny rzut na atak przeciw celowi."
+    },
+    "range": "60 stóp",
+    "components": "V",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Grzmot",
+    "english_name": "Thunderclap",
+    "level": 0,
+    "classes": ["bard", "wizard"],
+    "description": {
+      "pl": "Wypuszczasz grzmot, zadający 1k6 obrażeń od gromu w promieniu 5 stóp (pół przy udanym rzucie obronnym zwinności)."
+    },
+    "range": "5 stóp",
+    "components": "S",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Święty płomień",
+    "english_name": "Sacred Flame",
+    "level": 0,
+    "classes": ["cleric"],
+    "description": {
+      "pl": "Wypuszczasz płomień, zadający 1k8 obrażeń od ognia (pół przy udanym rzucie obronnym zwinności)."
+    },
+    "range": "60 stóp",
+    "components": "V, S",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Prestidigitacja",
+    "english_name": "Prestidigitation",
+    "level": 0,
+    "classes": ["wizard", "bard"],
+    "description": {
+      "pl": "Tworzysz drobne efekty magiczne, takie jak ciepło, światło czy czyste ubranie, trwające 1 godzinę."
+    },
+    "range": "10 stóp",
+    "components": "V, S",
+    "duration": "1 godzina"
+  },
+  {
+    "name": "Drobna iluzja",
+    "english_name": "Minor illusion",
+    "level": 0,
+    "classes": ["bard", "wizard"],
+    "description": {
+      "pl": "Tworzysz iluzję dźwięku lub obrazu o wielkości 5 stóp na 1 minutę."
+    },
+    "range": "30 stóp",
+    "components": "S, M (kawałek jedwabiu)",
+    "duration": "1 minuta"
+  },
+  {
+    "name": "Wyleczenie ran",
+    "english_name": "Cure Wounds",
+    "level": 1,
+    "classes": ["cleric", "bard"],
+    "description": {
+      "pl": "Dotykasz stworzenia i leczysz je, przywracając (1k8 + modyfikator mądrości) zdrowia."
+    },
+    "range": "Dotyk",
+    "components": "V, S",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Magiczne pociski",
+    "english_name": "Magic Missile",
+    "level": 1,
+    "classes": ["wizard"],
+    "description": {
+      "pl": "Wypuszczasz 3 pociski energii, z których każdy zadaje (1k4 + 1) obrażeń w wybranym celu."
+    },
+    "range": "120 stóp",
+    "components": "V, S",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Błogosławieństwo",
+    "english_name": "Bless",
+    "level": 1,
+    "classes": ["cleric"],
+    "description": {
+      "pl": "Błogosławisz do 3 stworzeń, dając im +1d4 do rzutów na atak i rzuty obronne przez 1 minutę."
+    },
+    "range": "30 stóp",
+    "components": "V, S, M (kropelka wody święconej)",
+    "duration": "Koncentracja, 1 minuta"
+  },
+  {
+    "name": "Kolorowy spray",
+    "english_name": "Color Spray",
+    "level": 1,
+    "classes": ["wizard"],
+    "description": {
+      "pl": "Wypuszczasz rozbłysk kolorowego światła, oślepiając stworzenia o łącznej liczbie PZ do 25 na 1 minutę."
+    },
+    "range": "15 stóp",
+    "components": "V, S, M (garść piasku lub proszku)",
+    "duration": "Koncentracja, 1 minuta"
+  },
+  {
+    "name": "Urok",
+    "english_name": "Charm Person",
+    "level": 1,
+    "classes": ["bard", "wizard"],
+    "description": {
+      "pl": "Zauroczasz jedną humanoidalną istotę, która traktuje cię przyjaźnie przez 1 godzinę."
+    },
+    "range": "30 stóp",
+    "components": "V, S",
+    "duration": "1 godzina"
+  },
+  {
+    "name": "Wykrycie magii",
+    "english_name": "Detect Magic",
+    "level": 1,
+    "classes": ["cleric", "wizard"],
+    "description": {
+      "pl": "Wyczuwasz magię w promieniu 30 stóp przez 10 minut, widząc jej aurę."
+    },
+    "range": "Self (30-foot radius)",
+    "components": "V, S",
+    "duration": "Koncentracja, 10 minut"
+  },
+  {
+    "name": "Słowo uzdrowienia",
+    "english_name": "Healing word",
+    "level": 1,
+    "classes": ["cleric", "bard"],
+    "description": {
+      "pl": "Wymawiasz magiczne słowo, lecząc stworzenie w 60 stóp o (1k4 + modyfikator mądrości) zdrowia."
+    },
+    "range": "60 stóp",
+    "components": "V",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Czarodziejska broń",
+    "english_name": "Spiritual Weapon",
+    "level": 2,
+    "classes": ["cleric"],
+    "description": {
+      "pl": "Przywołujesz broń duchową, która atakuje wybrane cele, zadając 1k8 obrażeń od siły na trafienie."
+    },
+    "range": "60 stóp",
+    "components": "V, S",
+    "duration": "Koncentracja, 1 minuta"
+  },
+  {
+    "name": "Niewidzialność",
+    "english_name": "Invisibility",
+    "level": 2,
+    "classes": ["bard", "wizard"],
+    "description": {
+      "pl": "Uczyniasz jedno stworzenie niewidzialnym na 1 godzinę, aż zaatakuje lub rzuci czar."
+    },
+    "range": "Dotyk",
+    "components": "V, S, M (płatek paproci i dymiąca świeca)",
+    "duration": "1 godzina"
+  },
+  {
+    "name": "Modlitwa uzdrowienia",
+    "english_name": "Prayer of Healing",
+    "level": 2,
+    "classes": ["cleric"],
+    "description": {
+      "pl": "Leczysz do 6 stworzeń w 30 stóp, przywracając każdemu (2k8 + modyfikator mądrości) zdrowia."
+    },
+    "range": "30 stóp",
+    "components": "V",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Rozbicie",
+    "english_name": "Shatter",
+    "level": 2,
+    "classes": ["bard", "wizard"],
+    "description": {
+      "pl": "Wybuch dźwięku zadaje 3k8 obrażeń od gromu w promieniu 10 stóp (pół przy udanym rzucie obronnym)."
+    },
+    "range": "60 stóp",
+    "components": "V, S, M (kawałek kwarcu)",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Cisza",
+    "english_name": "Silence",
+    "level": 2,
+    "classes": ["cleric", "bard"],
+    "description": {
+      "pl": "Tworzysz 20-stopową sferę ciszy, uniemożliwiając rzucanie czarów z werbalnymi komponentami."
+    },
+    "range": "120 stóp",
+    "components": "V, S",
+    "duration": "Koncentracja, 10 minut"
+  },
+  {
+    "name": "Piorun",
+    "english_name": "Lightning Bolt",
+    "level": 3,
+    "classes": ["wizard"],
+    "description": {
+      "pl": "Wypuszczasz błyskawicę w linii 100 stóp, zadającą 8k6 obrażeń od błyskawic (pół przy udanym rzucie obronnym)."
+    },
+    "range": "100 stóp / 5 stóp szerokości",
+    "components": "V, S, M (kawałek futra i pręt miedziany)",
+    "duration": "Natychmiastowe"
+  },
+  {
+    "name": "Ochrona przed energią",
+    "english_name": "Protection from Energy",
+    "level": 3,
+    "classes": ["cleric", "wizard"],
+    "description": {
+      "pl": "Dajesz jednemu stworzeniu odporność na obrażenia od wybranego typu energii przez 1 godzinę."
+    },
+    "range": "Dotyk",
+    "components": "V, S",
+    "duration": "Koncentracja, 1 godzina"
+  },
+  {
+    "name": "Heroizm",
+    "english_name": "Heroism",
+    "level": 1,
+    "classes": ["bard"],
+    "description": {
+      "pl": "Inspirujesz stworzenie, dając mu tymczasowe zdrowie równe (poziom zaklęcia + twój poziom) i odporność na strach."
+    },
+    "range": "Dotyk",
+    "components": "V, S",
+    "duration": "Koncentracja, 1 minuta"
+  },
+  {
+    "name": "Rozproszenie magii",
+    "english_name": "Dispel magic",
+    "level": 3,
+    "classes": ["cleric", "bard", "wizard"],
+    "description": {
+      "pl": "Zrywasz jedno zaklęcie lub efekt magiczny na wybranym celu w 120 stóp."
+    },
+    "range": "120 stóp",
+    "components": "V, S",
+    "duration": "Natychmiastowe"
+  }
+]

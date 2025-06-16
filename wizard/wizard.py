@@ -8,6 +8,7 @@ from .step_proficiencies import StepProficiencies
 from .step_spell_selection import StepSpellSelection
 from .step_equipment import StepEquipment
 from .step_image import StepImage
+from .step_character_display import StepCharacterDisplay
 
 class Wizard(tk.Frame):
     def __init__(self, master):
@@ -22,6 +23,7 @@ class Wizard(tk.Frame):
             StepSpellSelection,
             StepEquipment,
             StepImage,
+            StepCharacterDisplay,
         ]
         self.current = 0
         self.step_instances = {}
@@ -43,7 +45,7 @@ class Wizard(tk.Frame):
         spellcasting_classes = {"wizard", "cleric", "bard"}
 
         if self.current < len(self.steps) - 1:
-            if self.current == len(self.steps) - 4 and current_class not in spellcasting_classes:  # Before StepSpellSelection
+            if self.current == len(self.steps) - 5 and current_class not in spellcasting_classes:  # Before StepSpellSelection
                 self.current += 2  # Skip StepSpellSelection
                 if self.current >= len(self.steps):  # Ensure we don't exceed the list
                     self.current = len(self.steps) - 1

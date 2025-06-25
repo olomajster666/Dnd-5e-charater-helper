@@ -1,4 +1,5 @@
 import tkinter as tk
+import utils.language_helper as lh
 from tkinter import messagebox
 
 class StepNameGender(tk.Frame):
@@ -7,24 +8,23 @@ class StepNameGender(tk.Frame):
         self.master = master
         self.state = state
 
-        tk.Label(self, text="Imię postaci", font=("Arial", 16)).pack(pady=10)
+        tk.Label(self, text=lh.getInfo("choose_character_name"), font=("Arial", 16)).pack(pady=10)
         self.name_entry = tk.Entry(self)
         self.name_entry.pack()
 
-        tk.Label(self, text="Płeć postaci", font=("Arial", 16)).pack(pady=10)
-        self.gender_var = tk.StringVar(value="Nieokreślona")
-        genders = ["Mężczyzna", "Kobieta", "Nieokreślona"]
-        for g in genders:
+        tk.Label(self, text=lh.getInfo("choose_character_gender"), font=("Arial", 16)).pack(pady=10)
+        self.gender_var = tk.StringVar(value=lh.getGenders()[-1])
+        for g in lh.getGenders():
             tk.Radiobutton(self, text=g, variable=self.gender_var, value=g).pack()
 
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text="Dalej", command=self.save_and_continue).pack()
+        tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack()
 
     def save_and_continue(self):
         name = self.name_entry.get().strip()
         if name == "":
-            messagebox.showerror("Błąd", "Proszę podać imię postaci przed kontynuowaniem.")
+            messagebox.showerror(lh.getInfo("error"), lh.getInfo("error_character_name_wrong"))
             return
         
         self.state.set("name", name)

@@ -11,27 +11,13 @@ languages = jl.load_json("languages.json")
 proficiencies = jl.load_json("proficiencies.json")
 races = jl.load_json("races.json")
 spells = jl.load_json("spells.json")
+abilities = jl.load_json("abilities.json")
 
 def getInfo(key : str):
     return info[key][chosenLanguage]
 
-def getLanguages():
-    return languages
-
 def getGenders():
     return genders[chosenLanguage]
 
-def getBackgrounds():
-    return backgrounds
-
-def getClasses():
-    return classes
-
-def getProficiencies():
-    return proficiencies
-
-def getRaces():
-    return races
-
-def getSpells():
-    return spells
+def getAbility(key : str):
+    return abilities[key][chosenLanguage]

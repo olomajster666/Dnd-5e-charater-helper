@@ -1,0 +1,26 @@
+{
+  "strength": {
+    "en": "Strength",
+    "pl": "Siła"
+  },
+  "dexterity": {
+    "en": "Dexterity",
+    "pl": "Zręczność"
+  },
+  "constitution": {
+    "en": "Constitution",
+    "pl": "Kondycja"
+  },
+  "intelligence": {
+    "en": "Intelligence",
+    "pl": "Inteligencja"
+  },
+  "wisdom": {
+    "en": "Wisdom",
+    "pl": "Mądrość"
+  },
+  "charisma": {
+    "en": "Charisma",
+    "pl": "Charyzma"
+  }
+}

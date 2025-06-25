@@ -33,5 +33,39 @@
   "choose_class": {
     "en": "Choose class",
     "pl": "Wybierz klasę"
+  },
+
+  "choose_character_background": {
+    "en": "Choose character background",
+    "pl": "Wybierz tło postaci"
+  },
+
+  "choose_stat_method": {
+    "en": "Choose the method of statistics distribution",
+    "pl": "Wybierz metodę rozdzielania statystyk"
+  },
+  "stat_option_standard": {
+    "en": "Standard pool (15, 14, 13, ...)",
+    "pl": "Standardowa pula (15, 14, 13, ...)"
+  },
+  "stat_option_manual": {
+    "en": "Dice roll (enter manually)",
+    "pl": "Rzut kośćmi (wpisz ręcznie)"
+  },
+  "option_standard_info": {
+    "en": "Assign each value to attribute (each value only once)",
+    "pl": "Przypisz każdą wartość do cechy (każda wartość tylko raz)"
+  },
+  "option_manual_info": {
+    "en": "Enter results of dice rolls (3k6 or 4k6 drop lowest)",
+    "pl": "Wprowadź wyniki rzutów (3k6 lub 4k6 drop lowest)"
+  },
+  "error_option_manual": {
+    "en": "Make sure that all values are integers between 1 and 20",
+    "pl": "Upewnij się, że wszystkie wartości są liczbami całkowitymi między 1 a 20."
+  },
+  "error_option_standard": {
+    "en": "You have to assign each value only once",
+    "pl": "Musisz przypisać każdą wartość tylko raz."
   }
 }

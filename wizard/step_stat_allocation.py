@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+import utils.language_helper as lh
 
 STANDARD_ARRAY = [15, 14, 13, 12, 10, 8]
 ABILITIES = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
@@ -14,10 +15,10 @@ class StepStatAllocation(tk.Frame):
         self.assign_vars = {ability: tk.StringVar() for ability in ABILITIES}
         self.method_var.set("array")
 
-        tk.Label(self, text="Wybierz metodę rozdzielania statystyk", font=("Arial", 16)).pack(pady=10)
+        tk.Label(self, text=lh.getInfo("choose_stat_method"), font=("Arial", 16)).pack(pady=10)
 
-        tk.Radiobutton(self, text="Standardowa pula (15, 14, 13, ...)", variable=self.method_var, value="array", command=self.show_method).pack(anchor="w")
-        tk.Radiobutton(self, text="Rzut kośćmi (wpisz ręcznie)", variable=self.method_var, value="manual", command=self.show_method).pack(anchor="w")
+        tk.Radiobutton(self, text=lh.getInfo("stat_option_standard"), variable=self.method_var, value="array", command=self.show_method).pack(anchor="w")
+        tk.Radiobutton(self, text=lh.getInfo("stat_option_manual"), variable=self.method_var, value="manual", command=self.show_method).pack(anchor="w")
 
         self.method_frame = tk.Frame(self)
         self.method_frame.pack(pady=10)
@@ -27,8 +28,8 @@ class StepStatAllocation(tk.Frame):
         # Navigation
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text="Wstecz", command=self.master.previous_step).pack(side="left", padx=10)
-        tk.Button(nav, text="Dalej", command=self.save_and_continue).pack(side="right", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
 
     def show_method(self):
         for widget in self.method_frame.winfo_children():
@@ -37,7 +38,7 @@ class StepStatAllocation(tk.Frame):
         method = self.method_var.get()
 
         if method == "array":
-            tk.Label(self.method_frame, text="Przypisz każdą wartość do cechy (każda wartość tylko raz)").pack()
+            tk.Label(self.method_frame, text=lh.getInfo("option_standard_info")).pack()
 
             self.array_menus = {}
 
@@ -56,7 +57,7 @@ class StepStatAllocation(tk.Frame):
             for ability in ABILITIES:
                 row = tk.Frame(self.method_frame)
                 row.pack(pady=2)
-                tk.Label(row, text=ability.capitalize() + ":").pack(side="left", padx=5)
+                tk.Label(row, text=lh.getAbility(ability) + ":").pack(side="left", padx=5)
                 var = self.assign_vars[ability]
                 var.trace_add("write", update_dropdowns)
                 dropdown = tk.OptionMenu(row, var, *STANDARD_ARRAY)
@@ -66,11 +67,11 @@ class StepStatAllocation(tk.Frame):
             update_dropdowns()  # Initial call
 
         elif method == "manual":
-            tk.Label(self.method_frame, text="Wprowadź wyniki rzutów (3k6 lub 4k6 drop lowest)").pack()
+            tk.Label(self.method_frame, text=lh.getInfo("option_manual_info")).pack()
             for ability in ABILITIES:
                 row = tk.Frame(self.method_frame)
                 row.pack(pady=2)
-                tk.Label(row, text=ability.capitalize() + ":").pack(side="left", padx=5)
+                tk.Label(row, text=lh.getAbility(ability) + ":").pack(side="left", padx=5)
                 entry = tk.Entry(row, textvariable=self.assign_vars[ability])
                 entry.pack(side="left")
 
@@ -85,12 +86,12 @@ class StepStatAllocation(tk.Frame):
                     raise ValueError
                 stats[ability] = val
         except ValueError:
-            messagebox.showerror("Błąd", "Upewnij się, że wszystkie wartości są liczbami całkowitymi między 1 a 20.")
+            messagebox.showerror(lh.getInfo("error"), lh.getInfo("error_option_manual"))
             return
         if method == "array":
             values = list(stats.values())
             if sorted(values) != sorted(STANDARD_ARRAY):
-                messagebox.showerror("Błąd", "Musisz przypisać każdą wartość tylko raz.")
+                messagebox.showerror(lh.getInfo("error"), lh.getInfo("error_option_standard"))
                 return
 
         self.state.set("stat_method", method)

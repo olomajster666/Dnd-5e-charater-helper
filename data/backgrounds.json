@@ -6,25 +6,37 @@
       "pl": "Akolita"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Spędziłeś życie w służbie świątyni konkretnego bóstwa. Studiowałeś święte teksty i uczestniczyłeś w rytuałach religijnych."
     },
     "skill_proficiencies": ["insight", "religion"],
     "tool_proficiencies": [],
     "languages": 2,
-    "equipment": [
-      "święty symbol",
-      "księga modlitw",
-      "5 świec",
-      "zapaska",
-      "ubrania codzienne",
-      "15 sztuk złota"
-    ],
+    "equipment": {
+      "en": [
+        "Saint symbol",
+        "Book of prayers",
+        "5 candles",
+        "Zapaska????",
+        "Everyday clothes",
+        "15 gold pieces"
+      ],
+      "pl": [
+        "Święty symbol",
+        "Księga modlitw",
+        "5 świec",
+        "Zapaska",
+        "Ubrania codzienne",
+        "15 sztuk złota"
+      ]
+    },
     "feature": {
       "name": {
         "en": "Shelter of the Faithful",
         "pl": "Schronienie Wiernych"
       },
       "description": {
+        "en": "MISSING TRANSLATION",
         "pl": "Możesz otrzymać pomoc od członków swojej religii, w tym schronienie i leczenie."
       }
     }
@@ -36,23 +48,33 @@
       "pl": "Przestępca"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Masz przeszłość kryminalną – może byłeś kieszonkowcem, oszustem albo członkiem organizacji przestępczej."
     },
     "skill_proficiencies": ["deception", "stealth"],
     "tool_proficiencies": ["one type of gaming set", "thieves' tools"],
     "languages": 0,
-    "equipment": [
-      "łom",
-      "ciemny kaptur",
-      "ubrania codzienne",
-      "15 sztuk złota"
-    ],
+    "equipment": {
+      "en": [
+        "Crowbar",
+        "Dark hood",
+        "Everyday clothes",
+        "15 gold pieces"
+      ],
+      "pl": [
+        "Łom",
+        "Ciemny kaptur",
+        "Ubrania codzienne",
+        "15 sztuk złota"
+      ]
+    },
     "feature": {
       "name": {
         "en": "Criminal Contact",
         "pl": "Kontakt Kryminalny"
       },
       "description": {
+        "en": "MISSING TRANSLATION",
         "pl": "Masz niezawodny kontakt w sieci przestępczej, który może dostarczać informacji i pomocy."
       }
     }
@@ -64,24 +86,35 @@
       "pl": "Artysta"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Jesteś utalentowanym wykonawcą – śpiewasz, grasz, tańczysz lub zabawiasz innych w inny sposób."
     },
     "skill_proficiencies": ["acrobatics", "performance"],
     "tool_proficiencies": ["one musical instrument", "disguise kit"],
     "languages": 0,
-    "equipment": [
-      "instrument muzyczny",
-      "kostium sceniczny",
-      "list miłosny (od fana)",
-      "ubrania codzienne",
-      "15 sztuk złota"
-    ],
+    "equipment": {
+      "en": [
+        "Musical instrument",
+        "Scenic costume",
+        "Love letter (from fan)",
+        "Everyday clothes",
+        "15 gold pieces"
+      ],
+      "pl": [
+        "Instrument muzyczny",
+        "Kostium sceniczny",
+        "List miłosny (od fana)",
+        "Ubrania codzienne",
+        "15 sztuk złota"
+      ]
+    },
     "feature": {
       "name": {
         "en": "By Popular Demand",
         "pl": "Na Życzenie Publiczności"
       },
       "description": {
+        "en": "MISSING TRANSLATION",
         "pl": "Możesz występować w lokalnych gospodach i teatrach, zdobywając jedzenie, schronienie i uznanie."
       }
     }
@@ -93,25 +126,37 @@
       "pl": "Mędrzec"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Twoje życie upłynęło na studiowaniu wiedzy i ksiąg. Jesteś ekspertem w określonej dziedzinie akademickiej."
     },
     "skill_proficiencies": ["arcana", "history"],
     "tool_proficiencies": [],
     "languages": 2,
-    "equipment": [
-      "butelka czarnego atramentu",
-      "pióro",
-      "mały nóż",
-      "list od zmarłego mentora",
-      "ubrania codzienne",
-      "10 sztuk złota"
-    ],
+    "equipment": {
+      "en": [
+        "Black ink bottle",
+        "Feather",
+        "Small knife",
+        "Letter from dead mentor",
+        "Everyday clothes",
+        "10 gold pieces"
+      ],
+      "pl": [
+        "Butelka czarnego atramentu",
+        "Pióro",
+        "Mały nóż",
+        "List od zmarłego mentora",
+        "Ubrania codzienne",
+        "10 sztuk złota"
+      ]
+    },
     "feature": {
       "name": {
         "en": "Researcher",
         "pl": "Badacz"
       },
       "description": {
+        "en": "MISSING TRANSLATION",
         "pl": "Kiedy nie znasz odpowiedzi, wiesz gdzie i jak ją znaleźć – w księdze, w archiwum lub u uczonego."
       }
     }
@@ -123,24 +168,35 @@
       "pl": "Żołnierz"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Spędziłeś lata na polach bitew jako członek armii lub najemnik. Znasz się na dyscyplinie i taktyce."
     },
     "skill_proficiencies": ["athletics", "intimidation"],
     "tool_proficiencies": ["one type of gaming set", "vehicles (land)"],
     "languages": 0,
-    "equipment": [
-      "pamiątka z wojny",
-      "talia kart",
-      "zestaw do czyszczenia broni",
-      "ubrania codzienne",
-      "10 sztuk złota"
-    ],
+    "equipment": {
+      "en": [
+        "War souvenir",
+        "Deck of cards",
+        "Weapon cleaning kit",
+        "Everyday clothes",
+        "10 gold pieces"
+      ],
+      "pl": [
+        "Pamiątka z wojny",
+        "Talia kart",
+        "Zestaw do czyszczenia broni",
+        "Ubrania codzienne",
+        "10 sztuk złota"
+      ]
+    },
     "feature": {
       "name": {
         "en": "Military Rank",
         "pl": "Ranga Wojskowa"
       },
       "description": {
+        "en": "MISSING TRANSLATION",
         "pl": "Masz rangę wojskową, która budzi szacunek wśród żołnierzy oraz daje dostęp do baz wojskowych."
       }
     }

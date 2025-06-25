@@ -15,12 +15,20 @@
     "armor_proficiencies": ["all armor", "shields"],
     "weapon_proficiencies": ["simple weapons", "martial weapons"],
     "spellcasting": null,
-    "starting_equipment_options": [
-       ["kolczuga", "skórzana zbroja i długi łuk z 20 strzałami"],
-      ["broń bojowa i tarcza", "dwie bronie bojowe"],
-      ["lekka kusza i 20 bełtów", "dwa topory bojowe"],
-      ["pakiet poszukiwacza lochów", "pakiet eksploratora"]
-    ],
+    "starting_equipment_options": {
+      "en": [
+        ["Chainmail", "Leather armor and longbow with 20 arrows"],
+        ["Weapon and shield", "Two weapons"],
+        ["Light crossbow and 20 bolts", "Two war axes"],
+        ["Dungeon seeker packet", "Explorer packet"]
+      ],
+      "pl": [
+        ["Kolczuga", "Skórzana zbroja i długi łuk z 20 strzałami"],
+        ["Broń bojowa i tarcza", "Dwie bronie bojowe"],
+        ["Lekka kusza i 20 bełtów", "Dwa topory bojowe"],
+        ["Pakiet poszukiwacza lochów", "Pakiet eksploratora"]
+      ]
+    },
     "level_1_features": [
       {
         "name": {
@@ -60,12 +68,20 @@
     "armor_proficiencies": ["light armor"],
     "weapon_proficiencies": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
     "spellcasting": null,
-    "starting_equipment_options": [
-      ["szpada", "krótki miecz"],
-      ["krótki łuk i 20 strzał", "krótki miecz"],
-      ["pakiet włamywacza", "pakiet poszukiwacza lochów", "pakiet eksploratora"],
-      ["skórzana zbroja", "dwa sztylety", "narzędzia złodziejskie"]
-    ],
+    "starting_equipment_options": {
+      "en": [
+        ["Spade", "Short sword"],
+        ["Short bow and 20 arrows", "Short sword"],
+        ["Burglar packet", "Dungeon seeker packet", "Explorer packet"],
+        ["Leather armor", "Two daggers", "Thief tools"]
+      ],
+      "pl": [
+        ["Szpada", "Krótki miecz"],
+        ["Krótki łuk i 20 strzał", "Krótki miecz"],
+        ["Pakiet włamywacza", "Pakiet poszukiwacza lochów", "Pakiet eksploratora"],
+        ["Skórzana zbroja", "Dwa sztylety", "Narzędzia złodziejskie"]
+      ]
+    },
     "level_1_features": [
       {
         "name": {
@@ -112,12 +128,20 @@
         "1": 2
       }
     },
-    "starting_equipment_options": [
-      ["kostur", "sztylet"],
-      ["sakiewka komponentów", "fokus arkaniczny"],
-      ["pakiet uczonego", "pakiet eksploratora"],
-      ["księga czarów"]
-    ],
+    "starting_equipment_options": {
+      "en": [
+        ["Staff", "Dagger"],
+        ["Sack of components", "Arcanic focus"],
+        ["Scholar packet", "Explorer packet"],
+        ["Spellbook"]
+      ],
+      "pl": [
+        ["Kostur", "Sztylet"],
+        ["Sakiewka komponentów", "Fokus arkaniczny"],
+        ["Pakiet uczonego", "Pakiet eksploratora"],
+        ["Księga czarów"]
+      ]
+    },
     "level_1_features": [
       {
         "name": {
@@ -164,13 +188,22 @@
         "1": 2
       }
     },
-    "starting_equipment_options": [
-      ["buława", "młot wojenny (jeśli masz tą umiejętność)"],
-      ["zbroja łuskowa", "skórzana zbroja", "kolczuga (jeśli masz tą umiejętność)"],
-      ["lekka kusza i 20 bełtów", "dowolna broń prosta"],
-      ["pakiet kapłana", "pakiet eksploratora"],
-      ["tarcza", "święty symbol"]
-    ],
+    "starting_equipment_options": {
+      "en": [
+        ["Mace", "War hammer (if you have this skill)"],
+        ["Scale mail", "Leather armor", "Chainmail (if you have this skill)"],
+        ["Light crossbow and 20 bolts", "Any simple weapon"],
+        ["Priest packet", "Explorer packet"],
+        ["Shield", "Saint symbol"]
+      ],
+      "pl": [
+        ["Buława", "Młot wojenny (jeśli masz tą umiejętność)"],
+        ["Zbroja łuskowa", "Skórzana zbroja", "Kolczuga (jeśli masz tą umiejętność)"],
+        ["Lekka kusza i 20 bełtów", "Dowolna broń prosta"],
+        ["Pakiet kapłana", "Pakiet eksploratora"],
+        ["Tarcza", "Święty symbol"]
+      ]
+    },
     "level_1_features": [
       {
         "name": {
@@ -217,12 +250,20 @@
         "1": 2
       }
     },
-    "starting_equipment_options": [
-      ["szabla", "długi miecz", "dowolna broń prosta"],
-      ["pakiet dyplomaty", "pakiet artysty"],
-      ["lutnia", "dowolny instrument muzyczny"],
-      ["skórzana zbroja", "sztylet"]
-    ],
+    "starting_equipment_options": {
+      "en": [
+        ["Saber", "Longsword", "Any simple weapon"],
+        ["Diplomat packet", "Artist packet"],
+        ["Lute", "Any musical instrument"],
+        ["Leather armor", "Dagger"]
+      ],
+      "pl": [
+        ["Szabla", "Długi miecz", "Dowolna broń prosta"],
+        ["Pakiet dyplomaty", "Pakiet artysty"],
+        ["Lutnia", "Dowolny instrument muzyczny"],
+        ["Skórzana zbroja", "Sztylet"]
+      ]
+    },
     "level_1_features": [
       {
         "name": {

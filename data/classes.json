@@ -6,6 +6,7 @@
       "pl": "Wojownik"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wojownicy to mistrzowie walki, biegli w różnych stylach bojowych i uzbrojeniu."
     },
     "hit_die": 10,
@@ -27,6 +28,7 @@
           "pl": "Styl Walki"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Wybierz styl walki, który wpływa na twoje zdolności bojowe."
         }
       },
@@ -36,6 +38,7 @@
           "pl": "Drugi Oddech"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Raz na turę możesz odzyskać punkty życia równe 1k10 + poziom klasy."
         }
       }
@@ -48,6 +51,7 @@
       "pl": "Łotrzyk"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Łotrzyki to mistrzowie podstępu, infiltracji i precyzyjnych ataków."
     },
     "hit_die": 8,
@@ -69,6 +73,7 @@
           "pl": "Atak z Zaskoczenia"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Zadajesz dodatkowe obrażenia, gdy masz przewagę lub cel jest zajęty."
         }
       },
@@ -78,6 +83,7 @@
           "pl": "Żargon Złodziei"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Znasz tajny język używany przez złodziei i przestępców."
         }
       }
@@ -90,6 +96,7 @@
       "pl": "Czarodziej"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Czarodzieje to mistrzowie magii opartej na nauce i wiedzy tajemnej."
     },
     "hit_die": 6,
@@ -118,6 +125,7 @@
           "pl": "Rzucanie Czarów"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Możesz rzucać czary i korzystać z księgi czarów."
         }
       },
@@ -127,6 +135,7 @@
           "pl": "Magiczne Odzyskanie"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Raz dziennie możesz odzyskać część zużytych slotów czarów."
         }
       }
@@ -139,6 +148,7 @@
       "pl": "Kleryk"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Klerycy są sługami bóstw, władają magią boską i walczą w ich imieniu."
     },
     "hit_die": 8,
@@ -168,6 +178,7 @@
           "pl": "Boska Dziedzina"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Wybierasz dziedzinę boską, która nadaje dodatkowe czary i zdolności."
         }
       },
@@ -177,6 +188,7 @@
           "pl": "Rzucanie Czarów"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Zyskujesz dostęp do czarów boskich i możesz je rzucać według zasad klasy."
         }
       }
@@ -189,6 +201,7 @@
       "pl": "Bard"
     },
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Bardowie to artyści, muzycy i opowiadacze historii, którzy czerpią moc z inspiracji."
     },
     "hit_die": 8,
@@ -217,6 +230,7 @@
           "pl": "Inspiracja Barda"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Raz na turę możesz dodać 1k6 do rzutu ataku, testu umiejętności lub rzutu obronnego sojusznika."
         }
       },
@@ -226,6 +240,7 @@
           "pl": "Rzucanie Czarów"
         },
         "description": {
+          "en": "MISSING TRANSLATION",
           "pl": "Zyskujesz dostęp do magii barda i możesz rzucać czary."
         }
       }

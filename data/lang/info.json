@@ -84,5 +84,22 @@
   "error_too_many_skills_chosen": {
     "en": "You can choose max 3 additional skills",
     "pl": "Możesz wybrać maksymalnie 3 dodatkowe umiejętności."
+  },
+
+  "choose_spells": {
+    "en": "Choose ; 0-level spells and ; 1-level spells",
+    "pl": "Wybierz ; czary 0 poziomu i ; czary 1 poziomu"
+  },
+  "level": {
+    "en": "Level",
+    "pl": "Poziom"
+  },
+  "error_wrong_cantrip_amount": {
+    "en": "Please, choose exactly ; 0-level spells",
+    "pl": "Proszę wybrać dokładnie ; czary 0 poziomu."
+  },
+  "error_wrong_spell_amount": {
+    "en": "Please, choose exactly ; 1-level spells",
+    "pl": "Proszę wybrać dokładnie ; czary 1 poziomu."
   }
 }

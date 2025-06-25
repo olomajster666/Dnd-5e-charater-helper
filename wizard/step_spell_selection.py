@@ -1,5 +1,5 @@
 import tkinter as tk
-from utils.json_loader import load_json
+import utils.language_helper as lh
 
 class StepSpellSelection(tk.Frame):
     def __init__(self, master, state):
@@ -8,7 +8,7 @@ class StepSpellSelection(tk.Frame):
         self.state = state
 
         # Load spell data
-        self.spells = load_json("spells.json")
+        self.spells = lh.spells
 
         # Get class and stats from state
         class_data = self.state.get("class") or {}
@@ -29,7 +29,10 @@ class StepSpellSelection(tk.Frame):
         print(f"  State content: {self.state.data}")
 
         # UI Elements
-        tk.Label(self, text=f"Wybierz {self.max_cantrips} czary 0 poziomu i {self.max_level_1} czary 1 poziomu", font=("Arial", 16)).pack(pady=10)
+        info : str = lh.getInfo("choose_spells")
+        info = info.replace(";", f"{self.max_cantrips}", 1)
+        info = info.replace(";", f"{self.max_level_1}", 1)
+        tk.Label(self, text=info, font=("Arial", 16)).pack(pady=10)
         self.cantrip_vars = {}
         self.level_1_vars = {}
         self.cantrip_frame = tk.Frame(self)
@@ -42,22 +45,22 @@ class StepSpellSelection(tk.Frame):
         level_1_spells = [s for s in self.spells if s["level"] == 1 and self.current_class in s["classes"]]
         for spell in cantrips:
             var = tk.BooleanVar()
-            self.cantrip_vars[spell["name"]] = var
-            cb = tk.Checkbutton(self.cantrip_frame, text=f"{spell['name']} (Poziom 0)", variable=var,
-                              command=lambda s=spell["name"]: self.validate_selection(s, "cantrip"))
+            self.cantrip_vars[lh.getFromDict(spell["name"])] = var
+            cb = tk.Checkbutton(self.cantrip_frame, text=f"{lh.getFromDict(spell['name'])} ({lh.getInfo('level')} 0)", variable=var,
+                              command=lambda s=lh.getFromDict(spell["name"]): self.validate_selection(s, "cantrip"))
             cb.pack(anchor="w")
         for spell in level_1_spells:
             var = tk.BooleanVar()
-            self.level_1_vars[spell["name"]] = var
-            cb = tk.Checkbutton(self.level_1_frame, text=f"{spell['name']} (Poziom 1)", variable=var,
-                              command=lambda s=spell["name"]: self.validate_selection(s, "level_1"))
+            self.level_1_vars[lh.getFromDict(spell["name"])] = var
+            cb = tk.Checkbutton(self.level_1_frame, text=f"{lh.getFromDict(spell['name'])} ({lh.getInfo('level')} 1)", variable=var,
+                              command=lambda s=lh.getFromDict(spell["name"]): self.validate_selection(s, "level_1"))
             cb.pack(anchor="w")
 
         # Navigation
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text="Wstecz", command=self.master.previous_step).pack(side="left", padx=10)
-        tk.Button(nav, text="Dalej", command=self.save_and_continue).pack(side="right", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
 
     def get_max_cantrips(self, stats):
         return 3  # Default for level 1, adjust based on class progression later
@@ -81,10 +84,14 @@ class StepSpellSelection(tk.Frame):
         selected_cantrips = [name for name, var in self.cantrip_vars.items() if var.get()]
         selected_level_1 = [name for name, var in self.level_1_vars.items() if var.get()]
         if len(selected_cantrips) != self.max_cantrips:
-            tk.messagebox.showerror("Błąd", f"Proszę wybrać dokładnie {self.max_cantrips} czary 0 poziomu.")
+            info : str = lh.getInfo("error_wrong_cantrip_amount")
+            info = info.replace(";", f"{self.max_cantrips}")
+            tk.messagebox.showerror(lh.getInfo("error"), info)
             return
         if len(selected_level_1) != self.max_level_1:
-            tk.messagebox.showerror("Błąd", f"Proszę wybrać dokładnie {self.max_level_1} czary 1 poziomu.")
+            info: str = lh.getInfo("error_wrong_spell_amount")
+            info = info.replace(";", f"{self.max_level_1}")
+            tk.messagebox.showerror(lh.getInfo("error"), info)
             return
         self.state.set("spells", selected_cantrips + selected_level_1)
         self.master.next_step()

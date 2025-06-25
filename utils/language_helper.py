@@ -17,10 +17,12 @@ abilities = jl.load_json("lang/abilities.json")
 
 
 def getFromDict(d : dict):
-    return d.get(chosenLanguage, "en")
+    if(not d.keys().__contains__("en")):
+        raise KeyError
+    return d.get(chosenLanguage, d.get("en"))
 
 def getInfo(key : str):
-    return info[key].get(chosenLanguage, "en")
+    return info[key].get(chosenLanguage, info[key].get("en"))
 
 def getGenders():
     return genders.get(chosenLanguage, "en")

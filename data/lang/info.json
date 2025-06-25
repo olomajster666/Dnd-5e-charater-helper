@@ -61,11 +61,11 @@
     "pl": "Wprowadź wyniki rzutów (3k6 lub 4k6 drop lowest)"
   },
   "error_option_manual": {
-    "en": "Make sure that all values are integers between 1 and 20",
+    "en": "Make sure that all values are integers between 1 and 20.",
     "pl": "Upewnij się, że wszystkie wartości są liczbami całkowitymi między 1 a 20."
   },
   "error_option_standard": {
-    "en": "You have to assign each value only once",
+    "en": "You have to assign each value only once.",
     "pl": "Musisz przypisać każdą wartość tylko raz."
   },
 
@@ -78,11 +78,11 @@
     "pl": "Wybierz 3 dodatkowe umiejętności"
   },
   "no_skills_to_choose": {
-    "en": "No additional skills to choose",
+    "en": "No additional skills to choose.",
     "pl": "Brak dodatkowych umiejętności do wyboru."
   },
   "error_too_many_skills_chosen": {
-    "en": "You can choose max 3 additional skills",
+    "en": "You can choose max 3 additional skills.",
     "pl": "Możesz wybrać maksymalnie 3 dodatkowe umiejętności."
   },
 
@@ -95,11 +95,36 @@
     "pl": "Poziom"
   },
   "error_wrong_cantrip_amount": {
-    "en": "Please, choose exactly ; 0-level spells",
+    "en": "Please, choose exactly ; 0-level spells.",
     "pl": "Proszę wybrać dokładnie ; czary 0 poziomu."
   },
   "error_wrong_spell_amount": {
-    "en": "Please, choose exactly ; 1-level spells",
+    "en": "Please, choose exactly ; 1-level spells.",
     "pl": "Proszę wybrać dokładnie ; czary 1 poziomu."
+  },
+
+  "error_class_not_chosen": {
+    "en": "Error: Class not chosen.",
+    "pl": "Błąd: Nie wybrano klasy."
+  },
+  "background_equipment": {
+    "en": "Equipment from background (already owned):",
+    "pl": "Wyposażenie z tła (już posiadane):"
+  },
+  "background_equipment_missing": {
+    "en": "No equipment from background.",
+    "pl": "Brak wyposażenia z tła."
+  },
+  "choose_equipment_for_class": {
+    "en": "Choose equipment for class:",
+    "pl": "Wybierz wyposażenie dla klasy:"
+  },
+  "choose_option": {
+    "en": "Choose option",
+    "pl": "Wybierz opcję"
+  },
+  "error_not_all_options_selected": {
+    "en": "Please, choose one option from each equipment category.",
+    "pl": "Proszę wybrać jedną opcję z każdej grupy wyposażenia."
   }
 }

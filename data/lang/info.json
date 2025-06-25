@@ -12,6 +12,14 @@
     "en": "Back",
     "pl": "Wstecz"
   },
+  "button_skip": {
+    "en": "Skip",
+    "pl": "Pomiń"
+  },
+  "button_finish": {
+    "en": "Finish",
+    "pl": "Zakończ"
+  },
 
   "choose_character_name": {
     "en": "Character name",
@@ -126,5 +134,67 @@
   "error_not_all_options_selected": {
     "en": "Please, choose one option from each equipment category.",
     "pl": "Proszę wybrać jedną opcję z każdej grupy wyposażenia."
+  },
+
+  "add_character_image": {
+    "en": "Add character image (optional):",
+    "pl": "Dodaj obrazek postaci (opcjonalne):"
+  },
+  "choose_image": {
+    "en": "Choose image",
+    "pl": "Wybierz obrazek"
+  },
+
+  "created_character_display": {
+    "en": "Created Character Display:",
+    "pl": "Podgląd Stworzonej Postaci:"
+  },
+  "no_spells": {
+    "en": "No spells",
+    "pl": "Brak zaklęć"
+  },
+  "no_equipment": {
+    "en": "No equipment",
+    "pl": "Brak wyposażenia"
+  },
+  "character_display": {
+    "en": "Character Display:",
+    "pl": "Podgląd Postaci:"
+  },
+  "name_and_race": {
+    "en": "Name and Race:",
+    "pl": "Imię i Rasa:"
+  },
+  "class_and_level": {
+    "en": "Class and Level:",
+    "pl": "Klasa i Poziom:"
+  },
+  "background": {
+    "en": "Background:",
+    "pl": "Tło:"
+  },
+  "stats_and_modifiers": {
+    "en": "Statistics and Modifiers:",
+    "pl": "Statystyki i Modyfikatory:"
+  },
+  "health": {
+    "en": "Health",
+    "pl": "Zdrowie"
+  },
+  "spells": {
+    "en": "Spells",
+    "pl": "Zaklęcia"
+  },
+  "abilities": {
+    "en": "Abilities",
+    "pl": "Zdolności"
+  },
+  "no_abilities": {
+    "en": "No abilities",
+    "pl": "Brak zdolności"
+  },
+  "equipment": {
+    "en": "Equipment",
+    "pl": "Wyposażenie"
   }
 }

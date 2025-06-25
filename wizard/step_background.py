@@ -13,7 +13,7 @@ class StepBackground(tk.Frame):
 
         tk.Label(self, text=lh.getInfo("choose_character_background"), font=("Arial", 16)).pack(pady=10)
         for bg in self.background_options.values():
-            name = bg["name"][lh.chosenLanguage]
+            name = lh.getFromDict(bg["name"])
             tk.Radiobutton(self, text=name, variable=self.bg_var, value=bg["id"]).pack()
 
         nav = tk.Frame(self)

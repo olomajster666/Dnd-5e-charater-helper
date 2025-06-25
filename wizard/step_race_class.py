@@ -18,12 +18,12 @@ class StepRaceClass(tk.Frame):
 
         tk.Label(self, text=lh.getInfo("choose_race"), font=("Arial", 16)).pack(pady=10)
         for race in self.race_options.values():
-            name = race["name"][lh.chosenLanguage]
+            name = lh.getFromDict(race["name"])
             tk.Radiobutton(self, text=name, variable=self.race_var, value=race["id"]).pack()
 
         tk.Label(self, text=lh.getInfo("choose_class"), font=("Arial", 16)).pack(pady=10)
         for cls in self.class_options.values():
-            name = cls["name"][lh.chosenLanguage]
+            name = lh.getFromDict(cls["name"])
             tk.Radiobutton(self, text=name, variable=self.class_var, value=cls["id"]).pack()
 
         nav = tk.Frame(self)

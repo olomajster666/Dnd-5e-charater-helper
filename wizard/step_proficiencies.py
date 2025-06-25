@@ -1,5 +1,5 @@
 import tkinter as tk
-from utils.json_loader import load_json
+import utils.language_helper as lh
 
 class StepProficiencies(tk.Frame):
     def __init__(self, master, state):
@@ -8,10 +8,10 @@ class StepProficiencies(tk.Frame):
         self.state = state
 
         # Load data
-        self.proficiencies = load_json("proficiencies.json")
-        self.classes = {cls["id"]: cls for cls in load_json("classes.json")}
-        self.backgrounds = {bg["id"]: bg for bg in load_json("backgrounds.json")}
-        self.races = {race["id"]: race for race in load_json("races.json")}
+        self.proficiencies = lh.proficiencies
+        self.classes = {cls["id"]: cls for cls in lh.classes}
+        self.backgrounds = {bg["id"]: bg for bg in lh.backgrounds}
+        self.races = {race["id"]: race for race in lh.races}
 
         # Get current selections with manual fallback
         class_data = self.state.get("class") or {}
@@ -34,28 +34,28 @@ class StepProficiencies(tk.Frame):
         print(f"  Available choices: {self.available_choices}")
 
         # UI Elements
-        tk.Label(self, text="Umiejętności (domyślne)", font=("Arial", 16)).pack(pady=10)
+        tk.Label(self, text=lh.getInfo("default_skills"), font=("Arial", 16)).pack(pady=10)
         default_frame = tk.Frame(self)
         default_frame.pack()
         for prof_id in self.default_profs:
             prof = next(p for p in self.proficiencies if p["id"] == prof_id)
-            tk.Label(default_frame, text=prof["name"]["pl"], fg="gray").pack(anchor="w")
+            tk.Label(default_frame, text=lh.getFromDict(prof["name"]), fg="gray").pack(anchor="w")
 
-        tk.Label(self, text="Wybierz 3 dodatkowe umiejętności", font=("Arial", 16)).pack(pady=10)
+        tk.Label(self, text=lh.getInfo("choose_skills"), font=("Arial", 16)).pack(pady=10)
         self.skill_vars = {prof["id"]: tk.BooleanVar() for prof in self.available_choices}
         self.skill_frame = tk.Frame(self)
         self.skill_frame.pack()
 
         if not self.available_choices:
-            tk.Label(self.skill_frame, text="Brak dodatkowych umiejętności do wyboru.").pack()
+            tk.Label(self.skill_frame, text=lh.getInfo("no_skills_to_choose")).pack()
         else:
             self.update_skill_checkboxes()
 
         # Navigation
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text="Wstecz", command=self.master.previous_step).pack(side="left", padx=10)
-        tk.Button(nav, text="Dalej", command=self.save_and_continue).pack(side="right", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
 
     def get_proficiencies(self):
         default_profs = set()
@@ -87,7 +87,7 @@ class StepProficiencies(tk.Frame):
             widget.destroy()
         selected_count = sum(var.get() for var in self.skill_vars.values())
         for prof in self.available_choices:
-            cb = tk.Checkbutton(self.skill_frame, text=prof["name"]["pl"], variable=self.skill_vars[prof["id"]],
+            cb = tk.Checkbutton(self.skill_frame, text=lh.getFromDict(prof["name"]), variable=self.skill_vars[prof["id"]],
                               command=lambda p=prof["id"]: self.validate_selection(p))
             cb.pack(anchor="w")
         self.validate_selection()  # Initial validation
@@ -103,7 +103,7 @@ class StepProficiencies(tk.Frame):
     def save_and_continue(self):
         selected_profs = [prof for prof, var in self.skill_vars.items() if var.get()]
         if len(selected_profs) > 3:  # Changed from 2 to 3
-            tk.messagebox.showerror("Błąd", "Możesz wybrać maksymalnie 3 dodatkowe umiejętności.")
+            tk.messagebox.showerror(lh.getInfo("error"), lh.getInfo("error_too_many_skills_chosen"))
             return
 
         current_profs = self.state.get("proficiencies", [])

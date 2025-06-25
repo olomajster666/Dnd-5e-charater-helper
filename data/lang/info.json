@@ -67,5 +67,22 @@
   "error_option_standard": {
     "en": "You have to assign each value only once",
     "pl": "Musisz przypisać każdą wartość tylko raz."
+  },
+
+  "default_skills": {
+    "en": "Skills (default)",
+    "pl": "Umiejętności (domyślne)"
+  },
+  "choose_skills": {
+    "en": "Choose 3 additional skills",
+    "pl": "Wybierz 3 dodatkowe umiejętności"
+  },
+  "no_skills_to_choose": {
+    "en": "No additional skills to choose",
+    "pl": "Brak dodatkowych umiejętności do wyboru."
+  },
+  "error_too_many_skills_chosen": {
+    "en": "You can choose max 3 additional skills",
+    "pl": "Możesz wybrać maksymalnie 3 dodatkowe umiejętności."
   }
 }

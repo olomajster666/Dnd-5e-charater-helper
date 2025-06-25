@@ -1,7 +1,9 @@
 [
   {
-    "name": "Światło",
-    "english_name": "Light",
+    "name": {
+      "en": "Light",
+      "pl": "Światło"
+    },
     "level": 0,
     "classes": ["cleric", "wizard"],
     "description": {
@@ -13,8 +15,10 @@
     "duration": "1 godzina"
   },
   {
-    "name": "Wstrząs",
-    "english_name": "Shocking Grasp",
+    "name": {
+      "en": "Shocking Grasp",
+      "pl": "Wstrząs"
+    },
     "level": 0,
     "classes": ["wizard"],
     "description": {
@@ -26,8 +30,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Prowadzenie",
-    "english_name": "Guidance",
+    "name": {
+      "en": "Guidance",
+      "pl": "Prowadzenie"
+    },
     "level": 0,
     "classes": ["cleric"],
     "description": {
@@ -39,8 +45,10 @@
     "duration": "Konsumpcja, 1 minuta"
   },
   {
-    "name": "Gryźliwa Obraza",
-    "english_name": "Vicious Mockery",
+    "name": {
+      "en": "Vicious Mockery",
+      "pl": "Gryźliwa Obraza"
+    },
     "level": 0,
     "classes": ["bard"],
     "description": {
@@ -52,8 +60,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Grzmot",
-    "english_name": "Thunderclap",
+    "name": {
+      "en": "Thunderclap",
+      "pl": "Grzmot"
+    },
     "level": 0,
     "classes": ["bard", "wizard"],
     "description": {
@@ -65,8 +75,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Święty płomień",
-    "english_name": "Sacred Flame",
+    "name": {
+      "en": "Sacred Flame",
+      "pl": "Święty płomień"
+    },
     "level": 0,
     "classes": ["cleric"],
     "description": {
@@ -78,8 +90,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Prestidigitacja",
-    "english_name": "Prestidigitation",
+    "name": {
+      "en": "Prestidigitation",
+      "pl": "Prestidigitacja"
+    },
     "level": 0,
     "classes": ["wizard", "bard"],
     "description": {
@@ -91,8 +105,10 @@
     "duration": "1 godzina"
   },
   {
-    "name": "Drobna iluzja",
-    "english_name": "Minor illusion",
+    "name": {
+      "en": "Minor illusion",
+      "pl": "Drobna iluzja"
+    },
     "level": 0,
     "classes": ["bard", "wizard"],
     "description": {
@@ -104,8 +120,10 @@
     "duration": "1 minuta"
   },
   {
-    "name": "Wyleczenie ran",
-    "english_name": "Cure Wounds",
+    "name": {
+      "en": "Cure Wounds",
+      "pl": "Wyleczenie ran"
+    },
     "level": 1,
     "classes": ["cleric", "bard"],
     "description": {
@@ -117,8 +135,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Magiczne pociski",
-    "english_name": "Magic Missile",
+    "name": {
+      "en": "Magic Missile",
+      "pl": "Magiczne pociski"
+    },
     "level": 1,
     "classes": ["wizard"],
     "description": {
@@ -130,8 +150,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Błogosławieństwo",
-    "english_name": "Bless",
+    "name": {
+      "en": "Bless",
+      "pl": "Błogosławieństwo"
+    },
     "level": 1,
     "classes": ["cleric"],
     "description": {
@@ -143,8 +165,10 @@
     "duration": "Koncentracja, 1 minuta"
   },
   {
-    "name": "Kolorowy spray",
-    "english_name": "Color Spray",
+    "name": {
+      "en": "Color Spray",
+      "pl": "Kolorowy spray"
+    },
     "level": 1,
     "classes": ["wizard"],
     "description": {
@@ -156,8 +180,10 @@
     "duration": "Koncentracja, 1 minuta"
   },
   {
-    "name": "Urok",
-    "english_name": "Charm Person",
+    "name": {
+      "en": "Charm Person",
+      "pl": "Urok"
+    },
     "level": 1,
     "classes": ["bard", "wizard"],
     "description": {
@@ -169,8 +195,10 @@
     "duration": "1 godzina"
   },
   {
-    "name": "Wykrycie magii",
-    "english_name": "Detect Magic",
+    "name": {
+      "en": "Detect Magic",
+      "pl": "Wykrycie magii"
+    },
     "level": 1,
     "classes": ["cleric", "wizard"],
     "description": {
@@ -182,8 +210,10 @@
     "duration": "Koncentracja, 10 minut"
   },
   {
-    "name": "Słowo uzdrowienia",
-    "english_name": "Healing word",
+    "name": {
+      "en": "Healing word",
+      "pl": "Słowo uzdrowienia"
+    },
     "level": 1,
     "classes": ["cleric", "bard"],
     "description": {
@@ -195,8 +225,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Czarodziejska broń",
-    "english_name": "Spiritual Weapon",
+    "name": {
+      "en": "Spiritual Weapon",
+      "pl": "Duchowa broń"
+    },
     "level": 2,
     "classes": ["cleric"],
     "description": {
@@ -208,8 +240,10 @@
     "duration": "Koncentracja, 1 minuta"
   },
   {
-    "name": "Niewidzialność",
-    "english_name": "Invisibility",
+    "name": {
+      "en": "Invisibility",
+      "pl": "Niewidzialność"
+    },
     "level": 2,
     "classes": ["bard", "wizard"],
     "description": {
@@ -221,8 +255,10 @@
     "duration": "1 godzina"
   },
   {
-    "name": "Modlitwa uzdrowienia",
-    "english_name": "Prayer of Healing",
+    "name": {
+      "en": "Prayer of Healing",
+      "pl": "Modlitwa uzdrowienia"
+    },
     "level": 2,
     "classes": ["cleric"],
     "description": {
@@ -234,8 +270,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Rozbicie",
-    "english_name": "Shatter",
+    "name": {
+      "en": "Shatter",
+      "pl": "Rozbicie"
+    },
     "level": 2,
     "classes": ["bard", "wizard"],
     "description": {
@@ -247,8 +285,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Cisza",
-    "english_name": "Silence",
+    "name": {
+      "en": "Silence",
+      "pl": "Cisza"
+    },
     "level": 2,
     "classes": ["cleric", "bard"],
     "description": {
@@ -260,8 +300,10 @@
     "duration": "Koncentracja, 10 minut"
   },
   {
-    "name": "Piorun",
-    "english_name": "Lightning Bolt",
+    "name": {
+      "en": "Lightning Bolt",
+      "pl": "Piorun"
+    },
     "level": 3,
     "classes": ["wizard"],
     "description": {
@@ -273,8 +315,10 @@
     "duration": "Natychmiastowe"
   },
   {
-    "name": "Ochrona przed energią",
-    "english_name": "Protection from Energy",
+    "name": {
+      "en": "Protection from Energy",
+      "pl": "Ochrona przed energią"
+    },
     "level": 3,
     "classes": ["cleric", "wizard"],
     "description": {
@@ -286,8 +330,10 @@
     "duration": "Koncentracja, 1 godzina"
   },
   {
-    "name": "Heroizm",
-    "english_name": "Heroism",
+    "name": {
+      "en": "Heroism",
+      "pl": "Heroizm"
+    },
     "level": 1,
     "classes": ["bard"],
     "description": {
@@ -299,8 +345,10 @@
     "duration": "Koncentracja, 1 minuta"
   },
   {
-    "name": "Rozproszenie magii",
-    "english_name": "Dispel magic",
+    "name": {
+      "en": "Dispel magic",
+      "pl": "Rozproszenie magii"
+    },
     "level": 3,
     "classes": ["cleric", "bard", "wizard"],
     "description": {

@@ -1,0 +1,24 @@
+{
+  "error": {
+    "en": "Error",
+    "pl": "Błąd"
+  },
+
+  "button_continue": {
+    "en": "Continue",
+    "pl": "Dalej"
+  },
+
+  "choose_character_name": {
+    "en": "Character name",
+    "pl": "Imię postaci"
+  },
+  "choose_character_gender": {
+    "en": "Character gender",
+    "pl": "Płeć postaci"
+  },
+  "error_character_name_wrong": {
+    "en": "Please, provide character name before going further.",
+    "pl": "Proszę podać imię postaci przed kontynuowaniem."
+  }
+}

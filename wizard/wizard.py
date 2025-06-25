@@ -9,12 +9,14 @@ from .step_spell_selection import StepSpellSelection
 from .step_equipment import StepEquipment
 from .step_image import StepImage
 from .step_character_display import StepCharacterDisplay
+from .step_language import StepLanguage
 
 class Wizard(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
         self.state = CharacterState()
         self.steps = [
+            StepLanguage,
             StepNameGender,
             StepRaceClass,
             StepBackground,

@@ -5,6 +5,7 @@
     "level": 0,
     "classes": ["cleric", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Dotykając przedmiotu, sprawiasz, że emituje jasne światło w promieniu 20 stóp przez 1 godzinę."
     },
     "range": "Dotyk",
@@ -17,6 +18,7 @@
     "level": 0,
     "classes": ["wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Dotykasz stworzenia, zadając 1k8 obrażeń od błyskawic i uniemożliwiając mu reakcję, jeśli nie nosi metalowego pancerza."
     },
     "range": "Dotyk",
@@ -29,6 +31,7 @@
     "level": 0,
     "classes": ["cleric"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Dotykasz stworzenia, dając mu +1d4 do jednego testu zdolności w ciągu 1 minuty."
     },
     "range": "Dotyk",
@@ -41,6 +44,7 @@
     "level": 0,
     "classes": ["bard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Obraźliwymi słowami zadajesz 1k4 obrażeń psychicznych i dajesz przewagę na kolejny rzut na atak przeciw celowi."
     },
     "range": "60 stóp",
@@ -53,6 +57,7 @@
     "level": 0,
     "classes": ["bard", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wypuszczasz grzmot, zadający 1k6 obrażeń od gromu w promieniu 5 stóp (pół przy udanym rzucie obronnym zwinności)."
     },
     "range": "5 stóp",
@@ -65,6 +70,7 @@
     "level": 0,
     "classes": ["cleric"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wypuszczasz płomień, zadający 1k8 obrażeń od ognia (pół przy udanym rzucie obronnym zwinności)."
     },
     "range": "60 stóp",
@@ -77,6 +83,7 @@
     "level": 0,
     "classes": ["wizard", "bard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Tworzysz drobne efekty magiczne, takie jak ciepło, światło czy czyste ubranie, trwające 1 godzinę."
     },
     "range": "10 stóp",
@@ -89,6 +96,7 @@
     "level": 0,
     "classes": ["bard", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Tworzysz iluzję dźwięku lub obrazu o wielkości 5 stóp na 1 minutę."
     },
     "range": "30 stóp",
@@ -101,6 +109,7 @@
     "level": 1,
     "classes": ["cleric", "bard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Dotykasz stworzenia i leczysz je, przywracając (1k8 + modyfikator mądrości) zdrowia."
     },
     "range": "Dotyk",
@@ -113,6 +122,7 @@
     "level": 1,
     "classes": ["wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wypuszczasz 3 pociski energii, z których każdy zadaje (1k4 + 1) obrażeń w wybranym celu."
     },
     "range": "120 stóp",
@@ -125,6 +135,7 @@
     "level": 1,
     "classes": ["cleric"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Błogosławisz do 3 stworzeń, dając im +1d4 do rzutów na atak i rzuty obronne przez 1 minutę."
     },
     "range": "30 stóp",
@@ -137,6 +148,7 @@
     "level": 1,
     "classes": ["wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wypuszczasz rozbłysk kolorowego światła, oślepiając stworzenia o łącznej liczbie PZ do 25 na 1 minutę."
     },
     "range": "15 stóp",
@@ -149,6 +161,7 @@
     "level": 1,
     "classes": ["bard", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Zauroczasz jedną humanoidalną istotę, która traktuje cię przyjaźnie przez 1 godzinę."
     },
     "range": "30 stóp",
@@ -161,6 +174,7 @@
     "level": 1,
     "classes": ["cleric", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wyczuwasz magię w promieniu 30 stóp przez 10 minut, widząc jej aurę."
     },
     "range": "Self (30-foot radius)",
@@ -173,6 +187,7 @@
     "level": 1,
     "classes": ["cleric", "bard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wymawiasz magiczne słowo, lecząc stworzenie w 60 stóp o (1k4 + modyfikator mądrości) zdrowia."
     },
     "range": "60 stóp",
@@ -185,6 +200,7 @@
     "level": 2,
     "classes": ["cleric"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Przywołujesz broń duchową, która atakuje wybrane cele, zadając 1k8 obrażeń od siły na trafienie."
     },
     "range": "60 stóp",
@@ -197,6 +213,7 @@
     "level": 2,
     "classes": ["bard", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Uczyniasz jedno stworzenie niewidzialnym na 1 godzinę, aż zaatakuje lub rzuci czar."
     },
     "range": "Dotyk",
@@ -209,6 +226,7 @@
     "level": 2,
     "classes": ["cleric"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Leczysz do 6 stworzeń w 30 stóp, przywracając każdemu (2k8 + modyfikator mądrości) zdrowia."
     },
     "range": "30 stóp",
@@ -221,6 +239,7 @@
     "level": 2,
     "classes": ["bard", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wybuch dźwięku zadaje 3k8 obrażeń od gromu w promieniu 10 stóp (pół przy udanym rzucie obronnym)."
     },
     "range": "60 stóp",
@@ -233,6 +252,7 @@
     "level": 2,
     "classes": ["cleric", "bard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Tworzysz 20-stopową sferę ciszy, uniemożliwiając rzucanie czarów z werbalnymi komponentami."
     },
     "range": "120 stóp",
@@ -245,6 +265,7 @@
     "level": 3,
     "classes": ["wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Wypuszczasz błyskawicę w linii 100 stóp, zadającą 8k6 obrażeń od błyskawic (pół przy udanym rzucie obronnym)."
     },
     "range": "100 stóp / 5 stóp szerokości",
@@ -257,6 +278,7 @@
     "level": 3,
     "classes": ["cleric", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Dajesz jednemu stworzeniu odporność na obrażenia od wybranego typu energii przez 1 godzinę."
     },
     "range": "Dotyk",
@@ -269,6 +291,7 @@
     "level": 1,
     "classes": ["bard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Inspirujesz stworzenie, dając mu tymczasowe zdrowie równe (poziom zaklęcia + twój poziom) i odporność na strach."
     },
     "range": "Dotyk",
@@ -281,6 +304,7 @@
     "level": 3,
     "classes": ["cleric", "bard", "wizard"],
     "description": {
+      "en": "MISSING TRANSLATION",
       "pl": "Zrywasz jedno zaklęcie lub efekt magiczny na wybranym celu w 120 stóp."
     },
     "range": "120 stóp",

@@ -1,4 +1,6 @@
 import tkinter as tk
+
+import menu.start_menu
 import utils.language_helper as lh
 from tkinter import messagebox
 
@@ -7,6 +9,8 @@ class StepNameGender(tk.Frame):
         super().__init__(master)
         self.master = master
         self.state = state
+
+        self.quitToMenuVar = tk.BooleanVar()
 
         tk.Label(self, text=lh.getInfo("choose_character_name"), font=("Arial", 16)).pack(pady=10)
         self.name_entry = tk.Entry(self)
@@ -19,6 +23,7 @@ class StepNameGender(tk.Frame):
 
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
+        tk.Button(nav, text=lh.getInfo("main_menu"), command=self.backToMenu).pack()
         tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack()
 
     def save_and_continue(self):
@@ -30,3 +35,11 @@ class StepNameGender(tk.Frame):
         self.state.set("name", name)
         self.state.set("gender", self.gender_var.get())
         self.master.next_step()
+
+    def backToMenu(self):
+        result = messagebox.askquestion(lh.getInfo("warning"), lh.getInfo("u_sure"))
+
+        if(result == 'yes' or result == True):
+            app = menu.start_menu.StartMenu(self.master)
+            self.destroy()
+            app.pack(side="top", expand=True, fill="both")

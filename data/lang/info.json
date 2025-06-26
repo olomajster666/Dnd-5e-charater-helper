@@ -3,6 +3,15 @@
     "en": "Error",
     "pl": "Błąd"
   },
+  "warning": {
+    "en": "Warning",
+    "pl": "Ostrzeżenie"
+  },
+
+  "u_sure": {
+    "en": "Your character's data will be lost! Are you sure you want to go back to the menu?",
+    "pl": "Dane twojej postaci zostaną utracone! Czy jesteś pewien, że chcesz wyjść do menu?"
+  },
 
   "button_continue": {
     "en": "Continue",

@@ -1,12 +1,13 @@
 import tkinter as tk
-from wizard.wizard import Wizard
+
+from menu.start_menu import StartMenu
 
 def main():
     root = tk.Tk()
     root.title("Kreator Postaci D&D 5e")
     root.geometry("800x600")
 
-    app = Wizard(root)
+    app = StartMenu(root)
     app.pack(expand=True, fill="both")
 
     root.mainloop()

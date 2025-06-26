@@ -20,6 +20,27 @@
     "en": "Finish",
     "pl": "Zakończ"
   },
+  "button_new_character": {
+    "en": "New character",
+    "pl": "Nowa postać"
+  },
+  "button_options": {
+    "en": "Options",
+    "pl": "Opcje"
+  },
+
+  "main_menu": {
+    "en": "Main menu",
+    "pl": "Menu główne"
+  },
+  "options_menu": {
+    "en": "Options",
+    "pl": "Opcje"
+  },
+  "choose_language": {
+    "en": "Choose language",
+    "pl": "Wybierz język"
+  },
 
   "choose_character_name": {
     "en": "Character name",

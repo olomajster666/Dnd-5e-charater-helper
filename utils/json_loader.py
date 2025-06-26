@@ -4,6 +4,7 @@ import os
 
 def load_json(filename):
     path = os.path.join("data", filename)
+    print(path)
     with open(path, encoding="utf-8") as f:
         return json.load(f)
 
@@ -23,3 +24,10 @@ def loadLanguageOptions():
     except:
         writeLanguageOptions()
         return loadLanguageOptions()
+
+
+def loadSavedCharacter(fileName : str):
+    return load_json("saved_characters/" + fileName)
+
+def getSavedCharacterList():
+    return [f for f in os.listdir(os.path.join("data", "saved_characters")) if os.path.isfile(os.path.join("data", f"saved_characters/{f}")) and f.__contains__(".json")]

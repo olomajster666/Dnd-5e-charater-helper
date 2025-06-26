@@ -24,6 +24,10 @@
     "en": "New character",
     "pl": "Nowa postać"
   },
+  "button_view_characters": {
+    "en": "Saved characters",
+    "pl": "Zapisane postacie"
+  },
   "button_options": {
     "en": "Options",
     "pl": "Opcje"
@@ -40,6 +44,10 @@
   "choose_language": {
     "en": "Choose language",
     "pl": "Wybierz język"
+  },
+  "saved_characters": {
+    "en": "Saved characters",
+    "pl": "Zapisane postacie"
   },
 
   "choose_character_name": {

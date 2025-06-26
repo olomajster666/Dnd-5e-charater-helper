@@ -23,8 +23,8 @@ class StepNameGender(tk.Frame):
 
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("main_menu"), command=self.backToMenu).pack()
-        tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack()
+        tk.Button(nav, text=lh.getInfo("main_menu"), command=self.backToMenu).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="left", padx=10)
 
     def save_and_continue(self):
         name = self.name_entry.get().strip()

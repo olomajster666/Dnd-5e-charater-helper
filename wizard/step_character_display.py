@@ -5,6 +5,8 @@ import os
 from logic.modifier_calculator import calculate_modifier
 from logic.health_calculator import calculate_health
 import menu.start_menu
+from utils.json_loader import saveCharacter
+from tkinter import messagebox
 
 
 class StepCharacterDisplay(tk.Frame):
@@ -26,6 +28,9 @@ class StepCharacterDisplay(tk.Frame):
         self.update_display()
         tk.Button(self, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10, pady=20)
         tk.Button(self, text=lh.getInfo("main_menu"), command=self.backToMenu).pack(side="right", padx=10, pady=20)
+        tk.Button(self, text=lh.getInfo("button_save_character"), command=self.saveCharacterToFile).pack(side="right", padx=10, pady=20)
+
+        self.characterSaved = False
 
     def update_display(self):
         state = self.state.data
@@ -138,6 +143,15 @@ class StepCharacterDisplay(tk.Frame):
         self.display_text.insert(tk.END, display)
 
     def backToMenu(self):
-        app = menu.start_menu.StartMenu(self.master)
-        self.destroy()
-        app.pack(side="top", expand=True, fill="both")
+        if(self.characterSaved or messagebox.askquestion(lh.getInfo("warning"), lh.getInfo("u_sure")) == "yes"):
+            app = menu.start_menu.StartMenu(self.master)
+            self.destroy()
+            app.pack(side="top", expand=True, fill="both")
+
+
+    def saveCharacterToFile(self):
+        if(saveCharacter(self.state)):
+            messagebox.showinfo(lh.getInfo("success"), lh.getInfo("character_save_success"))
+            self.characterSaved = True
+        else:
+            messagebox.showerror(lh.getInfo("error"), lh.getInfo("character_save_failure"))

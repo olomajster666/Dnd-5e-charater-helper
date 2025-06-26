@@ -1,6 +1,8 @@
 import json
 import os
 
+from state.character_state import CharacterState
+
 
 def load_json(filename):
     path = os.path.join("data", filename)
@@ -35,3 +37,23 @@ def loadSavedCharacter(fileName : str):
 
 def getSavedCharacterList():
     return [f for f in os.listdir(os.path.join("data", "saved_characters")) if os.path.isfile(os.path.join("data", f"saved_characters/{f}")) and f.__contains__(".json")]
+
+
+def saveCharacter(state : CharacterState):
+    try:
+        fileName = state.get("name", "no name") + ".json"
+        number = 1
+        existingCharacters = getSavedCharacterList()
+        while(fileName in existingCharacters):
+            fileName = f"{state.get('name', 'no name')} ({number}).json"
+            number += 1
+
+        path = os.path.join("data", "saved_characters/" + fileName)
+        with open(path, "w", encoding="utf-8") as f:
+            print(path)
+            json.dump(state.data, f)
+            return True
+
+    except:
+        print("Failed to save character")
+        return False

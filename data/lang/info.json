@@ -7,10 +7,22 @@
     "en": "Warning",
     "pl": "Ostrzeżenie"
   },
+  "success": {
+    "en": "Success",
+    "pl": "Sukces"
+  },
 
   "u_sure": {
     "en": "Your character's data will be lost! Are you sure you want to go back to the menu?",
     "pl": "Dane twojej postaci zostaną utracone! Czy jesteś pewien, że chcesz wyjść do menu?"
+  },
+  "character_save_success": {
+    "en": "Character has been saved",
+    "pl": "Postać została zapisana"
+  },
+  "character_save_failure": {
+    "en": "An error occurred. Character was not saved.",
+    "pl": "Wystąpił błąd. Postać nie została zapisana."
   },
 
   "button_continue": {
@@ -40,6 +52,10 @@
   "button_options": {
     "en": "Options",
     "pl": "Opcje"
+  },
+  "button_save_character": {
+    "en": "Save character",
+    "pl": "Zapisz postać"
   },
 
   "main_menu": {

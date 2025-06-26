@@ -1,6 +1,6 @@
 import utils.json_loader as jl
 
-chosenLanguage = "en"
+chosenLanguage = jl.loadLanguageOptions()
 
 # to avoid loading one json multiple times
 backgrounds = jl.load_json("backgrounds.json")

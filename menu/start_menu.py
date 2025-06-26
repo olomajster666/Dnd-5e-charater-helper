@@ -2,6 +2,7 @@ import tkinter as tk
 
 from wizard.wizard import Wizard
 import utils.language_helper as lh
+from utils.json_loader import writeLanguageOptions
 
 
 class StartMenu(tk.Frame):
@@ -19,6 +20,7 @@ class StartMenu(tk.Frame):
         for widget in self.winfo_children():
             widget.destroy()
 
+
     def showStartMenu(self):
         self.destroyWidgets()
 
@@ -29,6 +31,7 @@ class StartMenu(tk.Frame):
         tk.Button(nav, text=lh.getInfo("button_new_character"), command=self.startWizard).pack(pady=5)
         tk.Button(nav, text=lh.getInfo("button_options"), command=self.showOptionsMenu).pack(pady=5)
 
+
     def showOptionsMenu(self):
         self.destroyWidgets()
 
@@ -36,6 +39,7 @@ class StartMenu(tk.Frame):
 
         def save(*args):
             lh.chosenLanguage = self.lang.get()
+            writeLanguageOptions(self.lang.get())
             self.showOptionsMenu()
 
 

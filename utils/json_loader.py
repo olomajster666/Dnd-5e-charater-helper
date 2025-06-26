@@ -27,7 +27,12 @@ def loadLanguageOptions():
 
 
 def loadSavedCharacter(fileName : str):
-    return load_json("saved_characters/" + fileName)
+    try:
+        json = load_json("saved_characters/" + fileName)
+        return json
+    except:
+        print(f"An error occurred while reading saved character from the following JSON file: {fileName}")
+        return {}
 
 def getSavedCharacterList():
     return [f for f in os.listdir(os.path.join("data", "saved_characters")) if os.path.isfile(os.path.join("data", f"saved_characters/{f}")) and f.__contains__(".json")]

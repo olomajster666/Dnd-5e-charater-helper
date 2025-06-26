@@ -37,8 +37,9 @@ class StartMenu(tk.Frame):
         nav = tk.Frame(self)
         nav.pack(side="top", pady=20)
         tk.Button(nav, text=lh.getInfo("button_new_character"), command=self.startWizard).pack(pady=5)
-        tk.Button(nav, text=lh.getInfo("button_view_characters"), command=self.showSavedCharacters).pack(pady=5)
+        tk.Button(nav, text=lh.getInfo("button_view_characters"), command=self.showSavedCharacters).pack(pady=12)
         tk.Button(nav, text=lh.getInfo("button_options"), command=self.showOptionsMenu).pack(pady=5)
+        tk.Button(nav, text=lh.getInfo("button_finish"), command=self.quitApp).pack(pady=20)
 
 
     def showOptionsMenu(self):
@@ -90,3 +91,6 @@ class StartMenu(tk.Frame):
         app = Wizard(self.master)
         self.destroy()
         app.pack(side="top", expand=True, fill="both")
+
+    def quitApp(self):
+        self.master.quit()

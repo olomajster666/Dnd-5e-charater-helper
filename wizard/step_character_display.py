@@ -4,6 +4,8 @@ from PIL import Image, ImageTk
 import os
 from logic.modifier_calculator import calculate_modifier
 from logic.health_calculator import calculate_health
+import menu.start_menu
+
 
 class StepCharacterDisplay(tk.Frame):
     def __init__(self, master, state):
@@ -23,7 +25,7 @@ class StepCharacterDisplay(tk.Frame):
 
         self.update_display()
         tk.Button(self, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10, pady=20)
-        tk.Button(self, text=lh.getInfo("button_finish"), command=self.quit_app).pack(side="right", padx=10, pady=20)
+        tk.Button(self, text=lh.getInfo("main_menu"), command=self.backToMenu).pack(side="right", padx=10, pady=20)
 
     def update_display(self):
         state = self.state.data
@@ -135,5 +137,7 @@ class StepCharacterDisplay(tk.Frame):
         self.display_text.delete(1.0, tk.END)
         self.display_text.insert(tk.END, display)
 
-    def quit_app(self):
-        self.master.quit()
+    def backToMenu(self):
+        app = menu.start_menu.StartMenu(self.master)
+        self.destroy()
+        app.pack(side="top", expand=True, fill="both")

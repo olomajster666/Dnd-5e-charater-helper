@@ -1,11 +1,14 @@
 import tkinter as tk
 import utils.language_helper as lh
+from .has_steps import HasSteps
+
 
 class StepSpellSelection(tk.Frame):
-    def __init__(self, master, state):
+    def __init__(self, master, state, wizard : HasSteps):
         super().__init__(master)
         self.master = master
         self.state = state
+        self.wizard = wizard
 
         # Load spell data
         self.spells = lh.spells
@@ -59,7 +62,7 @@ class StepSpellSelection(tk.Frame):
         # Navigation
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.wizard.previous_step).pack(side="left", padx=10)
         tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
 
     def get_max_cantrips(self, stats):
@@ -94,4 +97,4 @@ class StepSpellSelection(tk.Frame):
             tk.messagebox.showerror(lh.getInfo("error"), info)
             return
         self.state.set("spells", selected_cantrips + selected_level_1)
-        self.master.next_step()
+        self.wizard.next_step()

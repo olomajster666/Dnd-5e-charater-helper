@@ -1,5 +1,6 @@
 import tkinter as tk
 from state.character_state import CharacterState
+from .has_steps import HasSteps
 from .step_name_gender import StepNameGender
 from .step_race_class import StepRaceClass
 from .step_background import StepBackground
@@ -10,7 +11,7 @@ from .step_equipment import StepEquipment
 from .step_image import StepImage
 from .step_character_display import StepCharacterDisplay
 
-class Wizard(tk.Frame):
+class Wizard(tk.Frame, HasSteps):
     def __init__(self, master):
         super().__init__(master)
         self.state = CharacterState()
@@ -34,7 +35,7 @@ class Wizard(tk.Frame):
             widget.destroy()
 
         if index not in self.step_instances:
-            self.step_instances[index] = self.steps[index](self, self.state)
+            self.step_instances[index] = self.steps[index](self, self.state, self)
         step = self.step_instances[index]
 
         step.pack(fill="both", expand=True)

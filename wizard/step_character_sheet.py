@@ -3,11 +3,15 @@ import os
 from state.character_state import CharacterState
 import subprocess
 
+from .has_steps import HasSteps
+
+
 class StepCharacterSheet(tk.Frame):
-    def __init__(self, master, state):
+    def __init__(self, master, state, wizard : HasSteps):
         super().__init__(master)
         self.master = master
         self.state = state
+        self.wizard = wizard
 
         tk.Label(self, text="Podgląd karty postaci:", font=("Arial", 16)).pack(pady=10)
         self.preview_text = tk.Text(self, height=20, width=80)

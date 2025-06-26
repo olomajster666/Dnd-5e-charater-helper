@@ -1,15 +1,17 @@
 import tkinter as tk
 from tkinter import messagebox
 import utils.language_helper as lh
+from .has_steps import HasSteps
 
 STANDARD_ARRAY = [15, 14, 13, 12, 10, 8]
 ABILITIES = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
 
 class StepStatAllocation(tk.Frame):
-    def __init__(self, master, state):
+    def __init__(self, master, state, wizard : HasSteps):
         super().__init__(master)
         self.master = master
         self.state = state
+        self.wizard = wizard
 
         self.method_var = tk.StringVar(value="array")
         self.assign_vars = {ability: tk.StringVar() for ability in ABILITIES}
@@ -28,7 +30,7 @@ class StepStatAllocation(tk.Frame):
         # Navigation
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.wizard.previous_step).pack(side="left", padx=10)
         tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
 
     def show_method(self):
@@ -96,4 +98,4 @@ class StepStatAllocation(tk.Frame):
 
         self.state.set("stat_method", method)
         self.state.set("stats", stats)
-        self.master.next_step()
+        self.wizard.next_step()

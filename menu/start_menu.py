@@ -1,5 +1,8 @@
 import tkinter as tk
 
+from .fake_wizard import FakeWizard
+from state.character_state import CharacterState
+from wizard.step_character_display import StepCharacterDisplay
 from wizard.wizard import Wizard
 import utils.language_helper as lh
 from utils.json_loader import writeLanguageOptions, getSavedCharacterList, loadSavedCharacter
@@ -81,9 +84,15 @@ class StartMenu(tk.Frame):
     def showChosenCharacter(self, chosen):
         self.destroyWidgets()
 
-        print(self.savedCharacterStates[chosen])
+        state = CharacterState(self.savedCharacterStates[chosen])
+        fakeWizard = FakeWizard(self.master, self)
+        app = StepCharacterDisplay(self.master, state, fakeWizard)
+        app.characterSaved = True
+        fakeWizard.previousScreen = app
 
-        self.addBackButton(self.showSavedCharacters)
+        self.destroy()
+        app.pack(side="top", expand=True, fill="both")
+        #self.addBackButton(self.showSavedCharacters)
 
     def startWizard(self):
         self.destroyWidgets()

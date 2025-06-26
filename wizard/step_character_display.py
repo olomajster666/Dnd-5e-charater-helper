@@ -8,12 +8,16 @@ import menu.start_menu
 from utils.json_loader import saveCharacter
 from tkinter import messagebox
 
+from .has_steps import HasSteps
+
 
 class StepCharacterDisplay(tk.Frame):
-    def __init__(self, master, state):
+    def __init__(self, master, state, wizard : HasSteps):
         super().__init__(master)
         self.master = master
         self.state = state
+        self.wizard = wizard
+
         self.classes = {cls["id"]: cls for cls in lh.classes}
         self.races = {race["id"]: race for race in lh.races}
         self.backgrounds = {bg["id"]: bg for bg in lh.backgrounds}
@@ -26,7 +30,7 @@ class StepCharacterDisplay(tk.Frame):
         self.display_text.pack(pady=10)
 
         self.update_display()
-        tk.Button(self, text=lh.getInfo("button_back"), command=self.master.previous_step).pack(side="left", padx=10, pady=20)
+        tk.Button(self, text=lh.getInfo("button_back"), command=self.wizard.previous_step).pack(side="left", padx=10, pady=20)
         tk.Button(self, text=lh.getInfo("main_menu"), command=self.backToMenu).pack(side="right", padx=10, pady=20)
         tk.Button(self, text=lh.getInfo("button_save_character"), command=self.saveCharacterToFile).pack(side="right", padx=10, pady=20)
 

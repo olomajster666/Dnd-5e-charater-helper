@@ -2,12 +2,15 @@ import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
 import utils.language_helper as lh
+from .has_steps import HasSteps
+
 
 class StepImage(tk.Frame):
-    def __init__(self, master, state):
+    def __init__(self, master, state, wizard : HasSteps):
         super().__init__(master)
         self.master = master
         self.state = state
+        self.wizard = wizard
         self.image_path = tk.StringVar()
 
         tk.Label(self, text=lh.getInfo("add_character_image"), font=("Arial", 16)).pack(pady=10)
@@ -29,9 +32,9 @@ class StepImage(tk.Frame):
 
     def skip_and_continue(self):
         self.state.set("image_path", None)
-        self.master.next_step()
+        self.wizard.next_step()
 
     def save_and_continue(self):
         image_path = self.image_path.get() if self.image_path.get() else None
         self.state.set("image_path", image_path)
-        self.master.next_step()
+        self.wizard.next_step()

@@ -75,7 +75,7 @@ class StartMenu(tk.Frame):
             self.savedCharacterStates[fileName] = data
             row = tk.Frame(self)
             row.pack(side="top", pady=20)
-            tk.Button(row, text=fileName.removesuffix(".json").capitalize(), command=lambda: self.showChosenCharacter(fileName)).pack(pady=5)
+            tk.Button(row, text=fileName.removesuffix(".json").capitalize(), command=lambda x=fileName: self.showChosenCharacter(x)).pack(pady=5)
 
         self.addBackButton()
 
@@ -83,6 +83,7 @@ class StartMenu(tk.Frame):
     def showChosenCharacter(self, chosen):
         self.destroyWidgets()
 
+        print(chosen)
         state = CharacterState(self.savedCharacterStates[chosen])
         fakeWizard = FakeWizard(self.master, self)
         app = StepCharacterDisplay(self.master, state, fakeWizard)

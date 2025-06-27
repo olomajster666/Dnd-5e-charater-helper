@@ -95,7 +95,7 @@ class StepCharacterDisplay(tk.Frame):
 
         # Equipment
         equipment = state.get("equipment", [])
-        equipment_display = "\n".join([f"  - {item}" for item in equipment]) if equipment else "  - " + lh.getInfo("no_equipment")
+        equipment_display = "\n".join([f"  - {lh.getItemCountAndName(item)}" for item in equipment]) if equipment else "  - " + lh.getInfo("no_equipment")
 
         # Proficiencies
         proficiencies = state.get("proficiencies", [])

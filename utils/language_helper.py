@@ -33,3 +33,13 @@ def getAbility(key : str):
 
 def getItem(key : str):
     return items[key].get(chosenLanguage, "en")
+
+def getItemCountAndName(item : dict):
+    if(item['count'] < 1):
+        return ""
+
+    text : str = ""
+    if(item['count'] > 1):
+        text += str(item['count']) + "x "
+
+    return text + getItem(item['id'])

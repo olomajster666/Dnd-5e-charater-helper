@@ -12,24 +12,14 @@
     "skill_proficiencies": ["insight", "religion"],
     "tool_proficiencies": [],
     "languages": 2,
-    "equipment": {
-      "en": [
-        "Saint symbol",
-        "Book of prayers",
-        "5 candles",
-        "Zapaska????",
-        "Everyday clothes",
-        "15 gold pieces"
-      ],
-      "pl": [
-        "Święty symbol",
-        "Księga modlitw",
-        "5 świec",
-        "Zapaska",
-        "Ubrania codzienne",
-        "15 sztuk złota"
-      ]
-    },
+    "equipment": [
+      {"id": "saint_symbol", "count": 1},
+      {"id": "book_of_prayers", "count": 1},
+      {"id": "candle", "count": 5},
+      {"id": "whot_is_zapaska_aleksandrze", "count": 1},
+      {"id": "everyday_clothes", "count": 1},
+      {"id": "gold_pieces", "count": 15}
+    ],
     "feature": {
       "name": {
         "en": "Shelter of the Faithful",
@@ -54,20 +44,12 @@
     "skill_proficiencies": ["deception", "stealth"],
     "tool_proficiencies": ["one type of gaming set", "thieves' tools"],
     "languages": 0,
-    "equipment": {
-      "en": [
-        "Crowbar",
-        "Dark hood",
-        "Everyday clothes",
-        "15 gold pieces"
-      ],
-      "pl": [
-        "Łom",
-        "Ciemny kaptur",
-        "Ubrania codzienne",
-        "15 sztuk złota"
-      ]
-    },
+    "equipment": [
+      {"id": "crowbar", "count": 1},
+      {"id": "dark_hood", "count": 1},
+      {"id": "everyday_clothes", "count": 1},
+      {"id": "gold_pieces", "count": 15}
+    ],
     "feature": {
       "name": {
         "en": "Criminal Contact",
@@ -92,22 +74,13 @@
     "skill_proficiencies": ["acrobatics", "performance"],
     "tool_proficiencies": ["one musical instrument", "disguise kit"],
     "languages": 0,
-    "equipment": {
-      "en": [
-        "Musical instrument",
-        "Scenic costume",
-        "Love letter (from fan)",
-        "Everyday clothes",
-        "15 gold pieces"
-      ],
-      "pl": [
-        "Instrument muzyczny",
-        "Kostium sceniczny",
-        "List miłosny (od fana)",
-        "Ubrania codzienne",
-        "15 sztuk złota"
-      ]
-    },
+    "equipment": [
+      {"id": "musical_instrument", "count": 1},
+      {"id": "scenic_costume", "count": 1},
+      {"id": "love_letter_from_fan", "count": 1},
+      {"id": "everyday_clothes", "count": 1},
+      {"id": "gold_pieces", "count": 15}
+    ],
     "feature": {
       "name": {
         "en": "By Popular Demand",
@@ -132,24 +105,14 @@
     "skill_proficiencies": ["arcana", "history"],
     "tool_proficiencies": [],
     "languages": 2,
-    "equipment": {
-      "en": [
-        "Black ink bottle",
-        "Feather",
-        "Small knife",
-        "Letter from dead mentor",
-        "Everyday clothes",
-        "10 gold pieces"
-      ],
-      "pl": [
-        "Butelka czarnego atramentu",
-        "Pióro",
-        "Mały nóż",
-        "List od zmarłego mentora",
-        "Ubrania codzienne",
-        "10 sztuk złota"
-      ]
-    },
+    "equipment": [
+      {"id": "black_ink_bottle", "count": 1},
+      {"id": "feather", "count": 1},
+      {"id": "small_knife", "count": 1},
+      {"id": "letter_from_dead_mentor", "count": 1},
+      {"id": "everyday_clothes", "count": 1},
+      {"id": "gold_pieces", "count": 10}
+    ],
     "feature": {
       "name": {
         "en": "Researcher",
@@ -174,22 +137,13 @@
     "skill_proficiencies": ["athletics", "intimidation"],
     "tool_proficiencies": ["one type of gaming set", "vehicles (land)"],
     "languages": 0,
-    "equipment": {
-      "en": [
-        "War souvenir",
-        "Deck of cards",
-        "Weapon cleaning kit",
-        "Everyday clothes",
-        "10 gold pieces"
-      ],
-      "pl": [
-        "Pamiątka z wojny",
-        "Talia kart",
-        "Zestaw do czyszczenia broni",
-        "Ubrania codzienne",
-        "10 sztuk złota"
-      ]
-    },
+    "equipment": [
+      {"id": "war_souvenir", "count": 1},
+      {"id": "deck_of_cards", "count": 1},
+      {"id": "weapon_cleaning_kit", "count": 1},
+      {"id": "everyday_clothes", "count": 1},
+      {"id": "gold_pieces", "count": 10}
+    ],
     "feature": {
       "name": {
         "en": "Military Rank",

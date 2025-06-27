@@ -15,20 +15,24 @@
     "armor_proficiencies": ["all armor", "shields"],
     "weapon_proficiencies": ["simple weapons", "martial weapons"],
     "spellcasting": null,
-    "starting_equipment_options": {
-      "en": [
-        ["Chainmail", "Leather armor and longbow with 20 arrows"],
-        ["Weapon and shield", "Two weapons"],
-        ["Light crossbow and 20 bolts", "Two war axes"],
-        ["Dungeon seeker packet", "Explorer packet"]
+    "starting_equipment_options": [
+      [
+        [{"id": "chainmail", "count": 1}],
+        [{"id": "leather_armor", "count": 1}, {"id": "longbow", "count": 1}, {"id": "arrows", "count": 20}]
       ],
-      "pl": [
-        ["Kolczuga", "Skórzana zbroja i długi łuk z 20 strzałami"],
-        ["Broń bojowa i tarcza", "Dwie bronie bojowe"],
-        ["Lekka kusza i 20 bełtów", "Dwa topory bojowe"],
-        ["Pakiet poszukiwacza lochów", "Pakiet eksploratora"]
+      [
+        [{"id": "weapon", "count": 1}, {"id": "shield", "count": 1}],
+        [{"id": "weapon", "count": 2}]
+      ],
+      [
+        [{"id": "light_crossbow", "count": 1}, {"id": "bolts", "count": 20}],
+        [{"id": "war_axe", "count": 2}]
+      ],
+      [
+        [{"id": "dungeon_seeker_packet", "count": 1}],
+        [{"id": "explorer_packet", "count": 1}]
       ]
-    },
+    ],
     "level_1_features": [
       {
         "name": {
@@ -68,20 +72,26 @@
     "armor_proficiencies": ["light armor"],
     "weapon_proficiencies": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
     "spellcasting": null,
-    "starting_equipment_options": {
-      "en": [
-        ["Spade", "Short sword"],
-        ["Short bow and 20 arrows", "Short sword"],
-        ["Burglar packet", "Dungeon seeker packet", "Explorer packet"],
-        ["Leather armor", "Two daggers", "Thief tools"]
+    "starting_equipment_options": [
+      [
+        [{"id": "spade", "count": 1}],
+        [{"id": "short_sword", "count": 1}]
       ],
-      "pl": [
-        ["Szpada", "Krótki miecz"],
-        ["Krótki łuk i 20 strzał", "Krótki miecz"],
-        ["Pakiet włamywacza", "Pakiet poszukiwacza lochów", "Pakiet eksploratora"],
-        ["Skórzana zbroja", "Dwa sztylety", "Narzędzia złodziejskie"]
+      [
+        [{"id": "short_bow", "count": 1}, {"id": "arrows", "count": 20}],
+        [{"id": "short_sword", "count": 1}]
+      ],
+      [
+        [{"id": "burglar_packet", "count": 1}],
+        [{"id": "dungeon_seeker_packet", "count": 1}],
+        [{"id": "explorer_packet", "count": 1}]
+      ],
+      [
+        [{"id": "leather_armor", "count": 1}],
+        [{"id": "dagger", "count": 2}],
+        [{"id": "thief_tools", "count": 1}]
       ]
-    },
+    ],
     "level_1_features": [
       {
         "name": {
@@ -128,20 +138,23 @@
         "1": 2
       }
     },
-    "starting_equipment_options": {
-      "en": [
-        ["Staff", "Dagger"],
-        ["Sack of components", "Arcanic focus"],
-        ["Scholar packet", "Explorer packet"],
-        ["Spellbook"]
+    "starting_equipment_options": [
+      [
+        [{"id": "staff", "count": 1}],
+        [{"id": "dagger", "count": 1}]
       ],
-      "pl": [
-        ["Kostur", "Sztylet"],
-        ["Sakiewka komponentów", "Fokus arkaniczny"],
-        ["Pakiet uczonego", "Pakiet eksploratora"],
-        ["Księga czarów"]
+      [
+        [{"id": "sack_of_components", "count": 1}],
+        [{"id": "arcanic_focus", "count": 1}]
+      ],
+      [
+        [{"id": "scholar_packet", "count": 1}],
+        [{"id": "explorer_packet", "count": 1}]
+      ],
+      [
+        [{"id": "spellbook", "count": 1}]
       ]
-    },
+    ],
     "level_1_features": [
       {
         "name": {
@@ -188,22 +201,29 @@
         "1": 2
       }
     },
-    "starting_equipment_options": {
-      "en": [
-        ["Mace", "War hammer (if you have this skill)"],
-        ["Scale mail", "Leather armor", "Chainmail (if you have this skill)"],
-        ["Light crossbow and 20 bolts", "Any simple weapon"],
-        ["Priest packet", "Explorer packet"],
-        ["Shield", "Saint symbol"]
+    "starting_equipment_options": [
+      [
+        [{"id": "mace", "count": 1}],
+        [{"id": "war_hammer_if_skill", "count": 1}]
       ],
-      "pl": [
-        ["Buława", "Młot wojenny (jeśli masz tą umiejętność)"],
-        ["Zbroja łuskowa", "Skórzana zbroja", "Kolczuga (jeśli masz tą umiejętność)"],
-        ["Lekka kusza i 20 bełtów", "Dowolna broń prosta"],
-        ["Pakiet kapłana", "Pakiet eksploratora"],
-        ["Tarcza", "Święty symbol"]
+      [
+        [{"id": "scale_mail", "count": 1}],
+        [{"id": "leather_armor", "count": 1}],
+        [{"id": "chaimail_if_skill", "count": 1}]
+      ],
+      [
+        [{"id": "light_crossbow", "count": 1}, {"id": "bolts", "count": 20}],
+        [{"id": "any_simple_weapon", "count": 1}]
+      ],
+      [
+        [{"id": "priest_packet", "count": 1}],
+        [{"id": "explorer_packet", "count": 1}]
+      ],
+      [
+        [{"id": "shield", "count": 1}],
+        [{"id": "saint_symbol", "count": 1}]
       ]
-    },
+    ],
     "level_1_features": [
       {
         "name": {
@@ -250,20 +270,25 @@
         "1": 2
       }
     },
-    "starting_equipment_options": {
-      "en": [
-        ["Saber", "Longsword", "Any simple weapon"],
-        ["Diplomat packet", "Artist packet"],
-        ["Lute", "Any musical instrument"],
-        ["Leather armor", "Dagger"]
+    "starting_equipment_options": [
+      [
+        [{"id": "saber", "count": 1}],
+        [{"id": "longsword", "count": 1}],
+        [{"id": "any_simple_weapon", "count": 1}]
       ],
-      "pl": [
-        ["Szabla", "Długi miecz", "Dowolna broń prosta"],
-        ["Pakiet dyplomaty", "Pakiet artysty"],
-        ["Lutnia", "Dowolny instrument muzyczny"],
-        ["Skórzana zbroja", "Sztylet"]
+      [
+        [{"id": "diplomat_packet", "count": 1}],
+        [{"id": "artist_packet", "count": 1}]
+      ],
+      [
+        [{"id": "lute", "count": 1}],
+        [{"id": "any_musical_instrument", "count": 1}]
+      ],
+      [
+        [{"id": "leather_armor", "count": 1}],
+        [{"id": "dagger", "count": 1}]
       ]
-    },
+    ],
     "level_1_features": [
       {
         "name": {

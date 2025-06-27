@@ -1,0 +1,210 @@
+{
+  "chainmail": {
+    "en": "Chainmail",
+    "pl": "Kolczuga"
+  },
+  "dungeon_seeker_packet": {
+    "en": "Dungeon seeker packet",
+    "pl": "Pakiet poszukiwacza lochów"
+  },
+  "explorer_packet": {
+    "en": "Explorer packet",
+    "pl": "Pakiet eksploratora"
+  },
+  "spade": {
+    "en": "Spade",
+    "pl": "Szpada"
+  },
+  "short_sword": {
+    "en": "Short sword",
+    "pl": "Krótki miecz"
+  },
+  "short_bow": {
+    "en": "Short bow",
+    "pl": "Krótki łuk"
+  },
+  "burglar_packet": {
+    "en": "Burglar packet",
+    "pl": "Pakiet włamywacza"
+  },
+  "leather_armor": {
+    "en": "Leather armor",
+    "pl": "Skórzana zbroja"
+  },
+  "thief_tools": {
+    "en": "Thief tools",
+    "pl": "Narzędzia złodziejskie"
+  },
+  "staff": {
+    "en": "Staff",
+    "pl": "Kostur"
+  },
+  "dagger": {
+    "en": "Dagger",
+    "pl": "Sztylet"
+  },
+  "sack_of_components": {
+    "en": "Sack of components",
+    "pl": "Sakiewka komponentów"
+  },
+  "arcanic_focus": {
+    "en": "Arcanic focus",
+    "pl": "Fokus arkaniczny"
+  },
+  "spellbook": {
+    "en": "Spellbook",
+    "pl": ""
+  },
+  "scholar_packet": {
+    "en": "Scholar packet",
+    "pl": "Pakiet uczonego"
+  },
+  "mace": {
+    "en": "Mace",
+    "pl": "Buława"
+  },
+  "war_hammer_if_skill": {
+    "en": "War hammer (if you have this skill)",
+    "pl": "Młot wojenny (jeśli masz tą umiejętność)"
+  },
+  "scale_mail": {
+    "en": "Scale mail",
+    "pl": "Zbroja łuskowa"
+  },
+  "chaimail_if_skill": {
+    "en": "Chainmail (if you have this skill)",
+    "pl": "Kolczuga (jeśli masz tą umiejętność)"
+  },
+  "any_simple_weapon": {
+    "en": "Any simple weapon",
+    "pl": "Dowolna broń prosta"
+  },
+  "priest_packet": {
+    "en": "Priest packet",
+    "pl": "Pakiet kapłana"
+  },
+  "shield": {
+    "en": "Shield",
+    "pl": "Tarcza"
+  },
+  "saint_symbol": {
+    "en": "Saint symbol",
+    "pl": "Święty symbol"
+  },
+  "saber": {
+    "en": "Saber",
+    "pl": "Szabla"
+  },
+  "longsword": {
+    "en": "Longsword",
+    "pl": "Długi miecz"
+  },
+  "diplomat_packet": {
+    "en": "Diplomat packet",
+    "pl": "Pakiet dyplomaty"
+  },
+  "artist_packet": {
+    "en": "Artist packet",
+    "pl": "Pakiet artysty"
+  },
+  "lute": {
+    "en": "Lute",
+    "pl": "Lutnia"
+  },
+  "any_musical_instrument": {
+    "en": "Any musical instrument",
+    "pl": "Dowolny instrument muzyczny"
+  },
+  "book_of_prayers": {
+    "en": "Book of prayers",
+    "pl": "Księga modlitw"
+  },
+  "candle": {
+    "en": "Candle",
+    "pl": "Świeca"
+  },
+  "whot_is_zapaska_aleksandrze": {
+    "en": "Zapaska???",
+    "pl": "Zapaska"
+  },
+  "everyday_clothes": {
+    "en": "Everyday clothes",
+    "pl": "Ubrania codzienne"
+  },
+  "gold_pieces": {
+    "en": "Gold pieces",
+    "pl": "Sztuk złota"
+  },
+  "crowbar": {
+    "en": "Crowbar",
+    "pl": "Łom"
+  },
+  "dark_hood": {
+    "en": "Dark hood",
+    "pl": "Ciemny kaptur"
+  },
+  "musical_instrument": {
+    "en": "Musical instrument",
+    "pl": "Instrument muzyczny"
+  },
+  "scenic_costume": {
+    "en": "Scenic costume",
+    "pl": "Kostium sceniczny"
+  },
+  "love_letter_from_fan": {
+    "en": "Love letter (from fan)",
+    "pl": "List miłosny (od fana)"
+  },
+  "black_ink_bottle": {
+    "en": "Black ink bottle",
+    "pl": "Butelka czarnego atramentu"
+  },
+  "feather": {
+    "en": "Feather",
+    "pl": "Pióro"
+  },
+  "small_knife": {
+    "en": "Small knife",
+    "pl": "Mały nóż"
+  },
+  "letter_from_dead_mentor": {
+    "en": "Letter from dead mentor",
+    "pl": "List od zmarłego mentora"
+  },
+  "war_souvenir": {
+    "en": "War souvenir",
+    "pl": "Pamiątka z wojny"
+  },
+  "deck_of_cards": {
+    "en": "Deck of cards",
+    "pl": "Talia kart"
+  },
+  "weapon_cleaning_kit": {
+    "en": "Weapon cleaning kit",
+    "pl": "Zestaw do czyszczenia broni"
+  },
+  "longbow": {
+    "en": "Longbow",
+    "pl": "Długi łuk"
+  },
+  "arrows": {
+    "en": "Arrows",
+    "pl": "Strzał"
+  },
+  "weapon": {
+    "en": "Weapon",
+    "pl": "Broń"
+  },
+  "bolts": {
+    "en": "Bolts",
+    "pl": "Bełtów"
+  },
+  "war_axe": {
+    "en": "War axe",
+    "pl": "Topór wojenny"
+  },
+  "": {
+    "en": "",
+    "pl": ""
+  }
+}

@@ -34,8 +34,8 @@ class Wizard(tk.Frame, HasSteps):
         self.show_step(self.current)
 
     def show_step(self, index):
-        for widget in self.winfo_children():
-            widget.destroy()
+        #for widget in self.winfo_children():
+        #    widget.destroy()
 
         #if index not in self.step_instances:
         #    self.step_instances[index] = self.steps[index](self, self.state, self)
@@ -55,7 +55,7 @@ class Wizard(tk.Frame, HasSteps):
 
     def previous_step(self):
         if self.current > 0:
-            if(self.shouldSkipSpellSelection()):
+            if(self.current == len(self.steps) - 3 and self.shouldSkipSpellSelection()):
                 self.current -= 2
             else:
                 self.current -= 1

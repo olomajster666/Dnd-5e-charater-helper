@@ -1,13 +1,13 @@
 import tkinter as tk
 import utils.language_helper as lh
 from .has_steps import HasSteps
+from .is_step import IsStep
 
 
-class StepBackground(tk.Frame):
+class StepBackground(IsStep):
     def __init__(self, master, state, wizard : HasSteps):
-        super().__init__(master)
+        super().__init__(master, wizard)
         self.state = state
-        self.wizard = wizard
 
         self.bg_var = tk.StringVar()
         self.background_options = {bg["id"]: bg for bg in lh.backgrounds}
@@ -20,11 +20,11 @@ class StepBackground(tk.Frame):
 
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("button_back"), command=self.wizard.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.discard_and_back).pack(side="left", padx=10)
         tk.Button(nav, text=lh.getInfo("button_continue"), command=lambda: self.save_and_continue()).pack(side="right", padx=10)  # Explicit call
 
     def save_and_continue(self):
         bg_id = self.bg_var.get()
         self.state.set("background", {"id": bg_id})
         print(f"Saved Background: {self.state.get('background')}")  # Debug
-        self.wizard.next_step()
+        super().save_and_continue()

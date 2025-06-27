@@ -9,13 +9,13 @@ from utils.json_loader import saveCharacter
 from tkinter import messagebox
 
 from .has_steps import HasSteps
+from .is_step import IsStep
 
 
-class StepCharacterDisplay(tk.Frame):
+class StepCharacterDisplay(IsStep):
     def __init__(self, master, state, wizard : HasSteps):
-        super().__init__(master)
+        super().__init__(master, wizard)
         self.state = state
-        self.wizard = wizard
 
         self.classes = {cls["id"]: cls for cls in lh.classes}
         self.races = {race["id"]: race for race in lh.races}
@@ -29,7 +29,7 @@ class StepCharacterDisplay(tk.Frame):
         self.display_text.pack(pady=10)
 
         self.update_display()
-        tk.Button(self, text=lh.getInfo("button_back"), command=self.wizard.previous_step).pack(side="left", padx=10, pady=20)
+        tk.Button(self, text=lh.getInfo("button_back"), command=self.discard_and_back).pack(side="left", padx=10, pady=20)
         tk.Button(self, text=lh.getInfo("main_menu"), command=self.backToMenu).pack(side="right", padx=10, pady=20)
         tk.Button(self, text=lh.getInfo("button_save_character"), command=self.saveCharacterToFile).pack(side="right", padx=10, pady=20)
 

@@ -5,13 +5,14 @@ import utils.language_helper as lh
 from tkinter import messagebox
 
 from .has_steps import HasSteps
+from .is_step import IsStep
 
 
-class StepNameGender(tk.Frame):
+class StepNameGender(IsStep):
     def __init__(self, master, state, wizard : HasSteps):
-        super().__init__(master)
+        super().__init__(master, wizard)
         self.state = state
-        self.wizard = wizard
+
 
         self.quitToMenuVar = tk.BooleanVar()
 
@@ -37,7 +38,7 @@ class StepNameGender(tk.Frame):
         
         self.state.set("name", name)
         self.state.set("gender", self.gender_var.get())
-        self.wizard.next_step()
+        super().save_and_continue()
 
     def backToMenu(self):
         result = messagebox.askquestion(lh.getInfo("warning"), lh.getInfo("u_sure"))

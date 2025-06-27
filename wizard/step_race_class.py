@@ -1,12 +1,13 @@
 import tkinter as tk
 import utils.language_helper as lh
 from .has_steps import HasSteps
+from .is_step import IsStep
 
-class StepRaceClass(tk.Frame):
+
+class StepRaceClass(IsStep):
     def __init__(self, master, state, wizard : HasSteps):
-        super().__init__(master)
+        super().__init__(master, wizard)
         self.state = state
-        self.wizard = wizard
 
         # Load data
         self.race_options = {race["id"]: race for race in lh.races}
@@ -29,7 +30,7 @@ class StepRaceClass(tk.Frame):
 
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("button_back"), command=self.wizard.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.discard_and_back).pack(side="left", padx=10)
         tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
 
     def save_and_continue(self):
@@ -38,4 +39,4 @@ class StepRaceClass(tk.Frame):
         self.state.set("race", {"id": race_id})
         self.state.set("class", {"id": class_id})
         print(f"Saved Race: {self.state.get('race')}, Class: {self.state.get('class')}")  # Debug
-        self.wizard.next_step()
+        super().save_and_continue()

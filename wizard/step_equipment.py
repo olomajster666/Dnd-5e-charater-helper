@@ -1,13 +1,13 @@
 import tkinter as tk
 import utils.language_helper as lh
 from .has_steps import HasSteps
+from .is_step import IsStep
 
 
-class StepEquipment(tk.Frame):
+class StepEquipment(IsStep):
     def __init__(self, master, state, wizard : HasSteps):
-        super().__init__(master)
+        super().__init__(master, wizard)
         self.state = state
-        self.wizard = wizard
 
         # Load class and background data
         self.classes = {cls["id"]: cls for cls in lh.classes}
@@ -51,7 +51,7 @@ class StepEquipment(tk.Frame):
 
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("button_back"), command=self.wizard.previous_step).pack(side="left", padx=10)
+        tk.Button(nav, text=lh.getInfo("button_back"), command=self.discard_and_back).pack(side="left", padx=10)
         tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
 
     def save_and_continue(self):
@@ -70,4 +70,4 @@ class StepEquipment(tk.Frame):
         self.state.set("equipment", all_equipment)
         print("Selected equipment:")
         print(all_equipment)
-        self.wizard.next_step()
+        super().save_and_continue()

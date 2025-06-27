@@ -36,7 +36,6 @@
       "pl": ["Wspólny", "Jeden dodatkowy język do wyboru"]
     }
   },
-
   {
     "id": "elf",
     "name": {
@@ -44,7 +43,7 @@
       "pl": "Elf"
     },
     "description": {
-      "en": "MISSING TRANSLATION",
+      "en": "Elves embody grace, are long-lived, and are deeply connected to magic.",
       "pl": "Elfy są gracją uosobioną, długowieczne i silnie związane z magią."
     },
     "ability_bonuses": {
@@ -125,7 +124,6 @@
       }
     ]
   },
-
   {
     "id": "dwarf",
     "name": {
@@ -133,7 +131,7 @@
       "pl": "Krasnolud"
     },
     "description": {
-      "en": "MISSING TRANSLATION",
+      "en": "Dwarves are hardy, honorable, and excel in combat and craftsmanship.",
       "pl": "Krasnoludy są wytrzymałe, honorowe i świetnie radzą sobie w walce oraz rzemiośle."
     },
     "ability_bonuses": {
@@ -148,7 +146,7 @@
           "pl": "Krasnoludzka Odporność"
         },
         "description": {
-          "en": "MISSING TRANSLATION",
+          "en": "You have resistance to poison and advantage on saving throws against poison.",
           "pl": "Masz odporność na trucizny i przewagę na rzuty obronne przeciwko truciznom."
         }
       }
@@ -159,104 +157,102 @@
     },
     "subraces": []
   },
-
-
-{
-  "id": "halfling",
-  "name": {
-    "en": "Halfling",
-    "pl": "Niziołek"
-  },
-  "description": {
-    "en": "MISSING TRANSLATION",
-    "pl": "Niziołki są małymi, zwinnymi istotami, które cenią sobie komfort i wspólnotę. Znane są ze swojego szczęścia i odwagi."
-  },
-  "ability_bonuses": {
-    "dexterity": 2
-  },
-  "speed": 25,
-  "size": "Small",
-  "traits": [
-    {
-      "name": {
-        "en": "Lucky",
-        "pl": "Szczęśliwy"
-      },
-      "description": {
-        "en": "MISSING TRANSLATION",
-        "pl": "Gdy wyrzucisz 1 na kostce k20 podczas ataku, testu lub rzutu obronnego, możesz przerzucić tę kostkę."
-      }
+  {
+    "id": "halfling",
+    "name": {
+      "en": "Halfling",
+      "pl": "Niziołek"
     },
-    {
-      "name": {
-        "en": "Brave",
-        "pl": "Odważny"
-      },
-      "description": {
-        "en": "MISSING TRANSLATION",
-        "pl": "Masz przewagę na rzuty obronne przeciwko strachowi."
-      }
+    "description": {
+      "en": "Halflings are small, agile beings who value comfort and community. They are known for their luck and bravery.",
+      "pl": "Niziołki są małymi, zwinnymi istotami, które cenią sobie komfort i wspólnotę. Znane są ze swojego szczęścia i odwagi."
     },
-    {
-      "name": {
-        "en": "Halfling Nimbleness",
-        "pl": "Zwinność Niziołka"
+    "ability_bonuses": {
+      "dexterity": 2
+    },
+    "speed": 25,
+    "size": "Small",
+    "traits": [
+      {
+        "name": {
+          "en": "Lucky",
+          "pl": "Szczęśliwy"
+        },
+        "description": {
+          "en": "When you roll a 1 on a d20 for an attack, ability check, or saving throw, you can reroll the die.",
+          "pl": "Gdy wyrzucisz 1 na kostce k20 podczas ataku, testu lub rzutu obronnego, możesz przerzucić tę kostkę."
+        }
       },
-      "description": {
-        "en": "MISSING TRANSLATION",
-        "pl": "Możesz przechodzić przez pole istoty, która jest większa od ciebie."
+      {
+        "name": {
+          "en": "Brave",
+          "pl": "Odważny"
+        },
+        "description": {
+          "en": "You have advantage on saving throws against being frightened.",
+          "pl": "Masz przewagę na rzuty obronne przeciwko strachowi."
+        }
+      },
+      {
+        "name": {
+          "en": "Halfling Nimbleness",
+          "pl": "Zwinność Niziołka"
+        },
+        "description": {
+          "en": "You can move through the space of a creature larger than you.",
+          "pl": "Możesz przechodzić przez pole istoty, która jest większa od ciebie."
+        }
       }
-    }
-  ],
-  "languages": {
+    ],
+    "languages": {
       "en": ["Common", "Halfling"],
-      "pl": ["Wspólny", "Niziołkowy?"]
-  },
-  "subraces": [
-    {
-      "id": "lightfoot_halfling",
-      "name": {
-        "en": "Lightfoot Halfling",
-        "pl": "Niziołek Śmiałek"
-      },
-      "ability_bonuses": {
-        "charisma": 1
-      },
-      "traits": [
-        {
-          "name": {
-            "en": "Naturally Stealthy",
-            "pl": "Wrodzona Skrytość"
-          },
-          "description": {
-            "en": "MISSING TRANSLATION",
-            "pl": "Możesz próbować ukryć się, nawet gdy jesteś lekko zasłonięty przez inną osobę."
-          }
-        }
-      ]
+      "pl": ["Wspólny", "Niziołkowy"]
     },
-    {
-      "id": "stout_halfling",
-      "name": {
-        "en": "Stout Halfling",
-        "pl": "Niziołek Krzepki"
-      },
-      "ability_bonuses": {
-        "constitution": 1
-      },
-      "traits": [
-        {
-          "name": {
-            "en": "Stout Resilience",
-            "pl": "Krzepka Odporność"
-          },
-          "description": {
-            "en": "MISSING TRANSLATION",
-            "pl": "Masz przewagę na rzuty obronne przeciwko truciznom oraz odporność na obrażenia od trucizn."
+    "subraces": [
+      {
+        "id": "lightfoot_halfling",
+        "name": {
+          "en": "Lightfoot Halfling",
+          "pl": "Niziołek Śmiałek"
+        },
+        "ability_bonuses": {
+          "charisma": 1
+        },
+        "traits": [
+          {
+            "name": {
+              "en": "Naturally Stealthy",
+              "pl": "Wrodzona Skrytość"
+            },
+            "description": {
+              "en": "You can attempt to hide even when you are only lightly obscured by another creature.",
+              "pl": "Możesz próbować ukryć się, nawet gdy jesteś lekko zasłonięty przez inną osobę."
+            }
           }
-        }
-      ]
-    }
-  ]
-}
+        ]
+      },
+      {
+        "id": "stout_halfling",
+        "name": {
+          "en": "Stout Halfling",
+          "pl": "Niziołek Krzepki"
+        },
+        "ability_bonuses": {
+          "constitution": 1
+        },
+        "traits": [
+          {
+            "name": {
+              "en": "Stout Resilience",
+              "pl": "Krzepka Odporność"
+            },
+            "description": {
+              "en": "You have advantage on saving throws against poison and resistance to poison damage.",
+              "pl": "Masz przewagę na rzuty obronne przeciwko truciznom oraz odporność na obrażenia od trucizn."
+            }
+          }
+        ]
+      }
+    ]
+  }
 ]

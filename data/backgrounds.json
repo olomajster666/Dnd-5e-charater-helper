@@ -6,7 +6,7 @@
       "pl": "Akolita"
     },
     "description": {
-      "en": "MISSING TRANSLATION",
+      "en": "You have spent your life in service to a temple of a specific deity. You have studied sacred texts and participated in religious rituals.",
       "pl": "Spędziłeś życie w służbie świątyni konkretnego bóstwa. Studiowałeś święte teksty i uczestniczyłeś w rytuałach religijnych."
     },
     "skill_proficiencies": ["insight", "religion"],
@@ -16,7 +16,7 @@
       {"id": "saint_symbol", "count": 1},
       {"id": "book_of_prayers", "count": 1},
       {"id": "candle", "count": 5},
-      {"id": "whot_is_zapaska_aleksandrze", "count": 1},
+      {"id": "vestments", "count": 1},
       {"id": "everyday_clothes", "count": 1},
       {"id": "gold_pieces", "count": 15}
     ],
@@ -26,7 +26,7 @@
         "pl": "Schronienie Wiernych"
       },
       "description": {
-        "en": "MISSING TRANSLATION",
+        "en": "You can receive aid from members of your religion, including shelter and healing.",
         "pl": "Możesz otrzymać pomoc od członków swojej religii, w tym schronienie i leczenie."
       }
     }
@@ -38,7 +38,7 @@
       "pl": "Przestępca"
     },
     "description": {
-      "en": "MISSING TRANSLATION",
+      "en": "You have a criminal past—perhaps you were a pickpocket, a con artist, or a member of a criminal organization.",
       "pl": "Masz przeszłość kryminalną – może byłeś kieszonkowcem, oszustem albo członkiem organizacji przestępczej."
     },
     "skill_proficiencies": ["deception", "stealth"],
@@ -56,7 +56,7 @@
         "pl": "Kontakt Kryminalny"
       },
       "description": {
-        "en": "MISSING TRANSLATION",
+        "en": "You have a reliable contact within a criminal network who can provide information and assistance.",
         "pl": "Masz niezawodny kontakt w sieci przestępczej, który może dostarczać informacji i pomocy."
       }
     }
@@ -68,7 +68,7 @@
       "pl": "Artysta"
     },
     "description": {
-      "en": "MISSING TRANSLATION",
+      "en": "You are a talented performer—singing, playing instruments, dancing, or entertaining others in some other way.",
       "pl": "Jesteś utalentowanym wykonawcą – śpiewasz, grasz, tańczysz lub zabawiasz innych w inny sposób."
     },
     "skill_proficiencies": ["acrobatics", "performance"],
@@ -87,7 +87,7 @@
         "pl": "Na Życzenie Publiczności"
       },
       "description": {
-        "en": "MISSING TRANSLATION",
+        "en": "You can perform in local taverns and theaters, earning food, shelter, and recognition.",
         "pl": "Możesz występować w lokalnych gospodach i teatrach, zdobywając jedzenie, schronienie i uznanie."
       }
     }
@@ -99,7 +99,7 @@
       "pl": "Mędrzec"
     },
     "description": {
-      "en": "MISSING TRANSLATION",
+      "en": "Your life has been spent studying knowledge and books. You are an expert in a particular academic field.",
       "pl": "Twoje życie upłynęło na studiowaniu wiedzy i ksiąg. Jesteś ekspertem w określonej dziedzinie akademickiej."
     },
     "skill_proficiencies": ["arcana", "history"],
@@ -119,7 +119,7 @@
         "pl": "Badacz"
       },
       "description": {
-        "en": "MISSING TRANSLATION",
+        "en": "When you don’t know an answer, you know where and how to find it—be it in a book, archive, or from a scholar.",
         "pl": "Kiedy nie znasz odpowiedzi, wiesz gdzie i jak ją znaleźć – w księdze, w archiwum lub u uczonego."
       }
     }
@@ -131,7 +131,7 @@
       "pl": "Żołnierz"
     },
     "description": {
-      "en": "MISSING TRANSLATION",
+      "en": "You have spent years on battlefields as a member of an army or mercenary. You are skilled in discipline and tactics.",
       "pl": "Spędziłeś lata na polach bitew jako członek armii lub najemnik. Znasz się na dyscyplinie i taktyce."
     },
     "skill_proficiencies": ["athletics", "intimidation"],
@@ -150,7 +150,7 @@
         "pl": "Ranga Wojskowa"
       },
       "description": {
-        "en": "MISSING TRANSLATION",
+        "en": "You hold a military rank that earns respect among soldiers and grants access to military bases.",
         "pl": "Masz rangę wojskową, która budzi szacunek wśród żołnierzy oraz daje dostęp do baz wojskowych."
       }
     }

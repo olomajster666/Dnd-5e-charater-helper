@@ -1,0 +1,145 @@
+🟩 Phase 1: Planning & Setup
+🔹 Tasks:
+Finalize feature scope
+
+Decide on Python GUI framework
+
+Create a Git repository & basic folder structure
+
+Set up virtual environment with dependencies
+
+✅ Deliverables:
+/app folder structure
+
+Requirements file
+
+Language files (e.g., pl.json)
+
+🟦 Phase 2: Data Layer
+🔹 Tasks:
+Create structured JSON files for:
+
+Races
+
+Classes
+
+Backgrounds
+
+Proficiencies
+
+Create spell data (could be scraped but didn't feel like it XD)
+
+✅ Deliverables:
+data/races.json
+
+data/classes.json
+
+data/backgrounds.json
+
+data/spells.json
+
+data/equipment.json
+
+🟨 Phase 3: GUI Framework & Wizard Skeleton
+🔹 Tasks:
+Build navigation system (Next / Back buttons)
+
+Create GUI for each character creation step:
+
+Step 1: Name + Gender
+
+Step 2: Race/Class selection
+
+Step 3: Background
+
+Step 4: Ability score method + allocation
+
+Step 5: Proficiencies
+
+Step 6: Spells (if spellcaster)
+
+Step 7: Equipment
+
+Step 8: Image selection
+
+Step 9: Summary/Export
+
+✅ Deliverables:
+Working wizard UI
+
+JSON object builds live character as user proceeds
+
+Basic visuals & structure
+
+🟧 Phase 4: Core Logic & Validation
+🔹 Tasks:
+Link each choice to backend data (e.g., pick Elf → show traits)
+
+Implement rules: class/race/background combos, ability score bonuses, etc.
+
+Automatically apply proficiencies, languages, features from selections
+
+Add beginner guidance (tooltips, tips)
+
+✅ Deliverables:
+Character builder is fully functional
+
+Choices affect stats correctly
+
+Validation: no duplicate proficiencies, stats in valid range
+
+🟥 Phase 5: Level-Up System (maybe if time allows)
+🔹 Tasks:
+Create "Level Up" screen (Level 1–10)
+
+Handle class-specific features on level-up
+
+Let users choose new spells / abilities
+
+Add HP increase system (roll or average)
+
+✅ Deliverables:
+Working level-up logic
+
+Stored character JSON tracks level + changes
+
+Data persists across sessions
+
+🟫 Phase 6: Character Sheet + Export
+🔹 Tasks:
+Display full character sheet in readable layout
+
+Allow editing minor fields (notes, alignment)
+
+Export to PDF using reportlab or html2pdf
+
+Save/load sheet locally
+
+✅ Deliverables:
+Printable PDF export
+
+“Save character” & “Load character” options
+
+Uploaded image shown on sheet
+
+🟪 Phase 7: Polish, Test & Document
+🔹 Tasks:
+Finalize Polish translation
+
+Fix bugs & UI improvements
+
+Write documentation:
+
+Setup instructions
+
+How to use app
+
+Feature list
+
+✅ Deliverables:
+Working, polished app
+
+Clear, concise documentation (PDF or Markdown)
+
+(Optional) Build into .exe with PyInstaller
+

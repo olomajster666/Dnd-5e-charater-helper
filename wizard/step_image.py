@@ -17,7 +17,8 @@ class StepImage(IsStep):
         self.image_label = tk.Label(self)
         self.image_label.pack(pady=10)
 
-        tk.Button(self, text=lh.getInfo("button_skip"), command=self.skip_and_continue).pack(side="left", padx=10, pady=20)
+        tk.Button(self, text=lh.getInfo("button_back"), command=self.discard_and_back).pack(side="left", padx=10,pady=20)
+        tk.Button(self, text=lh.getInfo("button_skip"), command=self.skip_and_continue).pack(side="right", padx=10, pady=20)
         tk.Button(self, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10, pady=20)
 
     def load_image(self):

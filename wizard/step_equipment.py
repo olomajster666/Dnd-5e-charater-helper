@@ -29,9 +29,9 @@ class StepEquipment(IsStep):
         tk.Label(self, text=lh.getInfo("background_equipment"), font=("Arial", 14)).pack(pady=5)
         if self.background_equipment:
             for item in self.background_equipment:
-                tk.Label(self, text=lh.getItemCountAndName(item), fg="gray").pack(anchor="w")
+                tk.Label(self, text=lh.getItemCountAndName(item), fg="gray").pack()
         else:
-            tk.Label(self, text=lh.getInfo("background_equipment_missing"), fg="gray").pack(anchor="w")
+            tk.Label(self, text=lh.getInfo("background_equipment_missing"), fg="gray").pack()
 
         tk.Label(self, text=lh.getInfo("choose_equipment_for_class") + " " + lh.getFromDict(self.classes[self.current_class]['name']), font=("Arial", 16)).pack(pady=10)
 
@@ -63,7 +63,7 @@ class StepEquipment(IsStep):
         #    tk.messagebox.showerror(lh.getInfo("error"), lh.getInfo("error_not_all_options_selected"))
         #    return
 
-        all_equipment = self.background_equipment
+        all_equipment = self.background_equipment.copy()
         for i, option in enumerate(self.equipment_options):
             for item in option[self.selected_options[i].get()]:
                 all_equipment.append(item)

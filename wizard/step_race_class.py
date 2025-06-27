@@ -5,7 +5,6 @@ from .has_steps import HasSteps
 class StepRaceClass(tk.Frame):
     def __init__(self, master, state, wizard : HasSteps):
         super().__init__(master)
-        self.master = master
         self.state = state
         self.wizard = wizard
 

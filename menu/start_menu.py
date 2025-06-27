@@ -12,7 +12,6 @@ class StartMenu(tk.Frame):
 
     def __init__(self, master):
         super().__init__(master)
-        self.master = master
 
         self.lang = tk.StringVar(value=lh.chosenLanguage)
         self.savedCharacterStates = {}

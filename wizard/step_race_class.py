@@ -1,11 +1,12 @@
 import tkinter as tk
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepRaceClass(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -15,8 +16,15 @@ class StepRaceClass(IsStep):
 
         self.race_var = tk.StringVar()
         self.class_var = tk.StringVar()
-        self.race_var.set("human")
-        self.class_var.set("fighter")
+        if(self.state.get("race") != None and self.state.get("race").get("id") in self.race_options.keys()):
+            self.race_var.set(self.state.get("race").get("id"))
+        else:
+            self.race_var.set("human")
+
+        if(self.state.get("class") != None and self.state.get("class").get("id") in self.class_options.keys()):
+            self.class_var.set(self.state.get("class").get("id"))
+        else:
+            self.class_var.set("fighter")
 
         tk.Label(self, text=lh.getInfo("choose_race"), font=("Arial", 16)).pack(pady=10)
         for race in self.race_options.values():

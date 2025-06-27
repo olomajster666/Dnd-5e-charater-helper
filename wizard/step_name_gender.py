@@ -4,24 +4,27 @@ import menu.start_menu
 import utils.language_helper as lh
 from tkinter import messagebox
 
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepNameGender(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
-
-        self.quitToMenuVar = tk.BooleanVar()
-
         tk.Label(self, text=lh.getInfo("choose_character_name"), font=("Arial", 16)).pack(pady=10)
         self.name_entry = tk.Entry(self)
+        self.name_entry.insert(0, self.state.get("name", ""))
         self.name_entry.pack()
 
         tk.Label(self, text=lh.getInfo("choose_character_gender"), font=("Arial", 16)).pack(pady=10)
-        self.gender_var = tk.StringVar(value=lh.getGenders()[-1])
+        self.gender_var = tk.StringVar() # TODO trzeba bedzie przerobic plcie tak jak itemy przerobilem, bo sie bedzie zawsze wyswietlac w takim jezyku w jakim zostala stworzona postac
+        if(state.get("gender", "") in lh.getGenders()):
+            self.gender_var.set(state.get("gender"))
+        else:
+            self.gender_var.set(lh.getGenders()[-1])
         for g in lh.getGenders():
             tk.Radiobutton(self, text=g, variable=self.gender_var, value=g).pack()
 

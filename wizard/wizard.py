@@ -11,6 +11,9 @@ from .step_equipment import StepEquipment
 from .step_image import StepImage
 from .step_character_display import StepCharacterDisplay
 
+
+SPELLCASTING_CLASSES = {"wizard", "cleric", "bard"}
+
 class Wizard(tk.Frame, HasSteps):
     def __init__(self, master):
         super().__init__(master)
@@ -27,26 +30,22 @@ class Wizard(tk.Frame, HasSteps):
             StepCharacterDisplay,
         ]
         self.current = 0
-        self.step_instances = {}
+        #self.step_instances = {}
         self.show_step(self.current)
 
     def show_step(self, index):
         for widget in self.winfo_children():
             widget.destroy()
 
-        if index not in self.step_instances:
-            self.step_instances[index] = self.steps[index](self, self.state, self)
-        step = self.step_instances[index]
+        #if index not in self.step_instances:
+        #    self.step_instances[index] = self.steps[index](self, self.state, self)
+        step = self.steps[index](self, self.state, self)
 
         step.pack(fill="both", expand=True)
 
     def next_step(self):
-        class_data = self.state.get("class", {})
-        current_class = class_data.get("id") if isinstance(class_data, dict) else None
-        spellcasting_classes = {"wizard", "cleric", "bard"}
-
         if self.current < len(self.steps) - 1:
-            if self.current == len(self.steps) - 5 and current_class not in spellcasting_classes:  # Before StepSpellSelection
+            if self.current == len(self.steps) - 5 and self.shouldSkipSpellSelection():  # Before StepSpellSelection
                 self.current += 2  # Skip StepSpellSelection
                 if self.current >= len(self.steps):  # Ensure we don't exceed the list
                     self.current = len(self.steps) - 1
@@ -56,5 +55,15 @@ class Wizard(tk.Frame, HasSteps):
 
     def previous_step(self):
         if self.current > 0:
-            self.current -= 1
+            if(self.shouldSkipSpellSelection()):
+                self.current -= 2
+            else:
+                self.current -= 1
+
+            self.current = 0 if self.current < 0 else self.current
             self.show_step(self.current)
+
+    def shouldSkipSpellSelection(self):
+        class_data = self.state.get("class", {})
+        current_class = class_data.get("id") if isinstance(class_data, dict) else None
+        return current_class not in SPELLCASTING_CLASSES

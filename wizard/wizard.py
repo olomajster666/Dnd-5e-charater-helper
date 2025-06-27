@@ -30,6 +30,7 @@ class Wizard(tk.Frame, HasSteps):
             StepCharacterDisplay,
         ]
         self.current = 0
+        # sprawdzam czy moge pushowac
         #self.step_instances = {}
         self.show_step(self.current)
 

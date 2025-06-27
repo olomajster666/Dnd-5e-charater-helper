@@ -14,6 +14,7 @@ genders = jl.load_json("lang/genders.json")
 info = jl.load_json("lang/info.json")
 languages = jl.load_json("lang/languages.json")
 abilities = jl.load_json("lang/abilities.json")
+items = jl.load_json("lang/items.json")
 
 
 def getFromDict(d : dict):
@@ -29,3 +30,6 @@ def getGenders():
 
 def getAbility(key : str):
     return abilities[key].get(chosenLanguage, "en")
+
+def getItem(key : str):
+    return items[key].get(chosenLanguage, "en")

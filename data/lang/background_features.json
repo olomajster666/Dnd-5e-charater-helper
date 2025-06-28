@@ -1,0 +1,52 @@
+{
+  "shelter_of_the_faithful": {
+    "name": {
+      "en": "Shelter of the Faithful",
+      "pl": "Schronienie Wiernych"
+    },
+    "description": {
+      "en": "You can receive aid from members of your religion, including shelter and healing.",
+      "pl": "Możesz otrzymać pomoc od członków swojej religii, w tym schronienie i leczenie."
+    }
+  },
+  "criminal_contact": {
+    "name": {
+      "en": "Criminal Contact",
+      "pl": "Kontakt Kryminalny"
+    },
+    "description": {
+      "en": "You have a reliable contact within a criminal network who can provide information and assistance.",
+      "pl": "Masz niezawodny kontakt w sieci przestępczej, który może dostarczać informacji i pomocy."
+    }
+  },
+  "by_popular_demand": {
+    "name": {
+      "en": "By Popular Demand",
+      "pl": "Na Życzenie Publiczności"
+    },
+    "description": {
+      "en": "You can perform in local taverns and theaters, earning food, shelter, and recognition.",
+      "pl": "Możesz występować w lokalnych gospodach i teatrach, zdobywając jedzenie, schronienie i uznanie."
+    }
+  },
+  "researcher": {
+    "name": {
+      "en": "Researcher",
+      "pl": "Badacz"
+    },
+    "description": {
+      "en": "When you don’t know an answer, you know where and how to find it—be it in a book, archive, or from a scholar.",
+      "pl": "Kiedy nie znasz odpowiedzi, wiesz gdzie i jak ją znaleźć – w księdze, w archiwum lub u uczonego."
+    }
+  },
+  "military_rank": {
+    "name": {
+      "en": "Military Rank",
+      "pl": "Ranga Wojskowa"
+    },
+    "description": {
+      "en": "You hold a military rank that earns respect among soldiers and grants access to military bases.",
+      "pl": "Masz rangę wojskową, która budzi szacunek wśród żołnierzy oraz daje dostęp do baz wojskowych."
+    }
+  }
+}

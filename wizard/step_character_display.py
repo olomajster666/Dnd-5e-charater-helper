@@ -59,7 +59,7 @@ class StepCharacterDisplay(IsStep):
 
         # Spells (if applicable)
         if current_class not in {"wizard", "cleric", "bard"}:
-            spells = [lh.getInfo("no_spells")]
+            spells = ["no_spells"]
         else:
             spells = state.get("spells", [])
 
@@ -150,6 +150,9 @@ class StepCharacterDisplay(IsStep):
     def getTranslatedSpells(self, spells : list):
         tr = []
         for spell in spells:
+            if(spell == "no_spells"):
+                tr.append(lh.getInfo("no_spells"))
+                return tr
             tr.append(lh.getSpellName(spell))
 
         return tr

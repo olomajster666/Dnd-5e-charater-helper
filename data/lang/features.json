@@ -48,5 +48,85 @@
       "en": "You hold a military rank that earns respect among soldiers and grants access to military bases.",
       "pl": "Masz rangę wojskową, która budzi szacunek wśród żołnierzy oraz daje dostęp do baz wojskowych."
     }
+  },
+  "fighting_style": {
+    "name": {
+      "en": "Fighting Style",
+      "pl": "Styl Walki"
+    },
+    "description": {
+      "en": "Choose a fighting style that influences your combat abilities.",
+      "pl": "Wybierz styl walki, który wpływa na twoje zdolności bojowe."
+    }
+  },
+  "second_wind": {
+    "name": {
+      "en": "Second Wind",
+      "pl": "Drugi Oddech"
+    },
+    "description": {
+      "en": "Once per short rest, you can regain hit points equal to 1d10 + your fighter level.",
+      "pl": "Raz na turę możesz odzyskać punkty życia równe 1k10 + poziom klasy."
+    }
+  },
+  "sneak_attack": {
+    "name": {
+      "en": "Sneak Attack",
+      "pl": "Atak z Zaskoczenia"
+    },
+    "description": {
+      "en": "You deal extra damage when you have advantage or the target is occupied by an ally.",
+      "pl": "Zadajesz dodatkowe obrażenia, gdy masz przewagę lub cel jest zajęty."
+    }
+  },
+  "thieves_cant": {
+    "name": {
+      "en": "Thieves’ Cant",
+      "pl": "Żargon Złodziei"
+    },
+    "description": {
+      "en": "You know a secret language used by thieves and criminals.",
+      "pl": "Znasz tajny język używany przez złodziei i przestępców."
+    }
+  },
+  "spellcasting": {
+    "name": {
+      "en": "Spellcasting",
+      "pl": "Rzucanie Czarów"
+    },
+    "description": {
+      "en": "You gain access to magic and can cast spells.",
+      "pl": "Zyskujesz dostęp do magii i możesz rzucać czary."
+    }
+  },
+  "arcane_recovery": {
+    "name": {
+      "en": "Arcane Recovery",
+      "pl": "Magiczne Odzyskanie"
+    },
+    "description": {
+      "en": "Once per day, you can recover some expended spell slots.",
+      "pl": "Raz dziennie możesz odzyskać część zużytych slotów czarów."
+    }
+  },
+  "divine_domain": {
+    "name": {
+      "en": "Divine Domain",
+      "pl": "Boska Dziedzina"
+    },
+    "description": {
+      "en": "You choose a divine domain that grants additional spells and abilities.",
+      "pl": "Wybierasz dziedzinę boską, która nadaje dodatkowe czary i zdolności."
+    }
+  },
+  "bardic_inspiration": {
+    "name": {
+      "en": "Bardic Inspiration",
+      "pl": "Inspiracja Barda"
+    },
+    "description": {
+      "en": "Once per short rest, you can add 1d6 to an ally’s attack roll, ability check, or saving throw.",
+      "pl": "Raz na turę możesz dodać 1k6 do rzutu ataku, testu umiejętności lub rzutu obronnego sojusznika."
+    }
   }
 }

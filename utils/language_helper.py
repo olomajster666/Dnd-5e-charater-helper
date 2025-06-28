@@ -13,6 +13,8 @@ spell_names = jl.load_json("lang/spell_names.json")
 background_names = jl.load_json("lang/background_names.json")
 features = jl.load_json("lang/features.json")
 class_names = jl.load_json("lang/class_names.json")
+race_names = jl.load_json("lang/race_names.json")
+proficiency_names = jl.load_json("lang/proficiency_names.json")
 
 
 def getTranslation(d : dict):
@@ -37,6 +39,9 @@ def getGender(id : str):
 
 def getAbility(key : str):
     return getTranslation(abilities[key])
+
+def getProficiency(key : str):
+    return getTranslation(proficiency_names[key])
 
 def getItem(key : str):
     return getTranslation(items[key])
@@ -74,3 +79,9 @@ def getClassName(id : str):
 
 def getClassDescription(id : str):
     return getDescription(class_names[id])
+
+def getRaceName(id : str):
+    return getName(race_names[id])
+
+def getRaceDescription(id : str):
+    return getDescription(race_names[id])

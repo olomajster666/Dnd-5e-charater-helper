@@ -44,7 +44,7 @@ class StepProficiencies(IsStep):
         default_frame.pack()
         for prof_id in self.default_profs:
             prof = next(p for p in self.proficiencies if p["id"] == prof_id)
-            tk.Label(default_frame, text=lh.getTranslation(prof["name"]), fg="gray").pack(anchor="w")
+            tk.Label(default_frame, text=lh.getProficiency(prof["id"]), fg="gray").pack(anchor="w")
 
         tk.Label(self, text=lh.getInfo("choose_skills"), font=("Arial", 16)).pack(pady=10)
         self.skill_vars = {prof["id"]: tk.BooleanVar() for prof in self.available_choices}
@@ -92,7 +92,7 @@ class StepProficiencies(IsStep):
             widget.destroy()
         selected_count = sum(var.get() for var in self.skill_vars.values())
         for prof in self.available_choices:
-            cb = tk.Checkbutton(self.skill_frame, text=lh.getTranslation(prof["name"]), variable=self.skill_vars[prof["id"]],
+            cb = tk.Checkbutton(self.skill_frame, text=lh.getProficiency(prof["id"]), variable=self.skill_vars[prof["id"]],
                                 command=lambda p=prof["id"]: self.validate_selection(p))
             cb.pack(anchor="w")
         self.validate_selection()  # Initial validation

@@ -72,7 +72,7 @@ class StepCharacterDisplay(IsStep):
 
         # Get race name
         race_id = race_data.get("id")
-        race_name = lh.getTranslation(self.races.get(race_id, {}).get("name", {"en" : "None"}))
+        race_name = lh.getRaceName(race_id)
 
         # Get class and background names
         class_name = "None"
@@ -119,7 +119,7 @@ class StepCharacterDisplay(IsStep):
                 proficiency_bonus = 2 if skill_id in proficiency_ids else 0
                 total_modifier = base_value + proficiency_bonus
                 total_modifier_str = f"+{total_modifier}" if total_modifier >= 0 else str(total_modifier)
-                skill_name = lh.getTranslation(skill.get("name", {"en" : skill_id}))
+                skill_name = lh.getProficiency(skill.get("id", "None"))
                 display_name = f"* {skill_name} ({total_modifier_str})" if skill_id in proficiency_ids else f"{skill_name} ({total_modifier_str})"
                 stat_skills[ability].append(display_name)
 

@@ -7,13 +7,14 @@ from wizard.wizard import Wizard
 import utils.language_helper as lh
 from utils.json_loader import writeLanguageOptions, getSavedCharacterList, loadSavedCharacter
 
+AVAILABLE_LANGUAGES = {lh.getLanguageName(id) : id for id in lh.languages}
 
 class StartMenu(tk.Frame):
 
     def __init__(self, master):
         super().__init__(master)
 
-        self.lang = tk.StringVar(value=lh.chosenLanguage)
+        self.lang = tk.StringVar(value=lh.getLanguageName(lh.chosenLanguage))
         self.savedCharacterStates = {}
 
         self.showStartMenu()
@@ -50,8 +51,8 @@ class StartMenu(tk.Frame):
         tk.Label(self, text=lh.getInfo("options_menu"), font=("Arial", 16)).pack(pady=10)
 
         def save(*args):
-            lh.chosenLanguage = self.lang.get()
-            writeLanguageOptions(self.lang.get())
+            lh.chosenLanguage = AVAILABLE_LANGUAGES.get(self.lang.get())
+            writeLanguageOptions(AVAILABLE_LANGUAGES.get(self.lang.get()))
             self.showOptionsMenu()
 
 
@@ -61,7 +62,7 @@ class StartMenu(tk.Frame):
         tk.Label(langNav, text=lh.getInfo("choose_language") + ":").pack(side="left", padx=5)
 
         self.lang.trace_add("write", save)
-        tk.OptionMenu(langNav, self.lang, *lh.languages).pack(side="left", padx=5)
+        tk.OptionMenu(langNav, self.lang, *AVAILABLE_LANGUAGES.keys()).pack(side="left", padx=5)
 
         self.addBackButton()
 

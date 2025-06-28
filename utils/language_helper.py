@@ -9,11 +9,12 @@ proficiencies = jl.load_json("proficiencies.json")
 races = jl.load_json("races.json")
 spells = jl.load_json("spells.json")
 genders = jl.load_json("genders.json")
+languages = jl.load_json("languages.json")
 
 # only for translations
 gender_names = jl.load_json("lang/gender_names.json")
 info = jl.load_json("lang/info.json")
-languages = jl.load_json("lang/languages.json")
+language_names = jl.load_json("lang/language_names.json")
 abilities = jl.load_json("lang/abilities.json")
 items = jl.load_json("lang/items.json")
 spell_names = jl.load_json("lang/spell_names.json")
@@ -23,6 +24,9 @@ def getFromDict(d : dict):
     if(not d.keys().__contains__("en")):
         raise KeyError
     return d.get(chosenLanguage, d.get("en"))
+
+def getLanguageName(id : str):
+    return language_names.get(id, "Unknown")
 
 def getInfo(key : str):
     return info[key].get(chosenLanguage, info[key].get("en"))

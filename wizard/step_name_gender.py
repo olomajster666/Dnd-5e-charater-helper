@@ -2,6 +2,7 @@ import tkinter as tk
 
 import menu.start_menu
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from tkinter import messagebox
 
 from state.character_state import CharacterState
@@ -21,11 +22,11 @@ class StepNameGender(IsStep):
 
         tk.Label(self, text=lh.getInfo("choose_character_gender"), font=("Arial", 16)).pack(pady=10)
         self.gender_var = tk.StringVar()
-        if(state.get("gender", "") in lh.genders):
+        if(state.get("gender", "") in ld.genders):
             self.gender_var.set(state.get("gender"))
         else:
-            self.gender_var.set(lh.genders[-1])
-        for g in lh.genders:
+            self.gender_var.set(ld.genders[-1])
+        for g in ld.genders:
             tk.Radiobutton(self, text=lh.getGender(g), variable=self.gender_var, value=g).pack()
 
         nav = tk.Frame(self)

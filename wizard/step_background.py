@@ -1,5 +1,6 @@
 import tkinter as tk
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
@@ -11,7 +12,7 @@ class StepBackground(IsStep):
         self.state = state
 
         self.bg_var = tk.StringVar()
-        self.background_options = {bg["id"]: bg for bg in lh.backgrounds}
+        self.background_options = {bg["id"]: bg for bg in ld.backgrounds}
 
         if(self.state.get("background") != None and self.state.get("background").get("id") in self.background_options.keys()):
             self.bg_var.set(self.state.get("background").get("id"))

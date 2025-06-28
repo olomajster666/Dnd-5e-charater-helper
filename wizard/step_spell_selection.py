@@ -1,6 +1,7 @@
 import tkinter as tk
 import tkinter.messagebox
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
@@ -12,7 +13,7 @@ class StepSpellSelection(IsStep):
         self.state = state
 
         # Load spell data
-        self.spells = lh.spells
+        self.spells = ld.spells
 
         # Get class and stats from state
         class_data = self.state.get("class") or {}

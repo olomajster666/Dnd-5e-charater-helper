@@ -1,5 +1,6 @@
 import tkinter as tk
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from PIL import Image, ImageTk
 import os
 from logic.modifier_calculator import calculate_modifier
@@ -17,10 +18,10 @@ class StepCharacterDisplay(IsStep):
         super().__init__(master, wizard)
         self.state = state
 
-        self.classes = {cls["id"]: cls for cls in lh.classes}
-        self.races = {race["id"]: race for race in lh.races}
-        self.backgrounds = {bg["id"]: bg for bg in lh.backgrounds}
-        self.proficiencies_data = {prof["id"]: prof for prof in lh.proficiencies}
+        self.classes = {cls["id"]: cls for cls in ld.classes}
+        self.races = {race["id"]: race for race in ld.races}
+        self.backgrounds = {bg["id"]: bg for bg in ld.backgrounds}
+        self.proficiencies_data = {prof["id"]: prof for prof in ld.proficiencies}
 
         tk.Label(self, text=lh.getInfo("created_character_display"), font=("Arial", 16)).pack(pady=10)
         self.image_label = tk.Label(self)

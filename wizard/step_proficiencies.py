@@ -1,5 +1,7 @@
 import tkinter as tk
+import tkinter.messagebox
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
@@ -11,10 +13,10 @@ class StepProficiencies(IsStep):
         self.state = state
 
         # Load data
-        self.proficiencies = lh.proficiencies
-        self.classes = {cls["id"]: cls for cls in lh.classes}
-        self.backgrounds = {bg["id"]: bg for bg in lh.backgrounds}
-        self.races = {race["id"]: race for race in lh.races}
+        self.proficiencies = ld.proficiencies
+        self.classes = {cls["id"]: cls for cls in ld.classes}
+        self.backgrounds = {bg["id"]: bg for bg in ld.backgrounds}
+        self.races = {race["id"]: race for race in ld.races}
 
         # Get current selections with manual fallback
         class_data = self.state.get("class") or {}

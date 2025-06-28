@@ -5,9 +5,10 @@ from state.character_state import CharacterState
 from wizard.step_character_display import StepCharacterDisplay
 from wizard.wizard import Wizard
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from utils.json_loader import writeLanguageOptions, getSavedCharacterList, loadSavedCharacter
 
-AVAILABLE_LANGUAGES = {lh.getLanguageName(id) : id for id in lh.languages}
+AVAILABLE_LANGUAGES = {lh.getLanguageName(id) : id for id in ld.languages}
 
 class StartMenu(tk.Frame):
 

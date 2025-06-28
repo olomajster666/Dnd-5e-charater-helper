@@ -1,5 +1,6 @@
 import tkinter as tk
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
@@ -11,8 +12,8 @@ class StepRaceClass(IsStep):
         self.state = state
 
         # Load data
-        self.race_options = {race["id"]: race for race in lh.races}
-        self.class_options = {cls["id"]: cls for cls in lh.classes}
+        self.race_options = {race["id"]: race for race in ld.races}
+        self.class_options = {cls["id"]: cls for cls in ld.classes}
 
         self.race_var = tk.StringVar()
         self.class_var = tk.StringVar()

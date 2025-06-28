@@ -11,7 +11,7 @@ abilities = jl.load_json("lang/abilities.json")
 items = jl.load_json("lang/items.json")
 spell_names = jl.load_json("lang/spell_names.json")
 background_names = jl.load_json("lang/background_names.json")
-background_features = jl.load_json("lang/background_features.json")
+features = jl.load_json("lang/features.json")
 
 
 def getTranslation(d : dict):
@@ -62,8 +62,8 @@ def getBackgroundName(id : str):
 def getBackgroundDescription(id : str):
     return getDescription(background_names[id])
 
-def getBackgroundFeatureName(id : str):
-    return getName(background_features[id])
+def getFeatureName(id : str):
+    return getName(features[id])
 
-def getBackgroundFeatureDescription(id : str):
-    return getDescription(background_features[id])
+def getFeatureDescription(id : str):
+    return getDescription(features[id])

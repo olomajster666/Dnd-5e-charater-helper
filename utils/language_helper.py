@@ -10,27 +10,35 @@ language_names = jl.load_json("lang/language_names.json")
 abilities = jl.load_json("lang/abilities.json")
 items = jl.load_json("lang/items.json")
 spell_names = jl.load_json("lang/spell_names.json")
+background_names = jl.load_json("lang/background_names.json")
+background_features = jl.load_json("lang/background_features.json")
 
 
-def getFromDict(d : dict):
+def getTranslation(d : dict):
     if(not d.keys().__contains__("en")):
         raise KeyError
     return d.get(chosenLanguage, d.get("en"))
+
+def getDescription(d : dict):
+    return getTranslation(d.get("description"))
+
+def getName(d : dict):
+    return getTranslation(d.get("name"))
 
 def getLanguageName(id : str):
     return language_names.get(id, "Unknown")
 
 def getInfo(key : str):
-    return info[key].get(chosenLanguage, info[key].get("en"))
+    return getTranslation(info[key])
 
 def getGender(id : str):
-    return gender_names.get(id).get(chosenLanguage, gender_names.get(id).get("en"))
+    return getTranslation(gender_names[id])
 
 def getAbility(key : str):
-    return abilities[key].get(chosenLanguage, abilities[key].get("en"))
+    return getTranslation(abilities[key])
 
 def getItem(key : str):
-    return items[key].get(chosenLanguage, items[key].get("en"))
+    return getTranslation(items[key])
 
 def getItemCountAndName(item : dict):
     if(item['count'] < 1):
@@ -43,7 +51,19 @@ def getItemCountAndName(item : dict):
     return text + getItem(item['id'])
 
 def getSpellName(id : str):
-    return spell_names[id].get("name").get(chosenLanguage, spell_names[id].get("en"))
+    return getName(spell_names[id])
 
 def getSpellDescription(id : str):
-    return spell_names[id].get("description").get(chosenLanguage, spell_names[id].get("en"))
+    return getDescription(spell_names[id])
+
+def getBackgroundName(id : str):
+    return getName(background_names[id])
+
+def getBackgroundDescription(id : str):
+    return getDescription(background_names[id])
+
+def getBackgroundFeatureName(id : str):
+    return getName(background_features[id])
+
+def getBackgroundFeatureDescription(id : str):
+    return getDescription(background_features[id])

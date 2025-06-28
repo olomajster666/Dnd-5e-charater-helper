@@ -35,7 +35,7 @@ class StepEquipment(IsStep):
         else:
             tk.Label(self, text=lh.getInfo("background_equipment_missing"), fg="gray").pack()
 
-        tk.Label(self, text=lh.getInfo("choose_equipment_for_class") + " " + lh.getFromDict(self.classes[self.current_class]['name']), font=("Arial", 16)).pack(pady=10)
+        tk.Label(self, text=lh.getInfo("choose_equipment_for_class") + " " + lh.getTranslation(self.classes[self.current_class]['name']), font=("Arial", 16)).pack(pady=10)
 
         for i, options in enumerate(self.equipment_options):
             frame = tk.Frame(self)

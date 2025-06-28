@@ -68,21 +68,21 @@ class StepCharacterDisplay(IsStep):
         abilities = []
         if current_class and current_class in self.classes:
             for feature in self.classes[current_class].get("level_1_features", []):
-                abilities.append(f"{lh.getFromDict(feature['name'])}: {lh.getFromDict(feature['description'])}")
+                abilities.append(f"{lh.getTranslation(feature['name'])}: {lh.getTranslation(feature['description'])}")
 
         # Get race name
         race_id = race_data.get("id")
-        race_name = lh.getFromDict(self.races.get(race_id, {}).get("name", {"en" : "None"}))
+        race_name = lh.getTranslation(self.races.get(race_id, {}).get("name", {"en" : "None"}))
 
         # Get class and background names
         class_name = "None"
         if isinstance(class_data, dict) and "id" in class_data:
-            class_name = lh.getFromDict(self.classes.get(class_data["id"], {}).get("name", {"en" : "None"}))
+            class_name = lh.getTranslation(self.classes.get(class_data["id"], {}).get("name", {"en" : "None"}))
 
         # Get background name
         background_name = "None"
         if isinstance(background_data, dict) and "id" in background_data:
-            background_name = lh.getFromDict(self.backgrounds.get(background_data["id"], {}).get("name", {"en" : "None"}))
+            background_name = lh.getBackgroundName(background_data["id"])
 
         # Image handling
         image_path = state.get("image_path")
@@ -119,7 +119,7 @@ class StepCharacterDisplay(IsStep):
                 proficiency_bonus = 2 if skill_id in proficiency_ids else 0
                 total_modifier = base_value + proficiency_bonus
                 total_modifier_str = f"+{total_modifier}" if total_modifier >= 0 else str(total_modifier)
-                skill_name = lh.getFromDict(skill.get("name", {"en" : skill_id}))
+                skill_name = lh.getTranslation(skill.get("name", {"en" : skill_id}))
                 display_name = f"* {skill_name} ({total_modifier_str})" if skill_id in proficiency_ids else f"{skill_name} ({total_modifier_str})"
                 stat_skills[ability].append(display_name)
 

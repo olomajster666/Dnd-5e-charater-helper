@@ -1,12 +1,13 @@
 import tkinter as tk
 import tkinter.messagebox
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepSpellSelection(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -58,6 +59,14 @@ class StepSpellSelection(IsStep):
             cb = tk.Checkbutton(self.level_1_frame, text=f"{lh.getSpellName(spell['id'])} ({lh.getInfo('level')} 1)", variable=var,
                               command=lambda s=spell["id"]: self.validate_selection(s, "level_1"))
             cb.pack(anchor="w")
+
+        for spell in self.state.get("spells", []):
+            if(spell in self.cantrip_vars.keys()):
+                self.cantrip_vars[spell].set(True)
+            elif(spell in self.level_1_vars.keys()):
+                self.level_1_vars[spell].set(True)
+            else:
+                print("Character has unknown spell: " + spell)
 
         # Navigation
         nav = tk.Frame(self)

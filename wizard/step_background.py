@@ -1,17 +1,22 @@
 import tkinter as tk
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepBackground(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
         self.bg_var = tk.StringVar()
         self.background_options = {bg["id"]: bg for bg in lh.backgrounds}
-        self.bg_var.set("acolyte")
+
+        if(self.state.get("background") != None and self.state.get("background").get("id") in self.background_options.keys()):
+            self.bg_var.set(self.state.get("background").get("id"))
+        else:
+            self.bg_var.set("acolyte")
 
         tk.Label(self, text=lh.getInfo("choose_character_background"), font=("Arial", 16)).pack(pady=10)
         for bg in self.background_options.values():

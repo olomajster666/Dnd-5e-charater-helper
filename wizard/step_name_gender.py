@@ -20,13 +20,13 @@ class StepNameGender(IsStep):
         self.name_entry.pack()
 
         tk.Label(self, text=lh.getInfo("choose_character_gender"), font=("Arial", 16)).pack(pady=10)
-        self.gender_var = tk.StringVar() # TODO trzeba bedzie przerobic plcie tak jak itemy przerobilem, bo sie bedzie zawsze wyswietlac w takim jezyku w jakim zostala stworzona postac
-        if(state.get("gender", "") in lh.getGenders()):
+        self.gender_var = tk.StringVar()
+        if(state.get("gender", "") in lh.genders):
             self.gender_var.set(state.get("gender"))
         else:
-            self.gender_var.set(lh.getGenders()[-1])
-        for g in lh.getGenders():
-            tk.Radiobutton(self, text=g, variable=self.gender_var, value=g).pack()
+            self.gender_var.set(lh.genders[-1])
+        for g in lh.genders:
+            tk.Radiobutton(self, text=lh.getGender(g), variable=self.gender_var, value=g).pack()
 
         nav = tk.Frame(self)
         nav.pack(side="bottom", pady=20)

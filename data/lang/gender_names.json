@@ -1,0 +1,14 @@
+{
+  "male": {
+    "en": "Male",
+    "pl": "Mężczyzna"
+  },
+  "female": {
+    "en": "Female",
+    "pl": "Kobieta"
+  },
+  "not_specified": {
+    "en": "Not specified",
+    "pl": "Nieokreślona"
+  }
+}

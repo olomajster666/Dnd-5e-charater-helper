@@ -8,9 +8,10 @@ classes = jl.load_json("classes.json")
 proficiencies = jl.load_json("proficiencies.json")
 races = jl.load_json("races.json")
 spells = jl.load_json("spells.json")
+genders = jl.load_json("genders.json")
 
 # only for translations
-genders = jl.load_json("lang/genders.json")
+gender_names = jl.load_json("lang/gender_names.json")
 info = jl.load_json("lang/info.json")
 languages = jl.load_json("lang/languages.json")
 abilities = jl.load_json("lang/abilities.json")
@@ -26,8 +27,8 @@ def getFromDict(d : dict):
 def getInfo(key : str):
     return info[key].get(chosenLanguage, info[key].get("en"))
 
-def getGenders():
-    return genders.get(chosenLanguage, genders.get("en"))
+def getGender(id : str):
+    return gender_names.get(id).get(chosenLanguage, gender_names.get(id).get("en"))
 
 def getAbility(key : str):
     return abilities[key].get(chosenLanguage, abilities[key].get("en"))

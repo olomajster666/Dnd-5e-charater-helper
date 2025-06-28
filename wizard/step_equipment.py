@@ -1,11 +1,12 @@
 import tkinter as tk
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepEquipment(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -42,11 +43,16 @@ class StepEquipment(IsStep):
             var = self.selected_options[i]
             for j, option in enumerate(options):
                 text : str = ""
+                bl = True
                 for x in option:
+                    if(not (x in self.state.get("equipment"))):
+                        bl = False
                     if(len(text) < 1):
                         text += lh.getItemCountAndName(x)
                     else:
                         text += ", " + lh.getItemCountAndName(x)
+                if(bl):
+                    var.set(j)
                 tk.Radiobutton(frame, text=text, variable=var, value=j).pack(side="left", padx=5)
 
         nav = tk.Frame(self)

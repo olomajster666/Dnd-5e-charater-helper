@@ -1,11 +1,12 @@
 import tkinter as tk
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepProficiencies(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -93,6 +94,10 @@ class StepProficiencies(IsStep):
                               command=lambda p=prof["id"]: self.validate_selection(p))
             cb.pack(anchor="w")
         self.validate_selection()  # Initial validation
+        for id in self.skill_vars.keys():
+            if (id in self.state.get("proficiencies", [])):
+                self.skill_vars.get(id).set(True)
+                self.state.get("proficiencies").remove(id)
 
     def validate_selection(self, changed=None):
         selected = [prof for prof, var in self.skill_vars.items() if var.get()]

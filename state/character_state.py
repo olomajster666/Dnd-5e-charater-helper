@@ -1,6 +1,6 @@
 class CharacterState:
 
-    __defaultData = {
+    defaultData = {
         "name": "",
         "gender": "",
         "race": None,
@@ -18,9 +18,9 @@ class CharacterState:
         "spells": [],
         "equipment": [],
         "level": 1,
-        "image": None
+        "image_path": None
     }
-    def __init__(self, data : dict = __defaultData):
+    def __init__(self, data : dict = defaultData):
         self.data = data
 
     def set(self, key, value):

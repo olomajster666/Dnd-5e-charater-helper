@@ -2,15 +2,19 @@ import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepImage(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
         self.image_path = tk.StringVar()
+
+        if(self.state.get("image_path") != None):
+            self.image_path.set(self.state.get("image_path"))
 
         tk.Label(self, text=lh.getInfo("add_character_image"), font=("Arial", 16)).pack(pady=10)
         tk.Button(self, text=lh.getInfo("choose_image"), command=self.load_image).pack(pady=5)

@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
@@ -8,12 +9,12 @@ STANDARD_ARRAY = [15, 14, 13, 12, 10, 8]
 ABILITIES = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
 
 class StepStatAllocation(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
         self.method_var = tk.StringVar(value="array")
-        self.assign_vars = {ability: tk.StringVar() for ability in ABILITIES}
+        self.assign_vars = {ability: tk.StringVar(value=self.state.get("stats", CharacterState.defaultData.get("stats")).get(ability)) for ability in ABILITIES}
         self.method_var.set("array")
 
         tk.Label(self, text=lh.getInfo("choose_stat_method"), font=("Arial", 16)).pack(pady=10)

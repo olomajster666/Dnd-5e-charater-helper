@@ -15,6 +15,7 @@ info = jl.load_json("lang/info.json")
 languages = jl.load_json("lang/languages.json")
 abilities = jl.load_json("lang/abilities.json")
 items = jl.load_json("lang/items.json")
+spell_names = jl.load_json("lang/spell_names.json")
 
 
 def getFromDict(d : dict):
@@ -26,13 +27,13 @@ def getInfo(key : str):
     return info[key].get(chosenLanguage, info[key].get("en"))
 
 def getGenders():
-    return genders.get(chosenLanguage, "en")
+    return genders.get(chosenLanguage, genders.get("en"))
 
 def getAbility(key : str):
-    return abilities[key].get(chosenLanguage, "en")
+    return abilities[key].get(chosenLanguage, abilities[key].get("en"))
 
 def getItem(key : str):
-    return items[key].get(chosenLanguage, "en")
+    return items[key].get(chosenLanguage, items[key].get("en"))
 
 def getItemCountAndName(item : dict):
     if(item['count'] < 1):
@@ -43,3 +44,9 @@ def getItemCountAndName(item : dict):
         text += str(item['count']) + "x "
 
     return text + getItem(item['id'])
+
+def getSpellName(id : str):
+    return spell_names[id].get("name").get(chosenLanguage, spell_names[id].get("en"))
+
+def getSpellDescription(id : str):
+    return spell_names[id].get("description").get(chosenLanguage, spell_names[id].get("en"))

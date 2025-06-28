@@ -1,4 +1,5 @@
 import tkinter as tk
+import tkinter.messagebox
 import utils.language_helper as lh
 from .has_steps import HasSteps
 from .is_step import IsStep
@@ -47,15 +48,15 @@ class StepSpellSelection(IsStep):
         level_1_spells = [s for s in self.spells if s["level"] == 1 and self.current_class in s["classes"]]
         for spell in cantrips:
             var = tk.BooleanVar()
-            self.cantrip_vars[lh.getFromDict(spell["name"])] = var
-            cb = tk.Checkbutton(self.cantrip_frame, text=f"{lh.getFromDict(spell['name'])} ({lh.getInfo('level')} 0)", variable=var,
-                              command=lambda s=lh.getFromDict(spell["name"]): self.validate_selection(s, "cantrip"))
+            self.cantrip_vars[spell["id"]] = var
+            cb = tk.Checkbutton(self.cantrip_frame, text=f"{lh.getSpellName(spell['id'])} ({lh.getInfo('level')} 0)", variable=var,
+                              command=lambda s=spell["id"]: self.validate_selection(s, "cantrip"))
             cb.pack(anchor="w")
         for spell in level_1_spells:
             var = tk.BooleanVar()
-            self.level_1_vars[lh.getFromDict(spell["name"])] = var
-            cb = tk.Checkbutton(self.level_1_frame, text=f"{lh.getFromDict(spell['name'])} ({lh.getInfo('level')} 1)", variable=var,
-                              command=lambda s=lh.getFromDict(spell["name"]): self.validate_selection(s, "level_1"))
+            self.level_1_vars[spell["id"]] = var
+            cb = tk.Checkbutton(self.level_1_frame, text=f"{lh.getSpellName(spell['id'])} ({lh.getInfo('level')} 1)", variable=var,
+                              command=lambda s=spell["id"]: self.validate_selection(s, "level_1"))
             cb.pack(anchor="w")
 
         # Navigation
@@ -96,4 +97,6 @@ class StepSpellSelection(IsStep):
             tk.messagebox.showerror(lh.getInfo("error"), info)
             return
         self.state.set("spells", selected_cantrips + selected_level_1)
+        print("Selected spells:")
+        print(self.state.get("spells"))
         super().save_and_continue()

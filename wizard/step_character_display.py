@@ -58,9 +58,10 @@ class StepCharacterDisplay(IsStep):
         health = calculate_health(current_class, con_score, self.classes)
 
         # Spells (if applicable)
-        spells = state.get("spells", [])
         if current_class not in {"wizard", "cleric", "bard"}:
             spells = [lh.getInfo("no_spells")]
+        else:
+            spells = state.get("spells", [])
 
         # Abilities from classes.json
         abilities = []
@@ -135,7 +136,7 @@ class StepCharacterDisplay(IsStep):
             f"  **{lh.getAbility('wisdom')}:** {final_stats.get('wisdom', 10)} ({modifiers.get('wisdom', '+0')})" + ("\n" + "\n".join(stat_skills["wisdom"]) if stat_skills["wisdom"] else ""),
             f"  **{lh.getAbility('charisma')}:** {final_stats.get('charisma', 10)} ({modifiers.get('charisma', '+0')})" + ("\n" + "\n".join(stat_skills["charisma"]) if stat_skills["charisma"] else ""),
             f"{lh.getInfo('health')}: {health}",
-            f"{lh.getInfo('spells')}: {', '.join(spells)}",
+            f"{lh.getInfo('spells')}: {', '.join(self.getTranslatedSpells(spells))}",
             f"{lh.getInfo('abilities')}:" + ("\n" + "\n".join(abilities) if abilities else "\n" + lh.getInfo("no_abilities")),
             f"{lh.getInfo('equipment')}:" + "\n" + equipment_display
         ]
@@ -144,6 +145,14 @@ class StepCharacterDisplay(IsStep):
 
         self.display_text.delete(1.0, tk.END)
         self.display_text.insert(tk.END, display)
+
+
+    def getTranslatedSpells(self, spells : list):
+        tr = []
+        for spell in spells:
+            tr.append(lh.getSpellName(spell))
+
+        return tr
 
     def backToMenu(self):
         if(self.characterSaved or messagebox.askquestion(lh.getInfo("warning"), lh.getInfo("u_sure")) == "yes"):

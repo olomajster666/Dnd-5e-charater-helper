@@ -74,6 +74,6 @@ class StepEquipment(IsStep):
             for item in option[self.selected_options[i].get()]:
                 all_equipment.append(item)
         self.state.set("equipment", all_equipment)
-        print("Selected equipment:")
+        print("Character equipment:")
         print(all_equipment)
         super().save_and_continue()

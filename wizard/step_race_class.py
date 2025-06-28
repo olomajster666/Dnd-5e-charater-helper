@@ -34,7 +34,7 @@ class StepRaceClass(IsStep):
 
         tk.Label(self, text=lh.getInfo("choose_class"), font=("Arial", 16)).pack(pady=10)
         for cls in self.class_options.values():
-            name = lh.getTranslation(cls["name"])
+            name = lh.getClassName(cls["id"])
             tk.Radiobutton(self, text=name, variable=self.class_var, value=cls["id"]).pack()
 
         nav = tk.Frame(self)

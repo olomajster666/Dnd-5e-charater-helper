@@ -12,6 +12,7 @@ items = jl.load_json("lang/items.json")
 spell_names = jl.load_json("lang/spell_names.json")
 background_names = jl.load_json("lang/background_names.json")
 features = jl.load_json("lang/features.json")
+class_names = jl.load_json("lang/class_names.json")
 
 
 def getTranslation(d : dict):
@@ -67,3 +68,9 @@ def getFeatureName(id : str):
 
 def getFeatureDescription(id : str):
     return getDescription(features[id])
+
+def getClassName(id : str):
+    return getName(class_names[id])
+
+def getClassDescription(id : str):
+    return getDescription(class_names[id])

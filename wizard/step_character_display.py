@@ -68,7 +68,7 @@ class StepCharacterDisplay(IsStep):
         abilities = []
         if current_class and current_class in self.classes:
             for feature in self.classes[current_class].get("level_1_features", []):
-                abilities.append(f"{lh.getTranslation(feature['name'])}: {lh.getTranslation(feature['description'])}")
+                abilities.append(f"{lh.getFeatureName(feature)}: {lh.getFeatureDescription(feature)}")
 
         # Get race name
         race_id = race_data.get("id")
@@ -77,7 +77,7 @@ class StepCharacterDisplay(IsStep):
         # Get class and background names
         class_name = "None"
         if isinstance(class_data, dict) and "id" in class_data:
-            class_name = lh.getTranslation(self.classes.get(class_data["id"], {}).get("name", {"en" : "None"}))
+            class_name = lh.getClassName(class_data["id"])
 
         # Get background name
         background_name = "None"

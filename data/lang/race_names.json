@@ -1,0 +1,46 @@
+{
+  "human": {
+    "name": { "en": "Human", "pl": "Człowiek" },
+    "description": {
+      "en": "Humans are versatile and ambitious, they often dominate in fantasy lands.",
+      "pl": "Ludzie są wszechstronni i ambitni, często dominują w krainach fantasy."
+    }
+  },
+  "elf": {
+    "name": { "en": "Elf", "pl": "Elf" },
+    "description": {
+      "en": "Elves embody grace, are long-lived, and are deeply connected to magic.",
+      "pl": "Elfy są gracją uosobioną, długowieczne i silnie związane z magią."
+    },
+    "subraces": {
+      "high_elf": {
+        "name": { "en": "High Elf", "pl": "Wysoki Elf" }
+      },
+      "wood_elf": {
+        "name": { "en": "Wood Elf", "pl": "Leśny Elf" }
+      }
+    }
+  },
+  "dwarf": {
+    "name": { "en": "Dwarf", "pl": "Krasnolud" },
+    "description": {
+      "en": "Dwarves are hardy, honorable, and excel in combat and craftsmanship.",
+      "pl": "Krasnoludy są wytrzymałe, honorowe i świetnie radzą sobie w walce oraz rzemiośle."
+    }
+  },
+  "halfling": {
+    "name": { "en": "Halfling", "pl": "Niziołek" },
+    "description": {
+      "en": "Halflings are small, agile beings who value comfort and community. They are known for their luck and bravery.",
+      "pl": "Niziołki są małymi, zwinnymi istotami, które cenią sobie komfort i wspólnotę. Znane są ze swojego szczęścia i odwagi."
+    },
+    "subraces": {
+      "lightfoot_halfling": {
+        "name": { "en": "Lightfoot Halfling", "pl": "Niziołek Śmiałek" }
+      },
+      "stout_halfling": {
+        "name": { "en": "Stout Halfling", "pl": "Niziołek Krzepki" }
+      }
+    }
+  }
+}

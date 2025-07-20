@@ -119,8 +119,8 @@
     "pl": "Przypisz każdą wartość do cechy (każda wartość tylko raz)"
   },
   "option_manual_info": {
-    "en": "Enter results of dice rolls (3k6 or 4k6 drop lowest)",
-    "pl": "Wprowadź wyniki rzutów (3k6 lub 4k6 drop lowest)"
+    "en": "Enter results of dice rolls (3d6 or 4d6 drop lowest)",
+    "pl": "Wprowadź wyniki rzutów (3k6 lub 4k6 odrzuć najmniejszą)"
   },
   "error_option_manual": {
     "en": "Make sure that all values are integers between 1 and 20.",
@@ -250,5 +250,9 @@
   "equipment": {
     "en": "Equipment",
     "pl": "Wyposażenie"
+  },
+  "allocate_stats": {
+    "en": "Allocate Your Stats",
+    "pl": "Przydziel Statystyki"
   }
 }

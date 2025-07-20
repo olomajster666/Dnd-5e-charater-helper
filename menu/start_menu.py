@@ -8,13 +8,16 @@ from state.character_state import CharacterState
 from wizard.step_character_display import StepCharacterDisplay
 from wizard.wizard import Wizard
 import utils.language_helper as lh
+import utils.loaded_data as ld
 from utils.json_loader import writeLanguageOptions, getSavedCharacterList, loadSavedCharacter
+
+AVAILABLE_LANGUAGES = {lh.getLanguageName(id) : id for id in ld.languages}
 
 class StartMenu(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
-        self.master = master
-        self.lang = tk.StringVar(value=lh.chosenLanguage)
+
+        self.lang = tk.StringVar(value=lh.getLanguageName(lh.chosenLanguage))
         self.savedCharacterStates = {}
 
         # Load parchment background with PIL
@@ -66,15 +69,15 @@ class StartMenu(tk.Frame):
         tk.Label(self, text=lh.getInfo("options_menu"), font=(self.fantasy_font[0], 24), bg="#d2b48c").place(x=220, y=10)  # Updated to match parchment
 
         def save(*args):
-            lh.chosenLanguage = self.lang.get()
-            writeLanguageOptions(self.lang.get())
+            lh.chosenLanguage = AVAILABLE_LANGUAGES.get(self.lang.get())
+            writeLanguageOptions(AVAILABLE_LANGUAGES.get(self.lang.get()))
             self.showOptionsMenu()
 
         langNav = tk.Frame(self, bg="#d2b48c")  # Updated to match parchment
         langNav.place(x=220, y=50)
         tk.Label(langNav, text=lh.getInfo("choose_language") + ":", font=self.fantasy_font).pack(side="left", padx=5)
         self.lang.trace_add("write", save)
-        tk.OptionMenu(langNav, self.lang, *lh.languages).pack(side="left", padx=5)
+        tk.OptionMenu(langNav, self.lang, *AVAILABLE_LANGUAGES.keys()).pack(side="left", padx=5)
 
         self.addBackButton()
 

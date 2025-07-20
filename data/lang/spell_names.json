@@ -1,0 +1,242 @@
+{
+  "light": {
+    "name": {
+      "en": "Light",
+      "pl": "Światło"
+    },
+    "description": {
+      "en": "By touching an object, you cause it to shed bright light in a 20-foot radius for 1 hour.",
+      "pl": "Dotykając przedmiotu, sprawiasz, że emituje jasne światło w promieniu 20 stóp przez 1 godzinę."
+    }
+  },
+  "shocking_grasp": {
+    "name": {
+      "en": "Shocking Grasp",
+      "pl": "Wstrząs"
+    },
+    "description": {
+      "en": "You touch a creature, dealing 1d8 lightning damage and preventing its reaction if it isn’t wearing metal armor.",
+      "pl": "Dotykasz stworzenia, zadając 1k8 obrażeń od błyskawic i uniemożliwiając mu reakcję, jeśli nie nosi metalowego pancerza."
+    }
+  },
+  "guidance": {
+    "name": {
+      "en": "Guidance",
+      "pl": "Prowadzenie"
+    },
+    "description": {
+      "en": "You touch a creature, granting it a +1d4 bonus to one ability check within 1 minute.",
+      "pl": "Dotykasz stworzenia, dając mu +1d4 do jednego testu zdolności w ciągu 1 minuty."
+    }
+  },
+  "vicious_mockery": {
+    "name": {
+      "en": "Vicious Mockery",
+      "pl": "Gryźliwa Obraza"
+    },
+    "description": {
+      "en": "With insulting words, you deal 1d4 psychic damage and grant advantage on the next attack roll against the target.",
+      "pl": "Obraźliwymi słowami zadajesz 1k4 obrażeń psychicznych i dajesz przewagę na kolejny rzut na atak przeciw celowi."
+    }
+  },
+  "thunderclap": {
+    "name": {
+      "en": "Thunderclap",
+      "pl": "Grzmot"
+    },
+    "description": {
+      "en": "You create a burst of thunder, dealing 1d6 thunder damage in a 5-foot radius (half on a successful Dexterity save).",
+      "pl": "Wypuszczasz grzmot, zadający 1k6 obrażeń od gromu w promieniu 5 stóp (pół przy udanym rzucie obronnym zwinności)."
+    }
+  },
+  "sacred_flame": {
+    "name": {
+      "en": "Sacred Flame",
+      "pl": "Święty płomień"
+    },
+    "description": {
+      "en": "You hurl a flame, dealing 1d8 fire damage (half on a successful Dexterity save).",
+      "pl": "Wypuszczasz płomień, zadający 1k8 obrażeń od ognia (pół przy udanym rzucie obronnym zwinności)."
+    }
+  },
+  "prestidigitation": {
+    "name": {
+      "en": "Prestidigitation",
+      "pl": "Prestidigitacja"
+    },
+    "description": {
+      "en": "You create minor magical effects, such as warmth, light, or clean clothes, lasting 1 hour.",
+      "pl": "Tworzysz drobne efekty magiczne, takie jak ciepło, światło czy czyste ubranie, trwające 1 godzinę."
+    }
+  },
+  "minor_illusion": {
+    "name": {
+      "en": "Minor Illusion",
+      "pl": "Drobna iluzja"
+    },
+    "description": {
+      "en": "You create an illusion of sound or an image up to 5 feet in size for 1 minute.",
+      "pl": "Tworzysz iluzję dźwięku lub obrazu o wielkości 5 stóp na 1 minutę."
+    }
+  },
+  "cure_wounds": {
+    "name": {
+      "en": "Cure Wounds",
+      "pl": "Wyleczenie ran"
+    },
+    "description": {
+      "en": "You touch a creature and heal it, restoring (1d8 + your Wisdom modifier) hit points.",
+      "pl": "Dotykasz stworzenia i leczysz je, przywracając (1k8 + modyfikator mądrości) zdrowia."
+    }
+  },
+  "magic_missile": {
+    "name": {
+      "en": "Magic Missile",
+      "pl": "Magiczne pociski"
+    },
+    "description": {
+      "en": "You unleash 3 darts of magical energy, each dealing (1d4 + 1) damage to a target of your choice.",
+      "pl": "Wypuszczasz 3 pociski energii, z których każdy zadaje (1k4 + 1) obrażeń w wybranym celu."
+    }
+  },
+  "bless": {
+    "name": {
+      "en": "Bless",
+      "pl": "Błogosławieństwo"
+    },
+    "description": {
+      "en": "You bless up to 3 creatures, granting them a +1d4 bonus to attack rolls and saving throws for 1 minute.",
+      "pl": "Błogosławisz do 3 stworzeń, dając im +1d4 do rzutów na atak i rzuty obronne przez 1 minutę."
+    }
+  },
+  "color_spray": {
+    "name": {
+      "en": "Color Spray",
+      "pl": "Kolorowy spray"
+    },
+    "description": {
+      "en": "You unleash a burst of colored light, blinding creatures with a total of up to 25 hit points for 1 minute.",
+      "pl": "Wypuszczasz rozbłysk kolorowego światła, oślepiając stworzenia o łącznej liczbie PZ do 25 na 1 minutę."
+    }
+  },
+  "charm_person": {
+    "name": {
+      "en": "Charm Person",
+      "pl": "Urok"
+    },
+    "description": {
+      "en": "You charm one humanoid creature, which regards you as a friendly acquaintance for 1 hour.",
+      "pl": "Zauroczasz jedną humanoidalną istotę, która traktuje cię przyjaźnie przez 1 godzinę."
+    }
+  },
+  "detect_magic": {
+    "name": {
+      "en": "Detect Magic",
+      "pl": "Wykrycie magii"
+    },
+    "description": {
+      "en": "You sense magic within a 30-foot radius for 10 minutes, seeing its aura.",
+      "pl": "Wyczuwasz magię w promieniu 30 stóp przez 10 minut, widząc jej aurę."
+    }
+  },
+  "healing_word": {
+    "name": {
+      "en": "Healing Word",
+      "pl": "Słowo uzdrowienia"
+    },
+    "description": {
+      "en": "You speak a magical word, healing a creature within 60 feet for (1d4 + your Wisdom modifier) hit points.",
+      "pl": "Wymawiasz magiczne słowo, lecząc stworzenie w 60 stóp o (1k4 + modyfikator mądrości) zdrowia."
+    }
+  },
+  "spiritual_weapon": {
+    "name": {
+      "en": "Spiritual Weapon",
+      "pl": "Duchowa broń"
+    },
+    "description": {
+      "en": "You summon a spiritual weapon that attacks a chosen target, dealing 1d8 force damage on a hit.",
+      "pl": "Przywołujesz broń duchową, która atakuje wybrane cele, zadając 1k8 obrażeń od siły na trafienie."
+    }
+  },
+  "invisibility": {
+    "name": {
+      "en": "Invisibility",
+      "pl": "Niewidzialność"
+    },
+    "description": {
+      "en": "You make one creature invisible for 1 hour, until it attacks or casts a spell.",
+      "pl": "Uczyniasz jedno stworzenie niewidzialnym na 1 godzinę, aż zaatakuje lub rzuci czar."
+    }
+  },
+  "prayer_of_healing": {
+    "name": {
+      "en": "Prayer of Healing",
+      "pl": "Modlitwa uzdrowienia"
+    },
+    "description": {
+      "en": "You heal up to 6 creatures within 30 feet, restoring (2d8 + your Wisdom modifier) hit points to each.",
+      "pl": "Leczysz do 6 stworzeń w 30 stóp, przywracając każdemu (2k8 + modyfikator mądrości) zdrowia."
+    }
+  },
+  "shatter": {
+    "name": {
+      "en": "Shatter",
+      "pl": "Rozbicie"
+    },
+    "description": {
+      "en": "A burst of sound deals 3d8 thunder damage in a 10-foot radius (half on a successful save).",
+      "pl": "Wybuch dźwięku zadaje 3k8 obrażeń od gromu w promieniu 10 stóp (pół przy udanym rzucie obronnym)."
+    }
+  },
+  "silence": {
+    "name": {
+      "en": "Silence",
+      "pl": "Cisza"
+    },
+    "description": {
+      "en": "You create a 20-foot-radius sphere of silence, preventing spellcasting with verbal components.",
+      "pl": "Tworzysz 20-stopową sferę ciszy, uniemożliwiając rzucanie czarów z werbalnymi komponentami."
+    }
+  },
+  "lightning_bolt": {
+    "name": {
+      "en": "Lightning Bolt",
+      "pl": "Piorun"
+    },
+    "description": {
+      "en": "You release a lightning bolt in a 100-foot line, dealing 8d6 lightning damage (half on a successful save).",
+      "pl": "Wypuszczasz błyskawicę w linii 100 stóp, zadającą 8k6 obrażeń od błyskawic (pół przy udanym rzucie obronnym)."
+    }
+  },
+  "protection_from_energy": {
+    "name": {
+      "en": "Protection from Energy",
+      "pl": "Ochrona przed energią"
+    },
+    "description": {
+      "en": "You grant one creature resistance to damage from a chosen energy type for 1 hour.",
+      "pl": "Dajesz jednemu stworzeniu odporność na obrażenia od wybranego typu energii przez 1 godzinę."
+    }
+  },
+  "heroism": {
+    "name": {
+      "en": "Heroism",
+      "pl": "Heroizm"
+    },
+    "description": {
+      "en": "You inspire a creature, granting it temporary hit points equal to your spell level + your level and immunity to fear.",
+      "pl": "Inspirujesz stworzenie, dając mu tymczasowe zdrowie równe (poziom zaklęcia + twój poziom) i odporność na strach."
+    }
+  },
+  "dispel_magic": {
+    "name": {
+      "en": "Dispel Magic",
+      "pl": "Rozproszenie magii"
+    },
+    "description": {
+      "en": "You end one spell or magical effect on a target within 120 feet.",
+      "pl": "Zrywasz jedno zaklęcie lub efekt magiczny na wybranym celu w 120 stóp."
+    }
+  }
+}

@@ -1,214 +1,26 @@
 [
-  {
-    "id": "athletics",
-    "type": "skill",
-    "ability": "strength",
-    "name": {
-      "en": "Athletics",
-      "pl": "Atletyka"
-    }
-  },
-  {
-    "id": "acrobatics",
-    "type": "skill",
-    "ability": "dexterity",
-    "name": {
-      "en": "Acrobatics",
-      "pl": "Akrobatyka"
-    }
-  },
-  {
-    "id": "sleight_of_hand",
-    "type": "skill",
-    "ability": "dexterity",
-    "name": {
-      "en": "Sleight of Hand",
-      "pl": "Kuglarstwo"
-    }
-  },
-  {
-    "id": "stealth",
-    "type": "skill",
-    "ability": "dexterity",
-    "name": {
-      "en": "Stealth",
-      "pl": "Skradanie się"
-    }
-  },
-  {
-    "id": "arcana",
-    "type": "skill",
-    "ability": "intelligence",
-    "name": {
-      "en": "Arcana",
-      "pl": "Arkana"
-    }
-  },
-  {
-    "id": "history",
-    "type": "skill",
-    "ability": "intelligence",
-    "name": {
-      "en": "History",
-      "pl": "Historia"
-    }
-  },
-  {
-    "id": "investigation",
-    "type": "skill",
-    "ability": "intelligence",
-    "name": {
-      "en": "Investigation",
-      "pl": "Śledztwo"
-    }
-  },
-  {
-    "id": "nature",
-    "type": "skill",
-    "ability": "intelligence",
-    "name": {
-      "en": "Nature",
-      "pl": "Przyroda"
-    }
-  },
-  {
-    "id": "religion",
-    "type": "skill",
-    "ability": "intelligence",
-    "name": {
-      "en": "Religion",
-      "pl": "Religia"
-    }
-  },
-  {
-    "id": "animal_handling",
-    "type": "skill",
-    "ability": "wisdom",
-    "name": {
-      "en": "Animal Handling",
-      "pl": "Opieka nad zwierzętami"
-    }
-  },
-  {
-    "id": "insight",
-    "type": "skill",
-    "ability": "wisdom",
-    "name": {
-      "en": "Insight",
-      "pl": "Wyczucie"
-    }
-  },
-  {
-    "id": "medicine",
-    "type": "skill",
-    "ability": "wisdom",
-    "name": {
-      "en": "Medicine",
-      "pl": "Medycyna"
-    }
-  },
-  {
-    "id": "perception",
-    "type": "skill",
-    "ability": "wisdom",
-    "name": {
-      "en": "Perception",
-      "pl": "Spostrzegawczość"
-    }
-  },
-  {
-    "id": "survival",
-    "type": "skill",
-    "ability": "wisdom",
-    "name": {
-      "en": "Survival",
-      "pl": "Przetrwanie"
-    }
-  },
-  {
-    "id": "deception",
-    "type": "skill",
-    "ability": "charisma",
-    "name": {
-      "en": "Deception",
-      "pl": "Oszustwo"
-    }
-  },
-  {
-    "id": "intimidation",
-    "type": "skill",
-    "ability": "charisma",
-    "name": {
-      "en": "Intimidation",
-      "pl": "Zastraszanie"
-    }
-  },
-  {
-    "id": "performance",
-    "type": "skill",
-    "ability": "charisma",
-    "name": {
-      "en": "Performance",
-      "pl": "Występy"
-    }
-  },
-  {
-    "id": "persuasion",
-    "type": "skill",
-    "ability": "charisma",
-    "name": {
-      "en": "Persuasion",
-      "pl": "Perswazja"
-    }
-  },
-
-  {
-    "id": "simple_weapons",
-    "type": "weapon",
-    "name": {
-      "en": "Simple Weapons",
-      "pl": "Broń prosta"
-    }
-  },
-  {
-    "id": "martial_weapons",
-    "type": "weapon",
-    "name": {
-      "en": "Martial Weapons",
-      "pl": "Broń bojowa"
-    }
-  },
-  {
-    "id": "shields",
-    "type": "weapon",
-    "name": {
-      "en": "Shields",
-      "pl": "Tarcze"
-    }
-  },
-
-  {
-    "id": "light_armor",
-    "type": "armor",
-    "name": {
-      "en": "Light Armor",
-      "pl": "Lekki pancerz"
-    }
-  },
-  {
-    "id": "medium_armor",
-    "type": "armor",
-    "name": {
-      "en": "Medium Armor",
-      "pl": "Średni pancerz"
-    }
-  },
-  {
-    "id": "heavy_armor",
-    "type": "armor",
-    "name": {
-      "en": "Heavy Armor",
-      "pl": "Ciężki pancerz"
-    }
-  }
+  { "id": "athletics", "type": "skill", "ability": "strength" },
+  { "id": "acrobatics", "type": "skill", "ability": "dexterity" },
+  { "id": "sleight_of_hand", "type": "skill", "ability": "dexterity" },
+  { "id": "stealth", "type": "skill", "ability": "dexterity" },
+  { "id": "arcana", "type": "skill", "ability": "intelligence" },
+  { "id": "history", "type": "skill", "ability": "intelligence" },
+  { "id": "investigation", "type": "skill", "ability": "intelligence" },
+  { "id": "nature", "type": "skill", "ability": "intelligence" },
+  { "id": "religion", "type": "skill", "ability": "intelligence" },
+  { "id": "animal_handling", "type": "skill", "ability": "wisdom" },
+  { "id": "insight", "type": "skill", "ability": "wisdom" },
+  { "id": "medicine", "type": "skill", "ability": "wisdom" },
+  { "id": "perception", "type": "skill", "ability": "wisdom" },
+  { "id": "survival", "type": "skill", "ability": "wisdom" },
+  { "id": "deception", "type": "skill", "ability": "charisma" },
+  { "id": "intimidation", "type": "skill", "ability": "charisma" },
+  { "id": "performance", "type": "skill", "ability": "charisma" },
+  { "id": "persuasion", "type": "skill", "ability": "charisma" },
+  { "id": "simple_weapons", "type": "weapon" },
+  { "id": "martial_weapons", "type": "weapon" },
+  { "id": "shields", "type": "weapon" },
+  { "id": "light_armor", "type": "armor" },
+  { "id": "medium_armor", "type": "armor" },
+  { "id": "heavy_armor", "type": "armor" }
 ]

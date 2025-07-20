@@ -1,0 +1,52 @@
+{
+  "fighter": {
+    "name": {
+      "en": "Fighter",
+      "pl": "Wojownik"
+    },
+    "description": {
+      "en": "Fighters are masters of combat, skilled in various fighting styles and weaponry.",
+      "pl": "Wojownicy to mistrzowie walki, biegli w różnych stylach bojowych i uzbrojeniu."
+    }
+  },
+  "rogue": {
+    "name": {
+      "en": "Rogue",
+      "pl": "Łotrzyk"
+    },
+    "description": {
+      "en": "Rogues are masters of stealth, infiltration, and precision attacks.",
+      "pl": "Łotrzyki to mistrzowie podstępu, infiltracji i precyzyjnych ataków."
+    }
+  },
+  "wizard": {
+    "name": {
+      "en": "Wizard",
+      "pl": "Czarodziej"
+    },
+    "description": {
+      "en": "Wizards are masters of magic based on science and arcane knowledge.",
+      "pl": "Czarodzieje to mistrzowie magii opartej na nauce i wiedzy tajemnej."
+    }
+  },
+  "cleric": {
+    "name": {
+      "en": "Cleric",
+      "pl": "Kleryk"
+    },
+    "description": {
+      "en": "Clerics are servants of deities, wielding divine magic and fighting in their name.",
+      "pl": "Klerycy są sługami bóstw, władają magią boską i walczą w ich imieniu."
+    }
+  },
+  "bard": {
+    "name": {
+      "en": "Bard",
+      "pl": "Bard"
+    },
+    "description": {
+      "en": "Bards are artists, musicians, and storytellers who draw power from inspiration.",
+      "pl": "Bardowie to artyści, muzycy i opowiadacze historii, którzy czerpią moc z inspiracji."
+    }
+  }
+}

@@ -1,36 +1,10 @@
 [
   {
     "id": "human",
-    "name": {
-      "en": "Human",
-      "pl": "Człowiek"
-    },
-    "description": {
-      "en": "Humans are versatile and ambitious, they often dominate in fantasy lands.",
-      "pl": "Ludzie są wszechstronni i ambitni, często dominują w krainach fantasy."
-    },
-    "ability_bonuses": {
-      "strength": 1,
-      "dexterity": 1,
-      "constitution": 1,
-      "intelligence": 1,
-      "wisdom": 1,
-      "charisma": 1
-    },
+    "ability_bonuses": { "strength": 1, "dexterity": 1, "constitution": 1, "intelligence": 1, "wisdom": 1, "charisma": 1 },
     "speed": 30,
     "size": "Medium",
-    "traits": [
-      {
-        "name": {
-          "en": "Versatility",
-          "pl": "Wszechstronność"
-        },
-        "description": {
-          "en": "Bonus +1 to each ability.",
-          "pl": "Bonus +1 do każdej cechy."
-        }
-      }
-    ],
+    "traits": ["versatility"],
     "languages": {
       "en": ["Common", "One extra language of choice"],
       "pl": ["Wspólny", "Jeden dodatkowy język do wyboru"]
@@ -38,41 +12,10 @@
   },
   {
     "id": "elf",
-    "name": {
-      "en": "Elf",
-      "pl": "Elf"
-    },
-    "description": {
-      "en": "Elves embody grace, are long-lived, and are deeply connected to magic.",
-      "pl": "Elfy są gracją uosobioną, długowieczne i silnie związane z magią."
-    },
-    "ability_bonuses": {
-      "dexterity": 2
-    },
+    "ability_bonuses": { "dexterity": 2 },
     "speed": 30,
     "size": "Medium",
-    "traits": [
-      {
-        "name": {
-          "en": "Darkvision",
-          "pl": "Widzenie w ciemności"
-        },
-        "description": {
-          "en": "You see in the darkness within 18 meters radius.",
-          "pl": "Widzisz w ciemności w promieniu 18 metrów."
-        }
-      },
-      {
-        "name": {
-          "en": "Keen Senses",
-          "pl": "Wyostrzone zmysły"
-        },
-        "description": {
-          "en": "You gain proficiency in the Perception skill.",
-          "pl": "Zyskujesz biegłość w umiejętności Percepcja."
-        }
-      }
-    ],
+    "traits": ["darkvision", "keen_senses"],
     "languages": {
       "en": ["Common", "Elvish"],
       "pl": ["Wspólny", "Elficki"]
@@ -80,77 +23,22 @@
     "subraces": [
       {
         "id": "high_elf",
-        "name": {
-          "en": "High Elf",
-          "pl": "Wysoki Elf"
-        },
-        "ability_bonuses": {
-          "intelligence": 1
-        },
-        "traits": [
-          {
-            "name": {
-              "en": "Cantrip",
-              "pl": "Trik"
-            },
-            "description": {
-              "en": "You know one cantrip from the list of mage spells.",
-              "pl": "Znasz jeden trik z listy czarów maga."
-            }
-          }
-        ]
+        "ability_bonuses": { "intelligence": 1 },
+        "traits": ["cantrip"]
       },
       {
         "id": "wood_elf",
-        "name": {
-          "en": "Wood Elf",
-          "pl": "Leśny Elf"
-        },
-        "ability_bonuses": {
-          "wisdom": 1
-        },
-        "traits": [
-          {
-            "name": {
-              "en": "Fleet of Foot",
-              "pl": "Szybki Chód"
-            },
-            "description": {
-              "en": "Your walking speed equals 35 feet.",
-              "pl": "Twoja prędkość chodzenia wynosi 35 stóp."
-            }
-          }
-        ]
+        "ability_bonuses": { "wisdom": 1 },
+        "traits": ["fleet_of_foot"]
       }
     ]
   },
   {
     "id": "dwarf",
-    "name": {
-      "en": "Dwarf",
-      "pl": "Krasnolud"
-    },
-    "description": {
-      "en": "Dwarves are hardy, honorable, and excel in combat and craftsmanship.",
-      "pl": "Krasnoludy są wytrzymałe, honorowe i świetnie radzą sobie w walce oraz rzemiośle."
-    },
-    "ability_bonuses": {
-      "constitution": 2
-    },
+    "ability_bonuses": { "constitution": 2 },
     "speed": 25,
     "size": "Medium",
-    "traits": [
-      {
-        "name": {
-          "en": "Dwarven Resilience",
-          "pl": "Krasnoludzka Odporność"
-        },
-        "description": {
-          "en": "You have resistance to poison and advantage on saving throws against poison.",
-          "pl": "Masz odporność na trucizny i przewagę na rzuty obronne przeciwko truciznom."
-        }
-      }
-    ],
+    "traits": ["dwarven_resilience"],
     "languages": {
       "en": ["Common", "Dwarvish"],
       "pl": ["Wspólny", "Krasnoludzki"]
@@ -159,51 +47,10 @@
   },
   {
     "id": "halfling",
-    "name": {
-      "en": "Halfling",
-      "pl": "Niziołek"
-    },
-    "description": {
-      "en": "Halflings are small, agile beings who value comfort and community. They are known for their luck and bravery.",
-      "pl": "Niziołki są małymi, zwinnymi istotami, które cenią sobie komfort i wspólnotę. Znane są ze swojego szczęścia i odwagi."
-    },
-    "ability_bonuses": {
-      "dexterity": 2
-    },
+    "ability_bonuses": { "dexterity": 2 },
     "speed": 25,
     "size": "Small",
-    "traits": [
-      {
-        "name": {
-          "en": "Lucky",
-          "pl": "Szczęśliwy"
-        },
-        "description": {
-          "en": "When you roll a 1 on a d20 for an attack, ability check, or saving throw, you can reroll the die.",
-          "pl": "Gdy wyrzucisz 1 na kostce k20 podczas ataku, testu lub rzutu obronnego, możesz przerzucić tę kostkę."
-        }
-      },
-      {
-        "name": {
-          "en": "Brave",
-          "pl": "Odważny"
-        },
-        "description": {
-          "en": "You have advantage on saving throws against being frightened.",
-          "pl": "Masz przewagę na rzuty obronne przeciwko strachowi."
-        }
-      },
-      {
-        "name": {
-          "en": "Halfling Nimbleness",
-          "pl": "Zwinność Niziołka"
-        },
-        "description": {
-          "en": "You can move through the space of a creature larger than you.",
-          "pl": "Możesz przechodzić przez pole istoty, która jest większa od ciebie."
-        }
-      }
-    ],
+    "traits": ["lucky", "brave", "halfling_nimbleness"],
     "languages": {
       "en": ["Common", "Halfling"],
       "pl": ["Wspólny", "Niziołkowy"]
@@ -211,47 +58,13 @@
     "subraces": [
       {
         "id": "lightfoot_halfling",
-        "name": {
-          "en": "Lightfoot Halfling",
-          "pl": "Niziołek Śmiałek"
-        },
-        "ability_bonuses": {
-          "charisma": 1
-        },
-        "traits": [
-          {
-            "name": {
-              "en": "Naturally Stealthy",
-              "pl": "Wrodzona Skrytość"
-            },
-            "description": {
-              "en": "You can attempt to hide even when you are only lightly obscured by another creature.",
-              "pl": "Możesz próbować ukryć się, nawet gdy jesteś lekko zasłonięty przez inną osobę."
-            }
-          }
-        ]
+        "ability_bonuses": { "charisma": 1 },
+        "traits": ["naturally_stealthy"]
       },
       {
         "id": "stout_halfling",
-        "name": {
-          "en": "Stout Halfling",
-          "pl": "Niziołek Krzepki"
-        },
-        "ability_bonuses": {
-          "constitution": 1
-        },
-        "traits": [
-          {
-            "name": {
-              "en": "Stout Resilience",
-              "pl": "Krzepka Odporność"
-            },
-            "description": {
-              "en": "You have advantage on saving throws against poison and resistance to poison damage.",
-              "pl": "Masz przewagę na rzuty obronne przeciwko truciznom oraz odporność na obrażenia od trucizn."
-            }
-          }
-        ]
+        "ability_bonuses": { "constitution": 1 },
+        "traits": ["stout_resilience"]
       }
     ]
   }

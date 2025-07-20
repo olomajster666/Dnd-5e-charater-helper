@@ -1,17 +1,19 @@
 import tkinter as tk
 import utils.language_helper as lh
+import utils.loaded_data as ld
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 
 class StepEquipment(IsStep):
-    def __init__(self, master, state, wizard : HasSteps):
+    def __init__(self, master, state : CharacterState, wizard : HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
         # Load class and background data
-        self.classes = {cls["id"]: cls for cls in lh.classes}
-        self.backgrounds = {bg["id"]: bg for bg in lh.backgrounds}
+        self.classes = {cls["id"]: cls for cls in ld.classes}
+        self.backgrounds = {bg["id"]: bg for bg in ld.backgrounds}
         class_data = self.state.get("class", {})
         background_data = self.state.get("background", {})
         self.current_class = class_data.get("id") if isinstance(class_data, dict) else None
@@ -29,11 +31,11 @@ class StepEquipment(IsStep):
         tk.Label(self, text=lh.getInfo("background_equipment"), font=("Arial", 14)).pack(pady=5)
         if self.background_equipment:
             for item in self.background_equipment:
-                tk.Label(self, text=lh.getItemCountAndName(item), fg="gray").pack(anchor="w")
+                tk.Label(self, text=lh.getItemCountAndName(item), fg="gray").pack()
         else:
-            tk.Label(self, text=lh.getInfo("background_equipment_missing"), fg="gray").pack(anchor="w")
+            tk.Label(self, text=lh.getInfo("background_equipment_missing"), fg="gray").pack()
 
-        tk.Label(self, text=lh.getInfo("choose_equipment_for_class") + " " + lh.getFromDict(self.classes[self.current_class]['name']), font=("Arial", 16)).pack(pady=10)
+        tk.Label(self, text=lh.getInfo("choose_equipment_for_class") + " " + lh.getClassName(self.current_class), font=("Arial", 16)).pack(pady=10)
 
         for i, options in enumerate(self.equipment_options):
             frame = tk.Frame(self)
@@ -42,11 +44,16 @@ class StepEquipment(IsStep):
             var = self.selected_options[i]
             for j, option in enumerate(options):
                 text : str = ""
+                bl = True
                 for x in option:
+                    if(not (x in self.state.get("equipment"))):
+                        bl = False
                     if(len(text) < 1):
                         text += lh.getItemCountAndName(x)
                     else:
                         text += ", " + lh.getItemCountAndName(x)
+                if(bl):
+                    var.set(j)
                 tk.Radiobutton(frame, text=text, variable=var, value=j).pack(side="left", padx=5)
 
         nav = tk.Frame(self)
@@ -63,11 +70,11 @@ class StepEquipment(IsStep):
         #    tk.messagebox.showerror(lh.getInfo("error"), lh.getInfo("error_not_all_options_selected"))
         #    return
 
-        all_equipment = self.background_equipment
+        all_equipment = self.background_equipment.copy()
         for i, option in enumerate(self.equipment_options):
             for item in option[self.selected_options[i].get()]:
                 all_equipment.append(item)
         self.state.set("equipment", all_equipment)
-        print("Selected equipment:")
+        print("Character equipment:")
         print(all_equipment)
         super().save_and_continue()

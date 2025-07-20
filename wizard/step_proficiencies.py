@@ -1,13 +1,12 @@
 import tkinter as tk
-import tkinter.messagebox
+from PIL import Image, ImageTk
+import os
 import utils.language_helper as lh
-import utils.loaded_data as ld
-from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 class StepProficiencies(IsStep):
-    def __init__(self, master, state : CharacterState, wizard : HasSteps):
+    def __init__(self, master, state, wizard: HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -27,10 +26,10 @@ class StepProficiencies(IsStep):
         self.nav_frame.place(x=10, y=10, height=580, width=200)
 
         # Load data
-        self.proficiencies = ld.proficiencies
-        self.classes = {cls["id"]: cls for cls in ld.classes}
-        self.backgrounds = {bg["id"]: bg for bg in ld.backgrounds}
-        self.races = {race["id"]: race for race in ld.races}
+        self.proficiencies = lh.proficiencies
+        self.classes = {cls["id"]: cls for cls in lh.classes}
+        self.backgrounds = {bg["id"]: bg for bg in lh.backgrounds}
+        self.races = {race["id"]: race for race in lh.races}
 
         # Get current selections
         class_data = self.state.get("class") or {}
@@ -60,7 +59,8 @@ class StepProficiencies(IsStep):
         default_frame.pack(anchor="w", pady=5)
         for prof_id in self.default_profs:
             prof = next(p for p in self.proficiencies if p["id"] == prof_id)
-            tk.Label(default_frame, text=lh.getProficiency(prof["id"]), fg="gray").pack(anchor="w")
+            tk.Label(default_frame, text=lh.getFromDict(prof["name"]), font=self.fantasy_font,
+                    bg="#d2b48c", fg="gray").pack(anchor="w", pady=5)
 
         # Skill selection
         tk.Label(self.scrollable_frame, text=lh.getInfo("choose_skills"), font=("Chomsky", 24), bg="#d2b48c").pack(anchor="w", pady=10)
@@ -112,14 +112,11 @@ class StepProficiencies(IsStep):
             widget.destroy()
         selected_count = sum(var.get() for var in self.skill_vars.values())
         for prof in self.available_choices:
-            cb = tk.Checkbutton(self.skill_frame, text=lh.getProficiency(prof["id"]), variable=self.skill_vars[prof["id"]],
-                                command=lambda p=prof["id"]: self.validate_selection(p))
-            cb.pack(anchor="w")
-        self.validate_selection()  # Initial validation
-        for id in self.skill_vars.keys():
-            if (id in self.state.get("proficiencies", [])):
-                self.skill_vars.get(id).set(True)
-                self.state.get("proficiencies").remove(id)
+            cb = tk.Checkbutton(self.skill_frame, text=lh.getFromDict(prof["name"]), variable=self.skill_vars[prof["id"]],
+                               font=self.fantasy_font, bg="#d2b48c",
+                               command=lambda p=prof["id"]: self.validate_selection(p))
+            cb.pack(anchor="w", pady=5)
+        self.validate_selection()
 
     def validate_selection(self, changed=None):
         selected = [prof for prof, var in self.skill_vars.items() if var.get()]

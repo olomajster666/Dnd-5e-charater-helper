@@ -1,6 +1,14 @@
 [
   {
     "id": "fighter",
+    "name": {
+      "en": "Fighter",
+      "pl": "Wojownik"
+    },
+    "description": {
+      "en": "Fighters are masters of combat, skilled in various fighting styles and weaponry.",
+      "pl": "Wojownicy to mistrzowie walki, biegli w różnych stylach bojowych i uzbrojeniu."
+    },
     "hit_die": 10,
     "primary_ability": ["strength", "dexterity"],
     "saving_throws": ["strength", "constitution"],
@@ -26,12 +34,38 @@
       ]
     ],
     "level_1_features": [
-      "fighting_style",
-      "second_wind"
+      {
+        "name": {
+          "en": "Fighting Style",
+          "pl": "Styl Walki"
+        },
+        "description": {
+          "en": "Choose a fighting style that influences your combat abilities.",
+          "pl": "Wybierz styl walki, który wpływa na twoje zdolności bojowe."
+        }
+      },
+      {
+        "name": {
+          "en": "Second Wind",
+          "pl": "Drugi Oddech"
+        },
+        "description": {
+          "en": "Once per short rest, you can regain hit points equal to 1d10 + your fighter level.",
+          "pl": "Raz na turę możesz odzyskać punkty życia równe 1k10 + poziom klasy."
+        }
+      }
     ]
   },
   {
     "id": "rogue",
+    "name": {
+      "en": "Rogue",
+      "pl": "Łotrzyk"
+    },
+    "description": {
+      "en": "Rogues are masters of stealth, infiltration, and precision attacks.",
+      "pl": "Łotrzyki to mistrzowie podstępu, infiltracji i precyzyjnych ataków."
+    },
     "hit_die": 8,
     "primary_ability": ["dexterity"],
     "saving_throws": ["dexterity", "intelligence"],
@@ -59,12 +93,38 @@
       ]
     ],
     "level_1_features": [
-      "sneak_attack",
-      "thieves_cant"
+      {
+        "name": {
+          "en": "Sneak Attack",
+          "pl": "Atak z Zaskoczenia"
+        },
+        "description": {
+          "en": "You deal extra damage when you have advantage or the target is occupied by an ally.",
+          "pl": "Zadajesz dodatkowe obrażenia, gdy masz przewagę lub cel jest zajęty."
+        }
+      },
+      {
+        "name": {
+          "en": "Thieves’ Cant",
+          "pl": "Żargon Złodziei"
+        },
+        "description": {
+          "en": "You know a secret language used by thieves and criminals.",
+          "pl": "Znasz tajny język używany przez złodziei i przestępców."
+        }
+      }
     ]
   },
   {
     "id": "wizard",
+    "name": {
+      "en": "Wizard",
+      "pl": "Czarodziej"
+    },
+    "description": {
+      "en": "Wizards are masters of magic based on science and arcane knowledge.",
+      "pl": "Czarodzieje to mistrzowie magii opartej na nauce i wiedzy tajemnej."
+    },
     "hit_die": 6,
     "primary_ability": ["intelligence"],
     "saving_throws": ["intelligence", "wisdom"],
@@ -96,12 +156,38 @@
       ]
     ],
     "level_1_features": [
-      "spellcasting",
-      "arcane_recovery"
+      {
+        "name": {
+          "en": "Spellcasting",
+          "pl": "Rzucanie Czarów"
+        },
+        "description": {
+          "en": "You can cast spells and use your spellbook.",
+          "pl": "Możesz rzucać czary i korzystać z księgi czarów."
+        }
+      },
+      {
+        "name": {
+          "en": "Arcane Recovery",
+          "pl": "Magiczne Odzyskanie"
+        },
+        "description": {
+          "en": "Once per day, you can recover some expended spell slots.",
+          "pl": "Raz dziennie możesz odzyskać część zużytych slotów czarów."
+        }
+      }
     ]
   },
   {
     "id": "cleric",
+    "name": {
+      "en": "Cleric",
+      "pl": "Kleryk"
+    },
+    "description": {
+      "en": "Clerics are servants of deities, wielding divine magic and fighting in their name.",
+      "pl": "Klerycy są sługami bóstw, władają magią boską i walczą w ich imieniu."
+    },
     "hit_die": 8,
     "primary_ability": ["wisdom"],
     "saving_throws": ["wisdom", "charisma"],
@@ -139,12 +225,38 @@
       ]
     ],
     "level_1_features": [
-      "divine_domain",
-      "spellcasting"
+      {
+        "name": {
+          "en": "Divine Domain",
+          "pl": "Boska Dziedzina"
+        },
+        "description": {
+          "en": "You choose a divine domain that grants additional spells and abilities.",
+          "pl": "Wybierasz dziedzinę boską, która nadaje dodatkowe czary i zdolności."
+        }
+      },
+      {
+        "name": {
+          "en": "Spellcasting",
+          "pl": "Rzucanie Czarów"
+        },
+        "description": {
+          "en": "You gain access to divine spells and can cast them according to class rules.",
+          "pl": "Zyskujesz dostęp do czarów boskich i możesz je rzucać według zasad klasy."
+        }
+      }
     ]
   },
   {
     "id": "bard",
+    "name": {
+      "en": "Bard",
+      "pl": "Bard"
+    },
+    "description": {
+      "en": "Bards are artists, musicians, and storytellers who draw power from inspiration.",
+      "pl": "Bardowie to artyści, muzycy i opowiadacze historii, którzy czerpią moc z inspiracji."
+    },
     "hit_die": 8,
     "primary_ability": ["charisma"],
     "saving_throws": ["dexterity", "charisma"],
@@ -178,8 +290,26 @@
       ]
     ],
     "level_1_features": [
-      "bardic_inspiration",
-      "spellcasting"
+      {
+        "name": {
+          "en": "Bardic Inspiration",
+          "pl": "Inspiracja Barda"
+        },
+        "description": {
+          "en": "Once per short rest, you can add 1d6 to an ally’s attack roll, ability check, or saving throw.",
+          "pl": "Raz na turę możesz dodać 1k6 do rzutu ataku, testu umiejętności lub rzutu obronnego sojusznika."
+        }
+      },
+      {
+        "name": {
+          "en": "Spellcasting",
+          "pl": "Rzucanie Czarów"
+        },
+        "description": {
+          "en": "You gain access to bard magic and can cast spells.",
+          "pl": "Zyskujesz dostęp do magii barda i możesz rzucać czary."
+        }
+      }
     ]
   }
 ]

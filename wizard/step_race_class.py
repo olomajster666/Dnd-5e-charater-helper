@@ -2,13 +2,11 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import os
 import utils.language_helper as lh
-import utils.loaded_data as ld
-from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
 class StepRaceClass(IsStep):
-    def __init__(self, master, state : CharacterState, wizard : HasSteps):
+    def __init__(self, master, state, wizard: HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -28,41 +26,36 @@ class StepRaceClass(IsStep):
         self.nav_frame.place(x=10, y=10, height=580, width=200)
 
         # Load data
-        self.race_options = {race["id"]: race for race in ld.races}
-        self.class_options = {cls["id"]: cls for cls in ld.classes}
-
+        self.race_options = {race["id"]: race for race in lh.races}
+        self.class_options = {cls["id"]: cls for cls in lh.classes}
         self.race_var = tk.StringVar()
         self.class_var = tk.StringVar()
-        if(self.state.get("race") != None and self.state.get("race").get("id") in self.race_options.keys()):
-            self.race_var.set(self.state.get("race").get("id"))
-        else:
-            self.race_var.set("human")
-
-        if(self.state.get("class") != None and self.state.get("class").get("id") in self.class_options.keys()):
-            self.class_var.set(self.state.get("class").get("id"))
-        else:
-            self.class_var.set("fighter")
+        self.race_var.set("human")
+        self.class_var.set("fighter")
 
         # Race selection
         tk.Label(self, text=lh.getInfo("choose_race"), font=("Chomsky", 24), bg="#d2b48c").place(x=220, y=10)
         race_frame = tk.Frame(self, bg="#d2b48c")
         race_frame.place(x=220, y=50)
         for race in self.race_options.values():
-            name = lh.getRaceName(race["id"])
-            tk.Radiobutton(self, text=name, variable=self.race_var, value=race["id"]).pack()
+            name = lh.getFromDict(race["name"])
+            tk.Radiobutton(race_frame, text=name, variable=self.race_var, value=race["id"],
+                          font=self.fantasy_font, bg="#d2b48c").pack(anchor="w", pady=5)
 
         # Class selection
         tk.Label(self, text=lh.getInfo("choose_class"), font=("Chomsky", 24), bg="#d2b48c").place(x=220, y=200)
         class_frame = tk.Frame(self, bg="#d2b48c")
         class_frame.place(x=220, y=240)
         for cls in self.class_options.values():
-            name = lh.getClassName(cls["id"])
-            tk.Radiobutton(self, text=name, variable=self.class_var, value=cls["id"]).pack()
+            name = lh.getFromDict(cls["name"])
+            tk.Radiobutton(class_frame, text=name, variable=self.class_var, value=cls["id"],
+                          font=self.fantasy_font, bg="#d2b48c").pack(anchor="w", pady=5)
 
-        nav = tk.Frame(self)
-        nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("button_back"), command=self.discard_and_back).pack(side="left", padx=10)
-        tk.Button(nav, text=lh.getInfo("button_continue"), command=self.save_and_continue).pack(side="right", padx=10)
+        # Navigation buttons
+        tk.Button(self.nav_frame, text=lh.getInfo("button_back"), font=self.fantasy_font, bg="#8b4513",
+                 fg="white", padx=10, pady=5, bd=2, command=self.discard_and_back).pack(fill="x", pady=5)
+        tk.Button(self.nav_frame, text=lh.getInfo("button_continue"), font=self.fantasy_font, bg="#8b4513",
+                 fg="white", padx=10, pady=5, bd=2, command=self.save_and_continue).pack(fill="x", pady=5)
 
     def save_and_continue(self):
         race_id = self.race_var.get()

@@ -1,6 +1,5 @@
 import tkinter as tk
 import utils.language_helper as lh
-import utils.loaded_data as ld
 from PIL import Image, ImageTk
 import os
 from logic.modifier_calculator import calculate_modifier
@@ -18,10 +17,10 @@ class StepCharacterDisplay(IsStep):
         super().__init__(master, wizard)
         self.state = state
 
-        self.classes = {cls["id"]: cls for cls in ld.classes}
-        self.races = {race["id"]: race for race in ld.races}
-        self.backgrounds = {bg["id"]: bg for bg in ld.backgrounds}
-        self.proficiencies_data = {prof["id"]: prof for prof in ld.proficiencies}
+        self.classes = {cls["id"]: cls for cls in lh.classes}
+        self.races = {race["id"]: race for race in lh.races}
+        self.backgrounds = {bg["id"]: bg for bg in lh.backgrounds}
+        self.proficiencies_data = {prof["id"]: prof for prof in lh.proficiencies}
 
         tk.Label(self, text=lh.getInfo("created_character_display"), font=("Arial", 16)).pack(pady=10)
         self.image_label = tk.Label(self)
@@ -59,30 +58,29 @@ class StepCharacterDisplay(IsStep):
         health = calculate_health(current_class, con_score, self.classes)
 
         # Spells (if applicable)
+        spells = state.get("spells", [])
         if current_class not in {"wizard", "cleric", "bard"}:
-            spells = ["no_spells"]
-        else:
-            spells = state.get("spells", [])
+            spells = [lh.getInfo("no_spells")]
 
         # Abilities from classes.json
         abilities = []
         if current_class and current_class in self.classes:
             for feature in self.classes[current_class].get("level_1_features", []):
-                abilities.append(f"{lh.getFeatureName(feature)}: {lh.getFeatureDescription(feature)}")
+                abilities.append(f"{lh.getFromDict(feature['name'])}: {lh.getFromDict(feature['description'])}")
 
         # Get race name
         race_id = race_data.get("id")
-        race_name = lh.getRaceName(race_id)
+        race_name = lh.getFromDict(self.races.get(race_id, {}).get("name", {"en" : "None"}))
 
         # Get class and background names
         class_name = "None"
         if isinstance(class_data, dict) and "id" in class_data:
-            class_name = lh.getClassName(class_data["id"])
+            class_name = lh.getFromDict(self.classes.get(class_data["id"], {}).get("name", {"en" : "None"}))
 
         # Get background name
         background_name = "None"
         if isinstance(background_data, dict) and "id" in background_data:
-            background_name = lh.getBackgroundName(background_data["id"])
+            background_name = lh.getFromDict(self.backgrounds.get(background_data["id"], {}).get("name", {"en" : "None"}))
 
         # Image handling
         image_path = state.get("image_path")
@@ -119,7 +117,7 @@ class StepCharacterDisplay(IsStep):
                 proficiency_bonus = 2 if skill_id in proficiency_ids else 0
                 total_modifier = base_value + proficiency_bonus
                 total_modifier_str = f"+{total_modifier}" if total_modifier >= 0 else str(total_modifier)
-                skill_name = lh.getProficiency(skill.get("id", "None"))
+                skill_name = lh.getFromDict(skill.get("name", {"en" : skill_id}))
                 display_name = f"* {skill_name} ({total_modifier_str})" if skill_id in proficiency_ids else f"{skill_name} ({total_modifier_str})"
                 stat_skills[ability].append(display_name)
 
@@ -137,7 +135,7 @@ class StepCharacterDisplay(IsStep):
             f"  **{lh.getAbility('wisdom')}:** {final_stats.get('wisdom', 10)} ({modifiers.get('wisdom', '+0')})" + ("\n" + "\n".join(stat_skills["wisdom"]) if stat_skills["wisdom"] else ""),
             f"  **{lh.getAbility('charisma')}:** {final_stats.get('charisma', 10)} ({modifiers.get('charisma', '+0')})" + ("\n" + "\n".join(stat_skills["charisma"]) if stat_skills["charisma"] else ""),
             f"{lh.getInfo('health')}: {health}",
-            f"{lh.getInfo('spells')}: {', '.join(self.getTranslatedSpells(spells))}",
+            f"{lh.getInfo('spells')}: {', '.join(spells)}",
             f"{lh.getInfo('abilities')}:" + ("\n" + "\n".join(abilities) if abilities else "\n" + lh.getInfo("no_abilities")),
             f"{lh.getInfo('equipment')}:" + "\n" + equipment_display
         ]
@@ -146,17 +144,6 @@ class StepCharacterDisplay(IsStep):
 
         self.display_text.delete(1.0, tk.END)
         self.display_text.insert(tk.END, display)
-
-
-    def getTranslatedSpells(self, spells : list):
-        tr = []
-        for spell in spells:
-            if(spell == "no_spells"):
-                tr.append(lh.getInfo("no_spells"))
-                return tr
-            tr.append(lh.getSpellName(spell))
-
-        return tr
 
     def backToMenu(self):
         if(self.characterSaved or messagebox.askquestion(lh.getInfo("warning"), lh.getInfo("u_sure")) == "yes"):

@@ -3,7 +3,6 @@ from PIL import Image, ImageTk
 import os
 from tkinter import messagebox
 import utils.language_helper as lh
-from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 
@@ -11,7 +10,7 @@ STANDARD_ARRAY = [15, 14, 13, 12, 10, 8]
 ABILITIES = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
 
 class StepStatAllocation(IsStep):
-    def __init__(self, master, state : CharacterState, wizard : HasSteps):
+    def __init__(self, master, state, wizard: HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -35,17 +34,17 @@ class StepStatAllocation(IsStep):
 
         # Method selection with radio buttons
         self.method_var = tk.StringVar(value="array")
-        self.assign_vars = {ability: tk.StringVar(value=self.state.get("stats", CharacterState.defaultData.get("stats")).get(ability)) for ability in ABILITIES}
-        self.method_var.set("array")
+        method_frame = tk.Frame(self, bg="#d2b48c", bd=1, relief="groove")
+        method_frame.place(x=220, y=50, width=300, height=80)
+        tk.Radiobutton(method_frame, text=lh.getInfo("stat_option_standard"), variable=self.method_var, value="array",
+                       font=self.fantasy_font, bg="#d2b48c", command=self.show_method).pack(anchor="w", padx=10, pady=5)
+        tk.Radiobutton(method_frame, text=lh.getInfo("stat_option_manual"), variable=self.method_var, value="manual",
+                       font=self.fantasy_font, bg="#d2b48c", command=self.show_method).pack(anchor="w", padx=10, pady=5)
 
-        tk.Label(self, text=lh.getInfo("choose_stat_method"), font=("Arial", 16)).pack(pady=10)
-
-        tk.Radiobutton(self, text=lh.getInfo("stat_option_standard"), variable=self.method_var, value="array", command=self.show_method).pack(anchor="w")
-        tk.Radiobutton(self, text=lh.getInfo("stat_option_manual"), variable=self.method_var, value="manual", command=self.show_method).pack(anchor="w")
-
-        self.method_frame = tk.Frame(self)
-        self.method_frame.pack(pady=10)
-
+        # Method-specific input frame
+        self.method_frame = tk.Frame(self, bg="#d2b48c")
+        self.method_frame.place(x=220, y=150, width=450, height=300)
+        self.assign_vars = {ability: tk.StringVar() for ability in ABILITIES}
         self.show_method()
 
         # Navigation buttons

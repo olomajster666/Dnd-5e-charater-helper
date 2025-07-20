@@ -2,16 +2,9 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import os
 import utils.language_helper as lh
-import utils.loaded_data as ld
-from state.character_state import CharacterState
-from .has_steps import HasSteps
-from .is_step import IsStep
 from. import has_steps
 from. import is_step
 
-
-class StepBackground(IsStep):
-    def __init__(self, master, state : CharacterState, wizard : HasSteps):
 class StepBackground(is_step.IsStep):
     def __init__(self, master, state, wizard: has_steps.HasSteps):
         super().__init__(master, wizard)
@@ -37,23 +30,12 @@ class StepBackground(is_step.IsStep):
 
         # Background selection
         self.bg_var = tk.StringVar()
-        self.background_options = {bg["id"]: bg for bg in ld.backgrounds}
-
-        if(self.state.get("background") != None and self.state.get("background").get("id") in self.background_options.keys()):
-            self.bg_var.set(self.state.get("background").get("id"))
-        else:
-            self.bg_var.set("acolyte")
+        self.background_options = {bg["id"]: bg for bg in lh.backgrounds}
+        self.bg_var.set("acolyte")
 
         content_frame = tk.Frame(self, bg="#d2b48c")
         content_frame.place(x=220, y=50)
         for bg in self.background_options.values():
-            name = lh.getBackgroundName(bg["id"])
-            tk.Radiobutton(self, text=name, variable=self.bg_var, value=bg["id"]).pack()
-
-        nav = tk.Frame(self)
-        nav.pack(side="bottom", pady=20)
-        tk.Button(nav, text=lh.getInfo("button_back"), command=self.discard_and_back).pack(side="left", padx=10)
-        tk.Button(nav, text=lh.getInfo("button_continue"), command=lambda: self.save_and_continue()).pack(side="right", padx=10)  # Explicit call
             name = lh.getFromDict(bg["name"])
             tk.Radiobutton(content_frame, text=name, variable=self.bg_var, value=bg["id"],
                           font=self.fantasy_font, bg="#d2b48c").pack(anchor="w", pady=5)

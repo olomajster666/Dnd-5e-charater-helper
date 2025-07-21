@@ -107,13 +107,16 @@ class StartMenu(tk.Frame):
 
         tk.Label(self, text=lh.getInfo("saved_characters"), font=(self.fantasy_font[0], 24), bg="#d2b48c").place(x=220, y=10)
 
+        character_frame = tk.Frame(self, bg="#d2b48c", width=500, height=500, padx=10, pady=10)
+        character_frame.place(x=220, y=50)
+
         for fileName in getSavedCharacterList():
             data = loadSavedCharacter(fileName)
             self.savedCharacterStates[fileName] = data
-            row = tk.Frame(self, bg="#d2b48c")
-            row.place(x=220, y=50 + len(self.savedCharacterStates) * 30)
+            row = tk.Frame(character_frame, bg="#d2b48c")
+            row.pack(fill="x", pady=5)  # Stack rows vertically with padding
             tk.Button(row, text=fileName.removesuffix(".json").capitalize(), font=self.fantasy_font, bg="#8b4513",
-                      fg="white", padx=10, pady=5, bd=2, command=lambda x=fileName: self.showChosenCharacter(x)).pack()
+                      fg="white", padx=10, pady=5, bd=2, width=30, command=lambda x=fileName: self.showChosenCharacter(x)).pack()
 
         self.addBackButton()
 

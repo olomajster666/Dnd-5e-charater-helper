@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as tk    
 import utils.language_helper as lh
 import utils.loaded_data as ld
 from PIL import Image, ImageTk
@@ -16,14 +16,11 @@ class StepCharacterDisplay(IsStep):
     def __init__(self, master, state, wizard: HasSteps):
         super().__init__(master, wizard)
         self.state = state
+        # print("Initial state data:", self.state.data)  # Debug print to check state
 
         # Load and set up dynamic parchment background with Canvas
         self.canvas = tk.Canvas(self, bg="#d2b48c")
         self.canvas.pack(fill="both", expand=True)
-        image_path = os.path.join("assets", "parchment.png")
-        self.pil_image = Image.open(image_path)
-        self.update_background()
-        self.bind("<Configure>", self.update_background)
 
         # Configure fantasy font
         self.fantasy_font = ("Chomsky", 16)
@@ -33,16 +30,27 @@ class StepCharacterDisplay(IsStep):
         self.backgrounds = {bg["id"]: bg for bg in ld.backgrounds}
         self.proficiencies_data = {prof["id"]: prof for prof in ld.proficiencies}
 
-        tk.Label(self.canvas, text=lh.getInfo("created_character_display"), font=self.fantasy_font, bg="#d2b48c").pack(pady=10)
-        self.image_label = tk.Label(self.canvas, bg="#d2b48c")
-        self.image_label.pack(pady=10)
-        self.display_text = tk.Text(self.canvas, height=20, width=80, bg="#d2b48c", font=self.fantasy_font)
-        self.display_text.pack(pady=10)
+        # Add content frame (scrollbar removed)
+        self.content_frame = tk.Frame(self.canvas, bg="#d2b48c")
+        self.canvas.create_window((0, 0), window=self.content_frame, anchor="nw")
+        self.content_frame.pack(fill="both", expand=True)  # Allow content frame to expand
+        self.content_frame.bind("<Configure>", lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
 
-        self.update_display()
-        # Navigation
-        self.nav = tk.Frame(self.canvas, bg="#d2b48c")
-        self.nav.pack(side="bottom", pady=20)
+        # Load parchment background
+        image_path = os.path.join("assets", "parchment.png")
+        self.pil_image = Image.open(image_path)
+        self.update_background()
+        self.bind("<Configure>", self.update_background)
+
+        tk.Label(self.content_frame, text=lh.getInfo("created_character_display"), font=self.fantasy_font, bg="#d2b48c").pack(pady=10)
+        self.image_label = tk.Label(self.content_frame, bg="#d2b48c")
+        self.image_label.pack(pady=10)
+        self.display_text = tk.Text(self.content_frame, bg="#d2b48c", font=self.fantasy_font)
+        self.display_text.pack(pady=10, fill="both", expand=True)  # Allow text to expand
+
+        # Navigation (fixed at bottom)
+        self.nav = tk.Frame(self, bg="#d2b48c")
+        self.nav.pack(side="bottom", fill="x")
         tk.Button(self.nav, text=lh.getInfo("button_back"), font=self.fantasy_font, bg="#8b4513", fg="white", padx=10, pady=5, bd=2,
                   command=self.discard_and_back).pack(side="left", padx=10)
         tk.Button(self.nav, text=lh.getInfo("main_menu"), font=self.fantasy_font, bg="#8b4513", fg="white", padx=10, pady=5, bd=2,
@@ -51,6 +59,8 @@ class StepCharacterDisplay(IsStep):
                   command=self.saveCharacterToFile).pack(side="right", padx=10)
 
         self.characterSaved = False
+        self.update_display()  # Call after full UI setup
+        self.update()  # Force full UI update
 
     def update_background(self, event=None):
         width = self.winfo_width()
@@ -61,6 +71,7 @@ class StepCharacterDisplay(IsStep):
         self.bg_image = ImageTk.PhotoImage(resized_image)
         self.canvas.delete("all")
         self.canvas.create_image(0, 0, anchor="nw", image=self.bg_image)
+        self.canvas.update()  # Force canvas update
 
     def update_display(self):
         state = self.state.data
@@ -168,10 +179,12 @@ class StepCharacterDisplay(IsStep):
             f"{lh.getInfo('equipment')}:" + "\n" + equipment_display
         ]
         display = "\n".join(display_parts)
-        print("Full display content:", display)
+        # print("Full display content:", display)
 
         self.display_text.delete(1.0, tk.END)
         self.display_text.insert(tk.END, display)
+        self.canvas.update()  # Force canvas update after setting text
+        self.update()  # Force full UI update
 
     def getTranslatedSpells(self, spells: list):
         tr = []

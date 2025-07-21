@@ -43,7 +43,7 @@ class StepStatAllocation(IsStep):
 
         # Navigation
         nav = tk.Frame(self, bg="#d2b48c")
-        nav.place(x=10, y=400)  # Adjusted y position to fit below method_frame
+        nav.place(x=10, y=450)  # Adjusted y position to fit below method_frame
         tk.Button(nav, text=lh.getInfo("button_back"), font=self.fantasy_font, bg="#8b4513", fg="white", padx=10, pady=5, bd=2,
                   command=self.discard_and_back).pack(side="left", padx=10)
         tk.Button(nav, text=lh.getInfo("button_continue"), font=self.fantasy_font, bg="#8b4513", fg="white", padx=10, pady=5, bd=2,

@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 import utils.language_helper as lh
+from state.character_state import CharacterState
 from .has_steps import HasSteps
 from .is_step import IsStep
 import os
@@ -10,7 +11,7 @@ STANDARD_ARRAY = [15, 14, 13, 12, 10, 8]
 ABILITIES = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
 
 class StepStatAllocation(IsStep):
-    def __init__(self, master, state, wizard: HasSteps):
+    def __init__(self, master, state : CharacterState, wizard: HasSteps):
         super().__init__(master, wizard)
         self.state = state
 
@@ -25,9 +26,13 @@ class StepStatAllocation(IsStep):
         # Configure fantasy font
         self.fantasy_font = ("Chomsky", 16)
 
-        self.method_var = tk.StringVar(value="array")
+        self.method_var = tk.StringVar(value=state.get("stat_method", "array"))
         self.assign_vars = {ability: tk.StringVar() for ability in ABILITIES}
-        self.method_var.set("array")
+
+        for x in self.assign_vars.keys():
+            stat = self.state.get("stats").get(x)
+            if(stat > 0 and stat < 21):
+                self.assign_vars[x].set(str(stat))
 
         tk.Label(self, text=lh.getInfo("choose_stat_method"), font=(self.fantasy_font[0], 24), bg="#d2b48c").place(x=10, y=10)
 
